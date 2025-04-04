@@ -6,6 +6,14 @@ export interface RankingItem {
   rank?: number;
 }
 
+// Supabaseから返されるデータの型を定義
+interface RankingData {
+  date: string;
+  name: string;
+  song: string;
+  rank: number;
+}
+
 // 指定した日付のランキングデータを取得する関数
 export const fetchRankingByDate = async (date: string): Promise<RankingItem[]> => {
   try {
@@ -29,9 +37,9 @@ export const fetchRankingByDate = async (date: string): Promise<RankingItem[]> =
       return [];
     }
 
-    return data.map((item: { name: string; song: string; rank: number }) => ({
-      name: item.name,
-      song: item.song,
+    return data.map((item: RankingData) => ({
+      name: item.name || '',
+      song: item.song || '',
       rank: item.rank
     }));
   } catch (error) {
@@ -56,13 +64,14 @@ export const fetchAllPastRankings = async (): Promise<{[key: string]: RankingIte
 
     // 日付ごとにデータを整理
     const groupedData: {[key: string]: RankingItem[]} = {};
-    data.forEach((item: { date: string; name: string; song: string; rank: number }) => {
-      if (!groupedData[item.date]) {
-        groupedData[item.date] = [];
+    data.forEach((item: RankingData) => {
+      const date = item.date;
+      if (!groupedData[date]) {
+        groupedData[date] = [];
       }
-      groupedData[item.date].push({
-        name: item.name,
-        song: item.song,
+      groupedData[date].push({
+        name: item.name || '',
+        song: item.song || '',
         rank: item.rank
       });
     });

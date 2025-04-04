@@ -33,6 +33,29 @@ const MainPage = () => {
     return result;
   }
 
+  // 週の日付配列を生成する関数
+  function getWeekDates(startDate: Date): Date[] {
+    const dates: Date[] = [];
+    for (let i = 0; i < 7; i++) {
+      const date = new Date(startDate);
+      date.setDate(startDate.getDate() + i);
+      dates.push(date);
+    }
+    return dates;
+  }
+
+  // 週の日付配列を文字列形式で生成する関数
+  // 修正後
+  const getWeekDateStrings = useCallback((startDate: Date): string[] => {
+    const dates = getWeekDates(startDate);
+    return dates.map(date => {
+      const year = date.getFullYear();
+      const month = String(date.getMonth() + 1).padStart(2, '0');
+      const day = String(date.getDate()).padStart(2, '0');
+    return `${year}-${month}-${day}`;
+  });
+}, []);
+
   // 選択された日付のランキングデータを取得
   const fetchRankingData = useCallback(async (dayIndex: number) => {
     setLoading(true);
@@ -51,38 +74,16 @@ const MainPage = () => {
     }
   }, [currentWeekStart, getWeekDateStrings]);
 
-  // 選択された日付が変更されたときにデータを取得
-  useEffect(() => {
-    fetchRankingData(selectedDayIndex);
-  }, [selectedDayIndex, fetchRankingData]);
-
-  // 日付タブを選択したときの処理
-  const handleDaySelect = (index: number) => {
-    console.log(`[DEBUG] Selecting day index: ${index}`);
-    setSelectedDayIndex(index);
-  };
-
-  // 週の日付配列を生成する関数
-  function getWeekDates(startDate: Date): Date[] {
-    const dates: Date[] = [];
-    for (let i = 0; i < 7; i++) {
-      const date = new Date(startDate);
-      date.setDate(startDate.getDate() + i);
-      dates.push(date);
-    }
-    return dates;
-  }
-
-  // 週の日付配列を文字列形式で生成する関数
-  function getWeekDateStrings(startDate: Date): string[] {
-    const dates = getWeekDates(startDate);
-    return dates.map(date => {
-      const year = date.getFullYear();
-      const month = String(date.getMonth() + 1).padStart(2, '0');
-      const day = String(date.getDate()).padStart(2, '0');
-      return `${year}-${month}-${day}`;
-    });
-  }
+    // 選択された日付が変更されたときにデータを取得
+    useEffect(() => {
+      fetchRankingData(selectedDayIndex);
+    }, [selectedDayIndex, fetchRankingData]);
+  
+    // 日付タブを選択したときの処理
+    const handleDaySelect = (index: number) => {
+      console.log(`[DEBUG] Selecting day index: ${index}`);
+      setSelectedDayIndex(index);
+    };
   
   // 前の週に移動
   const goToPreviousWeek = () => {
