@@ -239,19 +239,14 @@ const MainPage = () => {
 
   // バイタルデータをLIVE配信
   const [monthlyRankings, setMonthlyRankings] = useState<Record<string, RankingItem[]>>({});
-  const [loadingMonthlyRankings, setLoadingMonthlyRankings] = useState<boolean>(true);
-
   // 月間ランキングデータを取得
   const fetchMonthlyRankingData = useCallback(async () => {
-    setLoadingMonthlyRankings(true);
     try {
       const data = await fetchMonthlyRankings();
       setMonthlyRankings(data);
     } catch (error) {
       console.error('月間ランキングデータの取得に失敗しました', error);
       setMonthlyRankings({});
-    } finally {
-      setLoadingMonthlyRankings(false);
     }
   }, []);
 
