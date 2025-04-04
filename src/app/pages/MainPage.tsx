@@ -271,16 +271,16 @@ const MainPage = () => {
   const [selectedDateData, setSelectedDateData] = useState<{date: string, ranking: RankingItem | null}>({date: '', ranking: null});
 
   const handleDayClick = (dateStr: string) => {
-    console.log('u65e5u4ed8u304cu30afu30eau30c3u30afu3055u308cu307eu3057u305f:', dateStr);
-    console.log('u6708u9593u30e9u30f3u30b0:', monthlyRankings);
-    console.log('u9078u629eu3055u308cu305fu65e5u306eu30e9u30f3u30b0:', monthlyRankings[dateStr]);
+    console.log('日付がクリックされました:', dateStr);
+    console.log('月間ランキング:', monthlyRankings);
+    console.log('選択された日のランキング:', monthlyRankings[dateStr]);
     
     if (monthlyRankings[dateStr] && monthlyRankings[dateStr].length > 0) {
-      console.log('u30ddu30c3u30d7u30a2u30c3u30d7u3092u8868u793au3057u307eu3059');
+      console.log('ポップアップを表示します');
       setSelectedDateData({date: dateStr, ranking: monthlyRankings[dateStr][0]});
       setIsPopupOpen(true);
     } else {
-      console.log('u9078u629eu3055u308cu305fu65e5u306eu30e9u30f3u30b0u304cu3042u308au307eu305bu3093');
+      console.log('選択された日のランキングがありません');
     }
   };
 
@@ -429,9 +429,7 @@ const MainPage = () => {
                     <span className="text-xs sm:text-sm">{day.day}</span>
                     {day.isToday && <span className="inline-block w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#d4af37]"></span>}
                   </div>
-                  {loadingMonthlyRankings ? (
-                    <div className="mt-0.5 sm:mt-1 text-[10px] sm:text-xs text-gray-400 w-full">u8aadu307fu8fbcu307fu4e2d...</div>
-                  ) : day.topRanker && (
+                  {day.topRanker && (
                     <div className="mt-0.5 sm:mt-1 text-[10px] sm:text-xs text-[#1a3a6c] w-full break-words line-clamp-2 overflow-hidden">
                       {day.topRanker}
                     </div>
