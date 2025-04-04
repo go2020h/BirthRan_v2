@@ -151,7 +151,7 @@ export async function fetchMonthlyRankings(): Promise<Record<string, RankingItem
     
     // データを日付ごとにグループ化
     if (data) {
-      data.forEach((item: any) => {
+      data.forEach((item: RankingData) => {
         const dateStr = item.date; // 'YYYY-MM-DD'形式
         
         if (!groupedByMonth[dateStr]) {
@@ -177,7 +177,6 @@ export async function fetchMonthlyRankings(): Promise<Record<string, RankingItem
 
 // 日付をYYYY-MM-DD形式の文字列に変換する関数
 export function formatDate(date: Date): string {
-  const year = date.getFullYear();
   const month = String(date.getMonth() + 1).padStart(2, '0');
   const day = String(date.getDate()).padStart(2, '0');
   return `${month}月${day}日`;
