@@ -4,14 +4,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState, useEffect, useCallback } from 'react';
 import { formatDateString } from '@/app/utils/rankingData';
-import { RankingItem, getRankingByDayIndex, fetchAllPastRankings } from '@/app/utils/rankingService';
+import { RankingItem, getRankingByDayIndex} from '@/app/utils/rankingService';
 
 const MainPage = () => {
-  // 過去のランキングダイアログの状態管理
-  const [isDialogOpen, setIsDialogOpen] = useState<boolean>(false);
-  const [pastRankings, setPastRankings] = useState<{[key: string]: RankingItem[]}>({});
-  const [loadingPastRankings, setLoadingPastRankings] = useState<boolean>(false);
-
   // カレンダー用の状態管理
   const [currentDate, setCurrentDate] = useState(new Date()); // 現在の日付を取得
   const today = new Date(); // 現在日
@@ -54,7 +49,7 @@ const MainPage = () => {
     } finally {
       setLoading(false);
     }
-  }, [currentWeekStart]);
+  }, [currentWeekStart, getWeekDateStrings]);
 
   // 選択された日付が変更されたときにデータを取得
   useEffect(() => {
