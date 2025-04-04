@@ -29,7 +29,7 @@ export const fetchRankingByDate = async (date: string): Promise<RankingItem[]> =
       return [];
     }
 
-    return data.map((item: any) => ({
+    return data.map((item: { name: string; song: string; rank: number }) => ({
       name: item.name,
       song: item.song,
       rank: item.rank
@@ -56,7 +56,7 @@ export const fetchAllPastRankings = async (): Promise<{[key: string]: RankingIte
 
     // 日付ごとにデータを整理
     const groupedData: {[key: string]: RankingItem[]} = {};
-    data.forEach((item: any) => {
+    data.forEach((item: { date: string; name: string; song: string; rank: number }) => {
       if (!groupedData[item.date]) {
         groupedData[item.date] = [];
       }
@@ -106,7 +106,7 @@ export const getRankingByDayIndex = async (dayIndex: number, weekDates: string[]
 };
 
 // 日付に基づいてランキングデータの表示数を取得する関数
-export const getRankingCount = (date: Date): number => {
+export const getRankingCount = (): number => {
   try {
     return 3; // 常に3つ表示
   } catch (error) {

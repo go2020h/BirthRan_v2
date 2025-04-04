@@ -84,7 +84,7 @@ export const formatDateString = (date: Date): string => {
 };
 
 // 日付に基づいてランキングデータの表示数を取得する関数
-export const getRankingCount = (date: Date): number => {
+export const getRankingCount = (): number => {
   try {
     const today = new Date();
     const targetDate = new Date(2025, 3, 4); // 2025年4月4日
