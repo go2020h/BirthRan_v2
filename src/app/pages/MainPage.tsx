@@ -4,23 +4,13 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState, useEffect, useCallback } from 'react';
 import { formatDateString } from '@/app/utils/rankingData';
-import { RankingItem, getRankingByDayIndex} from '@/app/utils/rankingService';
+import { RankingItem, getRankingByDayIndex, getRankingCount, fetchMonthlyRankings, formatDate } from '@/app/utils/rankingService';
 
 const MainPage = () => {
   // カレンダー用の状態管理
   const [currentDate, setCurrentDate] = useState(new Date()); // 現在の日付を取得
   const today = new Date(); // 現在日
   
-  // ランキング表示用の状態管理
-  const [currentWeekStart, setCurrentWeekStart] = useState<Date>(() => {
-    const lastWeekStart = getWeekStartDate(new Date());
-    lastWeekStart.setDate(lastWeekStart.getDate() - 7); // 先週の開始日
-    return lastWeekStart;
-  });
-  const [selectedDayIndex, setSelectedDayIndex] = useState<number>(0); // 金曜日（インデックスは0が金曜日）
-  const [rankingData, setRankingData] = useState<RankingItem[]>([]);
-  const [loading, setLoading] = useState<boolean>(true);
-
   // 最初の週の開始日（2025年3月28日）を定義
   const firstAllowedWeekStart = new Date(2025, 2, 28); // 2025年3月28日
   
@@ -33,6 +23,20 @@ const MainPage = () => {
     return result;
   }
 
+  // 最終週の開始日を取得する関数
+  function getLastWeekStartDate(date: Date): Date {
+    const weekStart = getWeekStartDate(date);
+    const lastWeekStart = new Date(weekStart);
+    lastWeekStart.setDate(weekStart.getDate() - 7);
+    return lastWeekStart;
+  };
+
+  // ランキング表示用の状態管理
+  const [currentWeekStart, setCurrentWeekStart] = useState<Date>(getLastWeekStartDate(today));
+  const [selectedDayIndex, setSelectedDayIndex] = useState<number>(0); // 金曜日（インデックスは0が金曜日）
+  const [rankingData, setRankingData] = useState<any[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
+  
   // 週の日付配列を生成する関数
   function getWeekDates(startDate: Date): Date[] {
     const dates: Date[] = [];
@@ -52,9 +56,9 @@ const MainPage = () => {
       const year = date.getFullYear();
       const month = String(date.getMonth() + 1).padStart(2, '0');
       const day = String(date.getDate()).padStart(2, '0');
-    return `${year}-${month}-${day}`;
-  });
-}, []);
+      return `${year}-${month}-${day}`;
+    });
+  }, []);
 
   // 選択された日付のランキングデータを取得
   const fetchRankingData = useCallback(async (dayIndex: number) => {
@@ -74,16 +78,16 @@ const MainPage = () => {
     }
   }, [currentWeekStart, getWeekDateStrings]);
 
-    // 選択された日付が変更されたときにデータを取得
-    useEffect(() => {
-      fetchRankingData(selectedDayIndex);
-    }, [selectedDayIndex, fetchRankingData]);
+  // 選択された日付が変更されたときにデータを取得
+  useEffect(() => {
+    fetchRankingData(selectedDayIndex);
+  }, [selectedDayIndex, fetchRankingData]);
   
-    // 日付タブを選択したときの処理
-    const handleDaySelect = (index: number) => {
-      console.log(`[DEBUG] Selecting day index: ${index}`);
-      setSelectedDayIndex(index);
-    };
+  // 日付タブを選択したときの処理
+  const handleDaySelect = (index: number) => {
+    console.log(`[DEBUG] Selecting day index: ${index}`);
+    setSelectedDayIndex(index);
+  };
   
   // 前の週に移動
   const goToPreviousWeek = () => {
@@ -175,22 +179,42 @@ const MainPage = () => {
     
     const calendarDays = [];
     
+    // 日付をYYYY-MM-DD形式に変換する関数
+    const formatDateHelper = (date: Date): string => {
+      const year = date.getFullYear();
+      const month = String(date.getMonth() + 1).padStart(2, '0');
+      const day = String(date.getDate()).padStart(2, '0');
+      return `${year}-${month}-${day}`;
+    };
+    
     // 前月の日を追加
     for (let i = 0; i < firstDayOfWeek; i++) {
       const day = daysInPrevMonth - firstDayOfWeek + i + 1;
+      const date = new Date(year, month - 1, day);
+      const dateStr = formatDateHelper(date);
+      const topRanker = monthlyRankings[dateStr]?.[0]?.name || '';
+      
       calendarDays.push({
         day,
         currentMonth: false,
-        date: new Date(year, month - 1, day)
+        date,
+        dateStr,
+        topRanker
       });
     }
     
     // 当月の日を追加
     for (let i = 1; i <= daysInMonth; i++) {
+      const date = new Date(year, month, i);
+      const dateStr = formatDateHelper(date);
+      const topRanker = monthlyRankings[dateStr]?.[0]?.name || '';
+      
       calendarDays.push({
         day: i,
         currentMonth: true,
-        date: new Date(year, month, i),
+        date,
+        dateStr,
+        topRanker,
         isToday: i === today.getDate() && month === today.getMonth() && year === today.getFullYear()
       });
     }
@@ -199,10 +223,16 @@ const MainPage = () => {
     const remainingDays = lastDayOfWeek < 6 ? 6 - lastDayOfWeek : 0;
     
     for (let i = 1; i <= remainingDays; i++) {
+      const date = new Date(year, month + 1, i);
+      const dateStr = formatDateHelper(date);
+      const topRanker = monthlyRankings[dateStr]?.[0]?.name || '';
+      
       calendarDays.push({
         day: i,
         currentMonth: false,
-        date: new Date(year, month + 1, i)
+        date,
+        dateStr,
+        topRanker
       });
     }
     
@@ -212,6 +242,58 @@ const MainPage = () => {
   // 月の名前を取得
   const getMonthName = (date: Date) => {
     return `${date.getFullYear()}年${date.getMonth() + 1}月`;
+  };
+
+  // バイタルデータをLIVE配信
+  const [monthlyRankings, setMonthlyRankings] = useState<Record<string, any[]>>({});
+  const [loadingMonthlyRankings, setLoadingMonthlyRankings] = useState<boolean>(true);
+
+  // 月間ランキングデータを取得
+  const fetchMonthlyRankingData = useCallback(async (year: number, month: number) => {
+    setLoadingMonthlyRankings(true);
+    try {
+      const data = await fetchMonthlyRankings(year, month);
+      setMonthlyRankings(data);
+    } catch (error) {
+      console.error('月間ランキングデータの取得に失敗しました', error);
+      setMonthlyRankings({});
+    } finally {
+      setLoadingMonthlyRankings(false);
+    }
+  }, []);
+
+  // 現在の日付が変更されたときに月間ランキングデータを取得
+  useEffect(() => {
+    const year = currentDate.getFullYear();
+    const month = currentDate.getMonth() + 1;
+    fetchMonthlyRankingData(year, month);
+  }, [currentDate, fetchMonthlyRankingData]);
+
+  // u65e5u4ed8u306eu67a0u3092u30afu30eau30c3u30afu3057u305fu3068u304du306bu30ddu30c3u30d7u30a2u30c3u30d7u3067u30e1u30c3u30bbu30fcu30b8u3092u8868u793au3059u308bu6a5fu80fdu3092u8ffdu52a0u3057u307eu3059u3002
+  const [isPopupOpen, setIsPopupOpen] = useState<boolean>(false);
+  const [selectedDateData, setSelectedDateData] = useState<{date: string, ranking: RankingItem | null}>({date: '', ranking: null});
+
+  const handleDayClick = (dateStr: string) => {
+    if (monthlyRankings[dateStr] && monthlyRankings[dateStr].length > 0) {
+      setSelectedDateData({date: dateStr, ranking: monthlyRankings[dateStr][0]});
+      setIsPopupOpen(true);
+    }
+  };
+
+  const closePopup = () => {
+    setIsPopupOpen(false);
+  };
+
+  // u65e5u4ed8u3092u300c2024u5e744u67083u65e5u300du5f62u5f0fu306bu30d5u30a9u30fcu30deu30c3u30c8u3059u308bu95a2u6570
+  const formatDateJapanese = (dateStr: string): string => {
+    const parts = dateStr.split('-');
+    if (parts.length !== 3) return dateStr;
+    
+    const year = parts[0];
+    const month = parseInt(parts[1], 10);
+    const day = parseInt(parts[2], 10);
+    
+    return `${year}年${month}月${day}日`;
   };
 
   return (
@@ -304,41 +386,63 @@ const MainPage = () => {
             </h2>
           </div>
           
-          <div className="bg-white rounded-xl shadow-lg p-8 max-w-4xl mx-auto border border-gray-200">
-            <div className="flex justify-center items-center mb-8">
+          <div className="bg-white rounded-xl shadow-lg p-4 sm:p-8 max-w-4xl mx-auto border border-gray-200">
+            <div className="flex justify-center items-center mb-4 sm:mb-8">
               <button 
-                className="text-[#1a3a6c] hover:text-[#d4af37] transition-colors mr-6 p-2" 
+                className="text-[#1a3a6c] hover:text-[#d4af37] transition-colors mr-3 sm:mr-6 p-1 sm:p-2" 
                 onClick={() => goToPreviousMonth()}
                 type="button"
                 aria-label="前月へ移動"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 sm:h-6 sm:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                 </svg>
               </button>
-              <h3 className="text-2xl font-bold mx-4 text-[#1a3a6c]">{getMonthName(currentDate)}</h3>
+              <h3 className="text-xl sm:text-2xl font-bold mx-2 sm:mx-4 text-[#1a3a6c]">{getMonthName(currentDate)}</h3>
               <button 
-                className="text-[#1a3a6c] hover:text-[#d4af37] transition-colors ml-6 p-2" 
+                className="text-[#1a3a6c] hover:text-[#d4af37] transition-colors ml-3 sm:ml-6 p-1 sm:p-2" 
                 onClick={() => goToNextMonth()}
                 type="button"
                 aria-label="翌月へ移動"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 sm:h-6 sm:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </button>
             </div>
             
-            <div className="grid grid-cols-7 gap-2">
+            <div className="grid grid-cols-7 gap-1 sm:gap-2">
               {['日', '月', '火', '水', '木', '金', '土'].map((day) => (
-                <div key={day} className="text-center font-medium py-2 text-gray-600">{day}</div>
+                <div key={day} className="text-center font-medium py-1 sm:py-2 text-gray-600 text-xs sm:text-base">{day}</div>
               ))}
               {generateCalendarDays().map((day, index) => (
-                <div key={index} className={`aspect-square bg-gray-50 hover:bg-[#f0f8ff] rounded-lg flex flex-col items-start justify-start p-2 cursor-pointer transition-colors border border-gray-100 ${!day.currentMonth ? 'text-gray-400' : day.isToday ? 'text-[#d4af37] font-bold' : 'text-gray-700'} font-medium`}>
-                  {day.day}
+                <div 
+                  key={index} 
+                  className={`h-16 sm:h-20 bg-gray-50 hover:bg-[#f0f8ff] rounded-lg flex flex-col items-start p-1 sm:p-2 cursor-pointer transition-colors border border-gray-100 ${!day.currentMonth ? 'text-gray-400' : day.isToday ? 'text-[#d4af37] font-bold' : 'text-gray-700'} font-medium`}
+                  onClick={() => handleDayClick(day.dateStr)}
+                >
+                  <div className="w-full flex justify-between items-start">
+                    <span className="text-xs sm:text-sm">{day.day}</span>
+                    {day.isToday && <span className="inline-block w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#d4af37]"></span>}
+                  </div>
+                  {day.topRanker && (
+                    <div className="mt-0.5 sm:mt-1 text-[10px] sm:text-xs text-[#1a3a6c] w-full break-words line-clamp-2 overflow-hidden">
+                      {day.topRanker}
+                    </div>
+                  )}
                 </div>
               ))}
             </div>
+          </div>
+
+          {/* 過去のランキングを見るボタン */}
+          <div className="mt-8 text-center">
+            <Link 
+              href="/backnumber"
+              className="bg-[#1a3a6c] hover:bg-[#15305a] text-white font-medium py-2 px-4 rounded-md transition-colors inline-block"
+            >
+              過去のランキングを見る
+            </Link>
           </div>
         </div>
       </section>
@@ -378,12 +482,9 @@ const MainPage = () => {
               
               <Link 
                 href="/post" 
-                className="bg-[#d4af37] hover:bg-[#c9a431] text-white font-bold py-4 px-8 rounded-lg transition-colors inline-flex items-center transform hover:scale-105 shadow-lg"
+                className="bg-[#d4af37] hover:bg-[#c9a431] text-white font-bold py-4 px-8 rounded-lg transition-colors inline-block"
               >
                 愛メッセージを投稿する
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 ml-2" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                </svg>
               </Link>
             </div>
           </div>
@@ -394,7 +495,7 @@ const MainPage = () => {
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4 text-[#1a3a6c] inline-block relative">
+            <h2 className="text-3xl font-bold mb-4 text-[#1a3a6c]">
               バスラン！デイリーランキングベスト３
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
@@ -436,7 +537,7 @@ const MainPage = () => {
                 <button
                   key={index}
                   onClick={() => handleDaySelect(index)}
-                  className={`py-2 px-3 rounded-lg transition-colors relative ${date.toDateString() === today.toDateString() ? 'bg-[#0166CD] text-white font-bold' : selectedDayIndex === index ? 'bg-[#0166CD] text-white font-bold' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
+                  className={`py-2 px-3 rounded-lg transition-colors relative ${selectedDayIndex === index ? 'bg-[#0166CD] text-white font-bold' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
                 >
                   <div className="text-left">
                   <div className="text-sm md:text-base"><span className="inline md:hidden">{dayNames[index].charAt(0)}</span><span className="hidden md:inline">{dayNames[index]}</span></div>
@@ -451,7 +552,7 @@ const MainPage = () => {
           <div className="max-w-4xl mx-auto">
             <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-200">
               <h3 className="text-xl font-bold text-[#1a3a6c] mb-4">
-                {formatDateString(getWeekDates(currentWeekStart)[selectedDayIndex])}
+                {formatDate(getWeekDates(currentWeekStart)[selectedDayIndex])}
                 のランキング
               </h3>
               {loading ? (
@@ -531,15 +632,7 @@ const MainPage = () => {
             </div>
           </div>
           
-          {/* 過去のランキングを見るボタン */}
-          <div className="mt-8 text-center">
-            <Link 
-              href="/backnumber"
-              className="bg-[#1a3a6c] hover:bg-[#15305a] text-white font-medium py-2 px-4 rounded-md transition-colors inline-block"
-            >
-              過去のランキングを見る
-            </Link>
-          </div>
+          
         </div>
       </section>
 
@@ -760,10 +853,7 @@ const MainPage = () => {
                     href="/cast" 
                     className="bg-[#d4af37] hover:bg-[#c9a431] text-white font-bold py-3 px-6 rounded-lg transition-colors inline-block text-lg"
                   >
-                    CAST＆STAFFを確認する
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                    </svg>
+                    キャスト＆STAFFを確認する
                   </Link>
                 </div>
               </div>
@@ -902,8 +992,8 @@ const MainPage = () => {
               </p>
               
               <div className="text-center">
-                <Link href="/recruit" className="bg-[#d4af37] hover:bg-[#c9a431] text-white font-bold py-3 px-8 rounded-lg transition-colors inline-block text-lg">
-                  参加する
+                <Link href="/wanted" className="bg-[#d4af37] hover:bg-[#c9a431] text-white font-bold py-3 px-8 rounded-lg transition-colors inline-block text-lg">
+                  応募する
                 </Link>
               </div>
             </div>
@@ -1002,7 +1092,56 @@ const MainPage = () => {
         </div>
       </section>
 
-      
+      {/* メッセージポップアップ */}
+      {isPopupOpen && selectedDateData.ranking && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50" onClick={closePopup}>
+          <div className="bg-white rounded-lg shadow-xl p-6 max-w-lg w-full max-h-[80vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
+            <div className="flex justify-between items-center mb-4">
+              <h3 className="text-xl font-bold text-[#1a3a6c]">{formatDateJapanese(selectedDateData.date)} 愛メッセージ</h3>
+              <button 
+                onClick={closePopup}
+                className="text-gray-500 hover:text-gray-700 transition-colors"
+                aria-label="閉じる"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            
+            <div className="space-y-6">
+              <div className="pb-4">
+                <div className="flex items-center mb-2">
+                  <span className="inline-flex items-center justify-center bg-[#FFD700] text-white rounded-full w-6 h-6 text-sm font-bold mr-2">
+                    1
+                  </span>
+                  <span className="font-medium text-[#1a3a6c]">{selectedDateData.ranking.name}さん</span>
+                </div>
+                {selectedDateData.ranking.message && (
+                  <div className="mt-4 bg-gradient-to-br from-[#f8f9fa] to-[#e6f0ff] p-4 rounded-lg border border-[#d4af37] shadow-md">
+                    <div className="flex flex-col items-center justify-center">
+                      <div className="inline-block text-center">
+                        <p className="text-[#1a3a6c] whitespace-pre-line font-medium text-lg leading-relaxed">
+                          {selectedDateData.ranking.message.replace(/\\n/g, '\n')}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+            
+            <div className="mt-6 text-center">
+              <button 
+                onClick={closePopup}
+                className="bg-[#1a3a6c] hover:bg-[#15305a] text-white font-medium py-2 px-4 rounded-md transition-colors"
+              >
+                閉じる
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </main>
     
   );
