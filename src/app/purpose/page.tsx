@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from 'react';
 import Menu from '@/components/Menu';
-import Link from 'next/link';
 
 const PurposePage: React.FC = () => {
   const [activeTab, setActiveTab] = useState<string>('media');

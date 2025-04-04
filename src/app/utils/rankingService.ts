@@ -1,5 +1,4 @@
 import { supabase } from './supabase';
-import { formatDateString } from './rankingData';
 
 export interface RankingItem {
   name: string;

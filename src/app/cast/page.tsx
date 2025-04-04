@@ -4,8 +4,6 @@ import React, { useState } from 'react';
 import Menu from '@/components/Menu';
 
 const CastStaffPage: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<string>('cast');
-
   const [selectedCast, setSelectedCast] = useState<{
     id: string;
     name: string;
