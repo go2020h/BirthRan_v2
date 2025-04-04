@@ -3,8 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState, useEffect, useCallback } from 'react';
-import { formatDateString } from '@/app/utils/rankingData';
-import { RankingItem, getRankingByDayIndex, getRankingCount, fetchMonthlyRankings, formatDate } from '@/app/utils/rankingService';
+import { RankingItem, getRankingByDayIndex, fetchMonthlyRankings, formatDate } from '@/app/utils/rankingService';
 
 const MainPage = () => {
   // カレンダー用の状態管理
@@ -34,7 +33,7 @@ const MainPage = () => {
   // ランキング表示用の状態管理
   const [currentWeekStart, setCurrentWeekStart] = useState<Date>(getLastWeekStartDate(today));
   const [selectedDayIndex, setSelectedDayIndex] = useState<number>(0); // 金曜日（インデックスは0が金曜日）
-  const [rankingData, setRankingData] = useState<any[]>([]);
+  const [rankingData, setRankingData] = useState<RankingItem[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   
   // 週の日付配列を生成する関数
@@ -49,7 +48,6 @@ const MainPage = () => {
   }
 
   // 週の日付配列を文字列形式で生成する関数
-  // 修正後
   const getWeekDateStrings = useCallback((startDate: Date): string[] => {
     const dates = getWeekDates(startDate);
     return dates.map(date => {
@@ -72,7 +70,7 @@ const MainPage = () => {
       setRankingData(data);
     } catch (error) {
       console.error('ランキングデータの取得に失敗しました', error);
-      setRankingData([{ name: 'データなし', song: 'データなし', rank: 1 }]);
+      setRankingData([{ name: 'データなし', song: 'データなし', rank: 1, message: '' }]);
     } finally {
       setLoading(false);
     }
@@ -112,11 +110,6 @@ const MainPage = () => {
   };
   
   // 日付をフォーマットする関数
-  function formatDate(date: Date): string {
-    return `${date.getMonth() + 1}月${date.getDate()}日`;
-  }
-  
-  // 週の範囲を表示する関数
   function getWeekRangeText(startDate: Date): string {
     const endDate = new Date(startDate);
     endDate.setDate(startDate.getDate() + 6);
@@ -245,14 +238,14 @@ const MainPage = () => {
   };
 
   // バイタルデータをLIVE配信
-  const [monthlyRankings, setMonthlyRankings] = useState<Record<string, any[]>>({});
+  const [monthlyRankings, setMonthlyRankings] = useState<Record<string, RankingItem[]>>({});
   const [loadingMonthlyRankings, setLoadingMonthlyRankings] = useState<boolean>(true);
 
   // 月間ランキングデータを取得
-  const fetchMonthlyRankingData = useCallback(async (year: number, month: number) => {
+  const fetchMonthlyRankingData = useCallback(async () => {
     setLoadingMonthlyRankings(true);
     try {
-      const data = await fetchMonthlyRankings(year, month);
+      const data = await fetchMonthlyRankings();
       setMonthlyRankings(data);
     } catch (error) {
       console.error('月間ランキングデータの取得に失敗しました', error);
@@ -264,19 +257,30 @@ const MainPage = () => {
 
   // 現在の日付が変更されたときに月間ランキングデータを取得
   useEffect(() => {
-    const year = currentDate.getFullYear();
-    const month = currentDate.getMonth() + 1;
-    fetchMonthlyRankingData(year, month);
-  }, [currentDate, fetchMonthlyRankingData]);
+    fetchMonthlyRankingData();
+    console.log('月間ランキングデータを取得しました');
+  }, [fetchMonthlyRankingData]);
 
-  // u65e5u4ed8u306eu67a0u3092u30afu30eau30c3u30afu3057u305fu3068u304du306bu30ddu30c3u30d7u30a2u30c3u30d7u3067u30e1u30c3u30bbu30fcu30b8u3092u8868u793au3059u308bu6a5fu80fdu3092u8ffdu52a0u3057u307eu3059u3002
+  // 月間ランキングデータが変更されたときにログを出力
+  useEffect(() => {
+    console.log('月間ランキングデータ:', monthlyRankings);
+  }, [monthlyRankings]);
+
+  // u65e5u4ed8u306eu67a0u3092u30afu30eau30c3u30afu3057u307eu305fu3068u304du306bu30ddu30c3u30d7u30a2u30c3u30d7u6a5fu80fdu3092u8ffdu52a0u3057u307eu3059u3002
   const [isPopupOpen, setIsPopupOpen] = useState<boolean>(false);
   const [selectedDateData, setSelectedDateData] = useState<{date: string, ranking: RankingItem | null}>({date: '', ranking: null});
 
   const handleDayClick = (dateStr: string) => {
+    console.log('u65e5u4ed8u304cu30afu30eau30c3u30afu3055u308cu307eu3057u305f:', dateStr);
+    console.log('u6708u9593u30e9u30f3u30adu30f3u30b0:', monthlyRankings);
+    console.log('u9078u629eu3055u308cu305fu65e5u306eu30e9u30f3u30adu30f3u30b0:', monthlyRankings[dateStr]);
+    
     if (monthlyRankings[dateStr] && monthlyRankings[dateStr].length > 0) {
+      console.log('u30ddu30c3u30d7u30a2u30c3u30d7u3092u8868u793au3057u307eu3059');
       setSelectedDateData({date: dateStr, ranking: monthlyRankings[dateStr][0]});
       setIsPopupOpen(true);
+    } else {
+      console.log('u9078u629eu3055u308cu305fu65e5u306eu30e9u30f3u30adu30f3u30b0u304cu3042u308au307eu305bu3093');
     }
   };
 
