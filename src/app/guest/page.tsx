@@ -1,7 +1,6 @@
 'use client';
 
-import Link from 'next/link';
-import { guestArchive, GuestData } from '../data/guestArchive';
+import { guestArchive } from '../data/guestArchive';
 import Menu from '@/components/Menu';
 import { useState } from 'react';
 
