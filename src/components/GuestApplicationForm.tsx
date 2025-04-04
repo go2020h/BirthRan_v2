@@ -15,17 +15,79 @@ const GuestApplicationForm: React.FC = () => {
     motivation: ''
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitSuccess, setSubmitSuccess] = useState(false);
+  const [submitError, setSubmitError] = useState(false);
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // ここでフォームデータを送信する処理を実装
-    console.log('送信されたデータ:', formData);
-    // 送信後の処理（成功メッセージの表示など）
-    alert('応募が送信されました！');
+    setIsSubmitting(true);
+    setSubmitSuccess(false);
+    setSubmitError(false);
+    
+    try {
+      // フォームデータを整形
+      const birthDate = `${formData.birthYear}年${formData.birthMonth}月${formData.birthDay}日`;
+      const appearanceDate = `${formData.appearanceYear}年${formData.appearanceMonth}月${formData.appearanceDay}日`;
+      
+      // 改行を<br>タグに変換
+      const formattedMotivation = formData.motivation.replace(/\n/g, '<br>');
+      
+      // 最終的なフォーマット
+      const formattedContent = [
+        `【名前】${formData.name}`,
+        `【誕生日】${birthDate}`,
+        `【ゲスト出演希望日】${appearanceDate}`,
+        `【所属事務所】${formData.agency}`,
+        `【担当者名】${formData.managerName}`,
+        `【メールアドレス】${formData.email}`,
+        `【応募の動機】`,
+        formattedMotivation
+      ].join('<br>');
+
+      // Webhookに送信
+      const response = await fetch('https://hook.us1.make.com/uihk0fyhk1aoyuao28dnpg3igwhkk4af', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          content: formattedContent
+        })
+      });
+
+      if (!response.ok) {
+        throw new Error('送信に失敗しました');
+      }
+
+      console.log('送信成功:', formData);
+      setSubmitSuccess(true);
+      
+      // フォームをリセット
+      setFormData({
+        name: '',
+        birthYear: '',
+        birthMonth: '',
+        birthDay: '',
+        appearanceYear: '',
+        appearanceMonth: '',
+        appearanceDay: '',
+        agency: '',
+        managerName: '',
+        email: '',
+        motivation: ''
+      });
+    } catch (error) {
+      console.error('エラー:', error);
+      setSubmitError(true);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   // 月と日の選択肢を生成
@@ -36,6 +98,20 @@ const GuestApplicationForm: React.FC = () => {
   return (
     <div className="max-w-2xl mx-auto">
       <h2 className="text-2xl font-bold text-[#1a3a6c] mb-6 text-center">ゲスト応募フォーム</h2>
+      
+      {submitSuccess && (
+        <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mb-6" role="alert">
+          <strong className="font-bold">応募が送信されました！</strong>
+          <span className="block sm:inline"> こちらの内容で送信されました。担当者よりご連絡いたします。</span>
+        </div>
+      )}
+
+      {submitError && (
+        <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-6" role="alert">
+          <strong className="font-bold">エラーが発生しました。</strong>
+          <span className="block sm:inline"> 再度送信してください。</span>
+        </div>
+      )}
       
       <form onSubmit={handleSubmit} className="space-y-6">
         <div>
@@ -202,9 +278,10 @@ const GuestApplicationForm: React.FC = () => {
         <div className="text-center pt-4">
           <button 
             type="submit"
-            className="inline-flex items-center justify-center bg-[#0167CC] hover:bg-[#0156a5] text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105"
+            disabled={isSubmitting}
+            className={`inline-flex items-center justify-center ${isSubmitting ? 'bg-gray-400 cursor-not-allowed' : 'bg-[#0167CC] hover:bg-[#0156a5]'} text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105`}
           >
-            応募する
+            {isSubmitting ? '送信中...' : '応募する'}
           </button>
         </div>
       </form>
