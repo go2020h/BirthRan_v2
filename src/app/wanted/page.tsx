@@ -4,16 +4,26 @@ import React, { useState } from 'react';
 import Menu from '../../components/Menu';
 import Dialog from '../../components/Dialog';
 import GuestApplicationForm from '../../components/GuestApplicationForm';
+import SponsorApplicationForm from '../../components/SponsorApplicationForm';
 
 const RecruitPage: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isGuestFormOpen, setIsGuestFormOpen] = useState(false);
+  const [isSponsorFormOpen, setIsSponsorFormOpen] = useState(false);
 
-  const handleOpen = () => {
-    setIsOpen(true);
+  const handleGuestFormOpen = () => {
+    setIsGuestFormOpen(true);
   };
 
-  const handleClose = () => {
-    setIsOpen(false);
+  const handleGuestFormClose = () => {
+    setIsGuestFormOpen(false);
+  };
+
+  const handleSponsorFormOpen = () => {
+    setIsSponsorFormOpen(true);
+  };
+
+  const handleSponsorFormClose = () => {
+    setIsSponsorFormOpen(false);
   };
 
   return (
@@ -41,7 +51,7 @@ const RecruitPage: React.FC = () => {
                 <img src="wanted1.jpg" alt="wanted1" className="object-cover" />
               </div>
               <div className="w-full md:w-2/3 lg:w-2/3 xl:w-2/3 p-4">
-                <h2 className="text-3xl font-bold text-[#1a3a6c] mb-8 text-center">誕生日が近い！ゲスト募集中！！</h2>
+                <h2 className="text-3xl font-bold text-[#1a3a6c] mb-8 text-center">番組では誕生日が近いゲストを大募集中！！</h2>
                 
                 <div className="text-center max-w-2xl mx-auto">
                   <p className="text-xl font-bold text-[#0167CC] mb-4">番組では、誕生日が近いゲストを大募集しています。</p>
@@ -52,7 +62,35 @@ const RecruitPage: React.FC = () => {
                   
                   <div className="mt-8">
                     <button 
-                      onClick={handleOpen}
+                      onClick={handleGuestFormOpen}
+                      className="inline-flex items-center justify-center bg-[#f5d742] hover:bg-[#f2c464] text-black font-bold py-4 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+                    >
+                      応募する
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* バースデープレゼントのスポンサー募集中！！セクション */}
+            <div className="bg-white p-8 rounded-xl shadow-lg mb-12 flex flex-wrap items-center">
+              <div className="w-full md:w-1/3 lg:w-1/3 xl:w-1/3 p-4 flex justify-center">
+                <img src="wanted2.jpg" alt="wanted2" className="object-cover" />
+              </div>
+              <div className="w-full md:w-2/3 lg:w-2/3 xl:w-2/3 p-4">
+                <h2 className="text-3xl font-bold text-[#1a3a6c] mb-8 text-center">バースデープレゼントのスポンサー募集中！！</h2>
+                
+                <div className="text-center max-w-2xl mx-auto">
+                  <p className="text-xl font-bold text-[#0167CC] mb-4">プレゼントを贈るスポンサーを募集しています。</p>
+                  <ul className="text-lg text-gray-700 mb-6 list-disc text-left pl-8">
+                    <li>商品やサービスを番組に提供する企業様</li>
+                    <li>番組内で商品・サービスの宣伝を行う企業様</li>
+                    <li>番組を応援してくださる方</li>
+                  </ul>
+                  
+                  <div className="mt-8">
+                    <button 
+                      onClick={handleSponsorFormOpen}
                       className="inline-flex items-center justify-center bg-[#f5d742] hover:bg-[#f2c464] text-black font-bold py-4 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
                     >
                       応募する
@@ -65,8 +103,12 @@ const RecruitPage: React.FC = () => {
         </div>
       </section>
 
-      <Dialog isOpen={isOpen} onClose={handleClose}>
+      <Dialog isOpen={isGuestFormOpen} onClose={handleGuestFormClose}>
         <GuestApplicationForm />
+      </Dialog>
+
+      <Dialog isOpen={isSponsorFormOpen} onClose={handleSponsorFormClose}>
+        <SponsorApplicationForm />
       </Dialog>
     </>
   );

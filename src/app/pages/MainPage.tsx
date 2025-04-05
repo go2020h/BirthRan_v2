@@ -263,7 +263,7 @@ const MainPage = () => {
     console.log('月間ランキングデータ:', monthlyRankings);
   }, [monthlyRankings]);
 
-  // u65e5u4ed8u306eu67a0u3092u30afu30eau30c3u30afu3057u307eu305fu3068u304du306bu30ddu30c3u30d7u30a2u30c3u30d7u6a5fu80fdu3092u8ffdu52a0u3057u307eu3059u3002
+  // u65e5u4ed8u306eu67a0u3092u30afu30eau30c3u30afu3057u307eu305fu3068u304du306bu30ddu30c3u30d7u6a5fu80fdu3092u8ffdu52a0u3057u307eu3059u3002
   const [isPopupOpen, setIsPopupOpen] = useState<boolean>(false);
   const [selectedDateData, setSelectedDateData] = useState<{date: string, ranking: RankingItem | null}>({date: '', ranking: null});
 
@@ -672,7 +672,7 @@ const MainPage = () => {
                 <p>という愛言葉が集まる場所になることを目指しています。</p>
               </div>
               
-              <div className="bg-white bg-opacity-80 rounded-lg p-6 shadow-md mb-6">
+              <div className="bg-white bg-opacity-80 rounded-lg shadow-md mb-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
                   <div>
                     <p className="text-gray-700"><span className="font-bold">放送開始：</span>2025年4月3日（木曜日）</p>
@@ -910,6 +910,17 @@ const MainPage = () => {
                       </div>
                     </div>
                   </div>
+                  <div className="mt-8 text-center">
+                    <Link href="/wanted" className="text-[#0167CC] hover:text-[#d4af37] font-medium transition-colors inline-flex items-center justify-center">
+                      <span className="sm:hidden">
+                        バースデープレゼントの<br/>
+                        スポンサー募集中！
+                      </span>
+                      <span className="hidden sm:inline">
+                        バースデープレゼントのスポンサー募集中！
+                      </span>
+                    </Link>
+                  </div>
                 </div>
               </div>
               
@@ -917,7 +928,7 @@ const MainPage = () => {
                 以上、愛が詰まった３つのサービス＆商品をプレゼントさせていただきます。
               </p>
               
-              <div className="text-center">
+              <div className="text-center mb-4">
                 <Link href="/wanted" className="bg-[#d4af37] hover:bg-[#c9a431] text-white font-bold py-3 px-8 rounded-lg transition-colors inline-block text-lg">
                   応募する
                 </Link>
