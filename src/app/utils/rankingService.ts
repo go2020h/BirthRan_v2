@@ -177,7 +177,7 @@ export async function fetchMonthlyRankings(): Promise<Record<string, RankingItem
 
 // 日付をYYYY-MM-DD形式の文字列に変換する関数
 export function formatDate(date: Date): string {
-  const month = String(date.getMonth() + 1).padStart(2, '0');
-  const day = String(date.getDate()).padStart(2, '0');
+  const month = date.getMonth() + 1; 
+  const day = date.getDate(); 
   return `${month}月${day}日`;
 }

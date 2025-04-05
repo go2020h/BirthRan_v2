@@ -285,7 +285,7 @@ const MainPage = () => {
     setIsPopupOpen(false);
   };
 
-  // u65e5u4ed8u3092u300c2024u5e744u67083u65e5u300du5f62u5f0fu306bu30d5u30a9u30fcu30deu30c3u30c8u3059u308bu95a2u6570
+  // u65e5u4ed8u3092u300c2024u5e744u67083u65e5u300du5f62u5f0fu306bu30d5u30a9u30fcu30deu30c8u3059u308bu95a2u6570
   const formatDateJapanese = (dateStr: string): string => {
     const parts = dateStr.split('-');
     if (parts.length !== 3) return dateStr;
@@ -504,7 +504,6 @@ const MainPage = () => {
             </p>
           </div>
           
-          {/* 週表示と曜日タブ */}
           <div className="bg-white rounded-xl shadow-lg p-8 max-w-4xl mx-auto border border-gray-200 mb-8">
             <div className="flex justify-center items-center mb-6">
               <button 
@@ -547,90 +546,96 @@ const MainPage = () => {
                 </button>
               ))}
             </div>
-          </div>
-          
-          {/* ランキング表示 */}
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-200">
-              <h3 className="text-xl font-bold text-[#1a3a6c] mb-4">
-                {formatDate(getWeekDates(currentWeekStart)[selectedDayIndex])}
-                のランキング
-              </h3>
-              {loading ? (
-                <div className="flex justify-center items-center py-10">
-                  <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#1a3a6c]"></div>
-                </div>
-              ) : (
-                <div className="overflow-hidden">
-                  <table className="min-w-full table-fixed">
-                    <thead>
-                      <tr>
-                        <th className="py-3 px-4 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-1/6">順位</th>
-                        <th className="py-3 px-4 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-1/3">名前</th>
-                        <th className="py-3 px-4 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-1/2">川村所長の選曲</th>
+            
+            {/* ランキング表示 */}
+            <h3 className="text-xl font-bold text-[#1a3a6c] mb-4">
+              {formatDate(getWeekDates(currentWeekStart)[selectedDayIndex])}
+              のランキング
+            </h3>
+            {loading ? (
+              <div className="flex justify-center items-center py-10">
+                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#1a3a6c]"></div>
+              </div>
+            ) : (
+              <div className="overflow-x-auto">
+                <table className="min-w-full table-fixed">
+                  <thead>
+                    <tr>
+                      <th className="py-3 px-4 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-[60px] min-w-[60px]">順位</th>
+                      <th className="py-3 px-4 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-[150px] min-w-[150px]">名前</th>
+                      <th className="py-3 px-4 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-[180px] min-w-[180px]">川村所長の選曲</th>
+                      <th className="py-3 px-4 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-[300px] min-w-[300px]">愛メッセージ</th>
+                    </tr>
+                  </thead>
+                  <tbody className="bg-white divide-y divide-gray-200">
+                    {/* 1位のみ表示 */}
+                    {rankingData.length > 0 && (
+                      <tr className="hover:bg-gray-50 transition-colors">
+                        <td className="py-4 px-4">
+                          <span className="inline-flex items-center justify-center bg-[#d4af37] text-white rounded-full w-6 h-6 text-sm font-bold">1</span>
+                        </td>
+                        <td className="py-4 px-4 font-medium text-[#1a3a6c] whitespace-nowrap">
+                          {rankingData[0].name === '集計中' ? 
+                            '集計中' : 
+                            `${rankingData[0].name}さん`
+                          }
+                        </td>
+                        <td className="py-4 px-4">
+                          {rankingData[0].song}
+                        </td>
+                        <td className="py-4 px-4 text-gray-700 whitespace-pre-wrap">
+                          {(rankingData[0].message ? rankingData[0].message.replace(/\\n/g, '\n') : '') || 'メッセージなし'}
+                        </td>
                       </tr>
-                    </thead>
-                    <tbody className="bg-white divide-y divide-gray-200">
-                      {/* 1位のみ表示 */}
-                      {rankingData.length > 0 && (
+                    )}
+                    
+                    {/* 2025年4月4日以降は2位と3位も表示 */}
+                    {new Date() >= new Date(2025, 3, 4) && rankingData.length > 1 && (
+                      <>
+                        {/* 2位 */}
                         <tr className="hover:bg-gray-50 transition-colors">
                           <td className="py-4 px-4">
-                            <span className="inline-flex items-center justify-center bg-[#d4af37] text-white rounded-full w-6 h-6 text-sm font-bold">1</span>
+                            <span className="inline-flex items-center justify-center bg-[#C0C0C0] text-white rounded-full w-6 h-6 text-sm font-bold">2</span>
                           </td>
-                          <td className="py-4 px-4 font-medium text-[#1a3a6c]">
-                            {rankingData[0].name === '集計中' ? 
+                          <td className="py-4 px-4 font-medium text-[#1a3a6c] whitespace-nowrap">
+                            {rankingData[1]?.name === '集計中' ? 
                               '集計中' : 
-                              `${rankingData[0].name}さん`
+                              `${rankingData[1]?.name}さん`
                             }
                           </td>
                           <td className="py-4 px-4">
-                            {rankingData[0].song}
+                            {rankingData[1]?.song}
+                          </td>
+                          <td className="py-4 px-4 text-gray-700 whitespace-pre-wrap">
+                            {(rankingData[1]?.message ? rankingData[1].message.replace(/\\n/g, '\n') : '') || 'メッセージなし'}
                           </td>
                         </tr>
-                      )}
-                      
-                      {/* 2025年4月4日以降は2位と3位も表示 */}
-                      {new Date() >= new Date(2025, 3, 4) && rankingData.length > 1 && (
-                        <>
-                          {/* 2位 */}
+                        {/* 3位 */}
+                        {rankingData.length > 2 && (
                           <tr className="hover:bg-gray-50 transition-colors">
                             <td className="py-4 px-4">
-                              <span className="inline-flex items-center justify-center bg-[#C0C0C0] text-white rounded-full w-6 h-6 text-sm font-bold">2</span>
+                              <span className="inline-flex items-center justify-center bg-[#CD7F32] text-white rounded-full w-6 h-6 text-sm font-bold">3</span>
                             </td>
-                            <td className="py-4 px-4 font-medium text-[#1a3a6c]">
-                              {rankingData[1]?.name === '集計中' ? 
+                            <td className="py-4 px-4 font-medium text-[#1a3a6c] whitespace-nowrap">
+                              {rankingData[2]?.name === '集計中' ? 
                                 '集計中' : 
-                                `${rankingData[1]?.name}さん`
+                                `${rankingData[2]?.name}さん`
                               }
                             </td>
                             <td className="py-4 px-4">
-                              {rankingData[1]?.song}
+                              {rankingData[2]?.song}
+                            </td>
+                            <td className="py-4 px-4 text-gray-700 whitespace-pre-wrap">
+                              {(rankingData[2]?.message ? rankingData[2].message.replace(/\\n/g, '\n') : '') || 'メッセージなし'}
                             </td>
                           </tr>
-                          {/* 3位 */}
-                          {rankingData.length > 2 && (
-                            <tr className="hover:bg-gray-50 transition-colors">
-                              <td className="py-4 px-4">
-                                <span className="inline-flex items-center justify-center bg-[#CD7F32] text-white rounded-full w-6 h-6 text-sm font-bold">3</span>
-                              </td>
-                              <td className="py-4 px-4 font-medium text-[#1a3a6c]">
-                                {rankingData[2]?.name === '集計中' ? 
-                                  '集計中' : 
-                                  `${rankingData[2]?.name}さん`
-                                }
-                              </td>
-                              <td className="py-4 px-4">
-                                {rankingData[2]?.song}
-                              </td>
-                            </tr>
-                          )}
-                        </>
-                      )}
-                    </tbody>
-                  </table>
-                </div>
-              )}
-            </div>
+                        )}
+                      </>
+                    )}
+                  </tbody>
+                </table>
+              </div>
+            )}
           </div>
           
           
@@ -1042,7 +1047,7 @@ const MainPage = () => {
                   <div className="mt-4 bg-gradient-to-br from-[#f8f9fa] to-[#e6f0ff] p-4 rounded-lg border border-[#d4af37] shadow-md">
                     <div className="flex flex-col items-center justify-center">
                       <div className="inline-block text-center">
-                        <p className="text-[#1a3a6c] whitespace-pre-line font-medium text-lg leading-relaxed">
+                        <p className="text-[#1a3a6c] whitespace-pre-wrap font-medium text-lg leading-relaxed">
                           {selectedDateData.ranking.message.replace(/\\n/g, '\n')}
                         </p>
                       </div>
