@@ -651,8 +651,7 @@ const MainPage = () => {
             </h2>
           </div>
           
-          <div className="max-w-4xl mx-auto bg-gradient-to-br from-[#f8f9fa] to-[#e6f0ff] rounded-xl shadow-lg p-10 border border-gray-200 relative overflow-hidden">
-            {/* 装飾用の半透明円形要素 */}
+          <div className="max-w-4xl mx-auto bg-gradient-to-br from-[#f8f9fa] to-[#e6f0ff] rounded-xl shadow-lg p-10 border border-gray-200 relative overflow-hidden">            {/* 装飾用の半透明円形要素 */}
             <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-[#d4af37] to-[#f0e68c] opacity-10 rounded-full transform translate-x-20 -translate-y-20"></div>
             <div className="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-tr from-[#0166CD] to-[#4dabf5] opacity-10 rounded-full transform -translate-x-16 translate-y-16"></div>
             
@@ -673,14 +672,13 @@ const MainPage = () => {
               </div>
               
               <div className="bg-white bg-opacity-80 rounded-lg shadow-md mb-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
-                  <div>
-                    <p className="text-gray-700"><span className="font-bold">放送開始：</span>2025年4月3日（木曜日）</p>
-                    <p className="text-gray-700"><span className="font-bold">放送時間：</span>毎週木曜日18:00～20:30（生放送）</p>
+                <div className="birthran-broadcast-info grid grid-cols-1 md:grid-cols-2 gap-4 text-left p-6">                  <div className="birthran-info-col">
+                    <p className="text-gray-700 mb-3 text-center sm:text-left"><span className="font-bold sm:inline block sm:after:content-[':'] after:content-['']">放送開始</span><span className="sm:inline"> </span>2025年4月3日<br className="sm:hidden" />（木曜日）</p>
+                    <p className="text-gray-700 text-center sm:text-left"><span className="font-bold sm:inline block sm:after:content-[':'] after:content-['']">放送時間</span><span className="sm:inline"> </span>毎週木曜日18:00～20:30<br className="sm:hidden" />（生放送）</p>
                   </div>
-                  <div>
-                    <p className="text-gray-700"><span className="font-bold">放送局：</span>ラジオ日本（FM92.4、AM1424）</p>
-                    <p className="text-gray-700"><span className="font-bold">ビジョン：</span>渋谷愛ビジョン（宮益坂交差点下）</p>
+                  <div className="birthran-info-col">
+                    <p className="text-gray-700 mb-3 text-center sm:text-left"><span className="font-bold sm:inline block sm:after:content-[':'] after:content-['']">放送局</span><span className="sm:inline"> </span>ラジオ日本<br className="sm:hidden" />（FM92.4、AM1424）</p>
+                    <p className="text-gray-700 text-center sm:text-left"><span className="font-bold sm:inline block sm:after:content-[':'] after:content-['']">ビジョン</span><span className="sm:inline"> </span>渋谷愛ビジョン<br className="sm:hidden" />（宮益坂交差点下）</p>
                   </div>
                 </div>
               </div>
