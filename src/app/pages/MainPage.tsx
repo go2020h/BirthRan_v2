@@ -653,7 +653,7 @@ const MainPage = () => {
             
             <div className="text-center relative z-10">
               <p className="text-xl md:text-2xl text-[#1a3a6c] font-medium mb-6">
-                愛溢れるメディアの創りたい<span className="text-[#ff4081]">💝</span>
+                愛溢れるメディアを創りたい<span className="text-[#ff4081]">💝</span>
               </p>
               
               <div className="space-y-4 text-lg text-gray-700 mb-8 leading-relaxed">
@@ -895,7 +895,7 @@ const MainPage = () => {
                       </p>
                       <div className="mt-4 text-center">
                         <a 
-                          href="https://shibuyahachikospice.com/" 
+                          href="https://shibuyaspice.tokyo/" 
                           target="_blank" 
                           rel="noopener noreferrer"
                           className="inline-flex items-center justify-center bg-[#0167CC] hover:bg-[#0155a8] text-white font-medium py-2 px-4 rounded-md transition-colors duration-300"
