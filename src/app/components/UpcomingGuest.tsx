@@ -56,7 +56,16 @@ export default function UpcomingGuest({
             
             {/* ゲスト情報 */}
             <div className="guest-info-wrapper w-full md:w-2/3 md:pl-8">
-              <h3 className="text-2xl font-bold text-[#1a3a6c] mb-4 text-center md:text-left">{name}</h3>
+              <h3 className="text-2xl font-bold text-[#1a3a6c] mb-2 text-center md:text-left">{name}</h3>
+              
+              <div className="flex flex-col sm:flex-row items-center sm:items-start gap-2 sm:gap-4 mb-4">
+                <div className="guest-date-badge bg-[#1a3a6c] text-white px-4 py-1.5 rounded-full text-base font-medium shadow-sm w-full sm:w-auto text-center">
+                  <span className="mr-1">出演日：</span>{appearanceDate}
+                </div>
+                <div className="guest-birthday-badge bg-[#d4af37] text-white px-4 py-1.5 rounded-full text-base font-medium shadow-sm w-full sm:w-auto text-center">
+                  <span className="mr-1">誕生日：</span>{birthDate}
+                </div>
+              </div>
               
               <p className="guest-bio text-gray-700 mb-6 text-sm sm:text-base">
                 {bio}
@@ -64,10 +73,6 @@ export default function UpcomingGuest({
               
               <div className="guest-details bg-white bg-opacity-80 rounded-lg p-4 sm:p-6 shadow-md mb-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
-                  <div className="guest-dates">
-                    <p className="text-gray-700 text-sm sm:text-base mb-2"><span className="font-bold">出演日：</span>{appearanceDate}</p>
-                    <p className="text-gray-700 text-sm sm:text-base mb-2"><span className="font-bold">誕生日：</span>{birthDate}</p>
-                  </div>
                   <div className="guest-links">
                     {officialSite && (
                       <p className="text-gray-700 mb-2 text-sm sm:text-base">
@@ -116,7 +121,7 @@ export default function UpcomingGuest({
         <div className="text-center mt-8">
                 <Link 
                   href="/guest" 
-                  className="bg-[#d4af37] hover:bg-[#c9a431] text-white font-bold py-3 px-6 rounded-lg transition-colors inline-block text-lg"
+                  className="bg-[#0266CD] hover:bg-[#01509f] text-white font-bold py-3 px-6 rounded-lg transition-colors inline-block text-lg"
                 >
                   過去のゲストを見る
                 </Link>
