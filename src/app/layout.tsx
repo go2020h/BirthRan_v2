@@ -8,10 +8,34 @@ import Script from 'next/script';
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "バスラン",
+  title: "バスラン - ウィークリー・バースデー・ランキング",
   description: "毎日が誰かの誕生日 最もバースデー愛メッセージが贈られたのは誰なのか 大好きな人、大切なひとが生まれた記念日を一緒にお祝いしよう",
   icons: {
     icon: "/favicon.ico",
+  },
+  // OGP設定
+  openGraph: {
+    title: "バスラン - ウィークリー・バースデー・ランキング",
+    description: "毎日が誰かの誕生日 最もバースデー愛メッセージが贈られたのは誰なのか 大好きな人、大切なひとが生まれた記念日を一緒にお祝いしよう",
+    url: "https://birthran.jp/",
+    siteName: "バスラン - ウィークリー・バースデー・ランキング",
+    images: [
+      {
+        url: "/ogp.jpg",  // 表示するOGP画像
+        width: 1200,
+        height: 630,
+        alt: "バスラン - ウィークリー・バースデー・ランキング",
+      },
+    ],
+    locale: "ja_JP",
+    type: "website",
+  },
+  // Twitter Card
+  twitter: {
+    card: "summary_large_image",
+    title: "バスラン - ウィークリー・バースデー・ランキング",
+    description: "毎日が誰かの誕生日 最もバースデー愛メッセージが贈られたのは誰なのか 大好きな人、大切なひとが生まれた記念日を一緒にお祝いしよう",
+    images: ["/ogp.jpg"],
   },
 };
 
