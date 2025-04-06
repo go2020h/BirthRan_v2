@@ -422,7 +422,7 @@ const MainPage = () => {
                   className={`h-16 sm:h-20 bg-gray-50 hover:bg-[#f0f8ff] rounded-lg flex flex-col items-start p-1 sm:p-2 cursor-pointer transition-colors border border-gray-100 ${!day.currentMonth ? 'text-gray-400' : day.isToday ? 'text-[#d4af37] font-bold' : 'text-gray-700'} font-medium`}
                   onClick={() => handleDayClick(day.dateStr)}
                 >
-                  <div className="w-full flex justify-between items-start">
+                  <div className="flex flex-col items-center justify-center h-full">
                     <span className="text-xs sm:text-sm">{day.day}</span>
                     {day.isToday && <span className="inline-block w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#d4af37]"></span>}
                   </div>
@@ -537,11 +537,11 @@ const MainPage = () => {
                 <button
                   key={index}
                   onClick={() => handleDaySelect(index)}
-                  className={`py-2 px-3 rounded-lg transition-colors relative ${selectedDayIndex === index ? 'bg-[#0166CD] text-white font-bold' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
+                  className={`py-2 px-1 sm:px-3 rounded-lg transition-colors relative flex items-center justify-center ${selectedDayIndex === index ? 'bg-[#0166CD] text-white font-bold' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
                 >
-                  <div className="text-left">
-                  <div className="text-sm md:text-base"><span className="inline md:hidden">{dayNames[index].charAt(0)}</span><span className="hidden md:inline">{dayNames[index]}</span></div>
-                  <div className="hidden md:block text-xs md:text-sm">{formatDate(date)}</div>
+                  <div className="text-center w-full">
+                    <div className="text-sm md:text-base"><span className="inline md:hidden">{dayNames[index].charAt(0)}</span><span className="hidden md:inline">{dayNames[index]}</span></div>
+                    <div className="hidden md:block text-xs md:text-sm">{formatDate(date)}</div>
                   </div>
                 </button>
               ))}
@@ -563,8 +563,8 @@ const MainPage = () => {
                     <tr>
                       <th className="py-3 px-4 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-[60px] min-w-[60px]">順位</th>
                       <th className="py-3 px-4 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-[150px] min-w-[150px]">名前</th>
-                      <th className="py-3 px-4 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-[180px] min-w-[180px]">川村所長の選曲</th>
                       <th className="py-3 px-4 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-[300px] min-w-[300px]">愛メッセージ</th>
+                      <th className="py-3 px-4 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-[180px] min-w-[180px]">川村所長の選曲</th>
                     </tr>
                   </thead>
                   <tbody className="bg-white divide-y divide-gray-200">
@@ -580,11 +580,11 @@ const MainPage = () => {
                             `${rankingData[0].name}さん`
                           }
                         </td>
+                        <td className="py-4 px-4 text-gray-700 whitespace-pre-wrap">
+                          {(rankingData[0].message ? rankingData[0].message.replace(/\\n/g, '\n') : '') || '集計中'}
+                        </td>
                         <td className="py-4 px-4">
                           {rankingData[0].song}
-                        </td>
-                        <td className="py-4 px-4 text-gray-700 whitespace-pre-wrap">
-                          {(rankingData[0].message ? rankingData[0].message.replace(/\\n/g, '\n') : '') || 'メッセージなし'}
                         </td>
                       </tr>
                     )}
@@ -603,11 +603,11 @@ const MainPage = () => {
                               `${rankingData[1]?.name}さん`
                             }
                           </td>
+                          <td className="py-4 px-4 text-gray-700 whitespace-pre-wrap">
+                            {(rankingData[1]?.message ? rankingData[1].message.replace(/\\n/g, '\n') : '') || '集計中'}
+                          </td>
                           <td className="py-4 px-4">
                             {rankingData[1]?.song}
-                          </td>
-                          <td className="py-4 px-4 text-gray-700 whitespace-pre-wrap">
-                            {(rankingData[1]?.message ? rankingData[1].message.replace(/\\n/g, '\n') : '') || 'メッセージなし'}
                           </td>
                         </tr>
                         {/* 3位 */}
@@ -622,11 +622,11 @@ const MainPage = () => {
                                 `${rankingData[2]?.name}さん`
                               }
                             </td>
+                            <td className="py-4 px-4 text-gray-700 whitespace-pre-wrap">
+                              {(rankingData[2]?.message ? rankingData[2].message.replace(/\\n/g, '\n') : '') || '集計中'}
+                            </td>
                             <td className="py-4 px-4">
                               {rankingData[2]?.song}
-                            </td>
-                            <td className="py-4 px-4 text-gray-700 whitespace-pre-wrap">
-                              {(rankingData[2]?.message ? rankingData[2].message.replace(/\\n/g, '\n') : '') || 'メッセージなし'}
                             </td>
                           </tr>
                         )}
@@ -752,7 +752,7 @@ const MainPage = () => {
                 <div className="p-5 bg-gradient-to-r from-[#f0f8ff] to-[#e6f0ff] border-t border-gray-100">
                   <div className="flex items-center mb-2">
                     <span className="text-xs bg-red-600 text-white px-2 py-1 rounded-full mr-2">LIVE</span>
-                    <h3 className="text-lg font-bold text-[#1a3a6c]">渋谷愛ビジョンの眼（AI）</h3>
+                    <h3 className="text-lg font-bold text-[#1a3a6c]">渋谷愛ビジョンの眼</h3>
                   </div>
                   <div className="mt-3 flex justify-end items-center">
                     <a 
@@ -846,7 +846,7 @@ const MainPage = () => {
                           href="https://saivision.jp/" 
                           target="_blank" 
                           rel="noopener noreferrer"
-                          className="inline-flex items-center justify-center bg-[#0167CC] hover:bg-[#0155a8] text-white font-medium py-2 px-4 rounded-md transition-colors duration-300"
+                          className="inline-flex items-center justify-center bg-[#0167CC] hover:bg-[#0155a8] text-white font-medium py-2 px-4 rounded-md transition-colors"
                         >
                           公式サイトを見る
                         </a>
@@ -873,7 +873,7 @@ const MainPage = () => {
                           href="https://mother-bracelet.com/" 
                           target="_blank" 
                           rel="noopener noreferrer"
-                          className="inline-flex items-center justify-center bg-[#0167CC] hover:bg-[#0155a8] text-white font-medium py-2 px-4 rounded-md transition-colors duration-300"
+                          className="inline-flex items-center justify-center bg-[#0167CC] hover:bg-[#0155a8] text-white font-medium py-2 px-4 rounded-md transition-colors"
                         >
                           公式サイトを見る
                         </a>
@@ -901,7 +901,7 @@ const MainPage = () => {
                           href="https://shibuyaspice.tokyo/" 
                           target="_blank" 
                           rel="noopener noreferrer"
-                          className="inline-flex items-center justify-center bg-[#0167CC] hover:bg-[#0155a8] text-white font-medium py-2 px-4 rounded-md transition-colors duration-300"
+                          className="inline-flex items-center justify-center bg-[#0167CC] hover:bg-[#0155a8] text-white font-medium py-2 px-4 rounded-md transition-colors"
                         >
                           公式サイトを見る
                         </a>
@@ -983,43 +983,22 @@ const MainPage = () => {
             <div className="bg-white rounded-xl shadow-lg p-8">
               <h3 className="text-xl font-bold text-[#1a3a6c] mb-6 text-center">バイタルデータ</h3>
               
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-                <div className="bg-gray-50 rounded-lg p-5 border border-gray-200">
-                  <h4 className="text-lg font-bold text-[#1a3a6c] mb-2">心拍数</h4>
-                  <div className="text-center py-4">
-                    <span className="text-4xl font-bold text-[#1a3a6c]">--</span>
-                    <span className="text-gray-500 ml-2">bpm</span>
-                  </div>
-                </div>
-                
-                <div className="bg-gray-50 rounded-lg p-5 border border-gray-200">
-                  <h4 className="text-lg font-bold text-[#1a3a6c] mb-2">体温</h4>
-                  <div className="text-center py-4">
-                    <span className="text-4xl font-bold text-[#1a3a6c]">--</span>
-                  </div>
-                </div>
-                
-                <div className="bg-gray-50 rounded-lg p-5 border border-gray-200">
-                  <h4 className="text-lg font-bold text-[#1a3a6c] mb-2">消費カロリー</h4>
-                  <div className="text-center py-4">
-                    <span className="text-4xl font-bold text-[#1a3a6c]">--</span>
-                    <span className="text-gray-500 ml-2">kcal</span>
-                  </div>
-                </div>
-              </div>
-              
-              <p className="text-gray-600 text-center mb-6">
-                ※ データはリアルタイムに更新されます。
+              <p className="text-gray-700 text-center mb-8">
+              出演者の生放送中のバイタルデータをLIVE配信して健康チェックをしています！<br />
+                チャンネル登録して最新情報をお見逃しなく。
               </p>
               
               <div className="text-center">
                 <a 
-                  href="https://mother-bracelet.com/" 
+                  href="https://www.youtube.com/@バスラン公式" 
                   target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="bg-[#1a3a6c] hover:bg-[#15305a] text-white font-bold py-3 px-8 rounded-lg transition-colors inline-block"
+                  rel="noopener noreferrer"
+                  className="bg-[#FF0000] hover:bg-[#CC0000] text-white font-bold py-3 px-8 rounded-lg transition-colors inline-flex items-center"
                 >
-                  公式サイトを見る
+                  LIVE配信を見る
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                    <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                  </svg>
                 </a>
               </div>
             </div>
