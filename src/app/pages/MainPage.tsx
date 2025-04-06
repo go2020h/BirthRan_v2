@@ -422,9 +422,9 @@ const MainPage = () => {
                   className={`h-16 sm:h-20 bg-gray-50 hover:bg-[#f0f8ff] rounded-lg flex flex-col items-start p-1 sm:p-2 cursor-pointer transition-colors border border-gray-100 ${!day.currentMonth ? 'text-gray-400' : day.isToday ? 'text-[#d4af37] font-bold' : 'text-gray-700'} font-medium`}
                   onClick={() => handleDayClick(day.dateStr)}
                 >
-                  <div className="flex flex-col items-center justify-center h-full">
+                  <div className="calendar-day-content self-start w-full text-left">
                     <span className="text-xs sm:text-sm">{day.day}</span>
-                    {day.isToday && <span className="inline-block w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#d4af37]"></span>}
+                    {day.isToday && <span className="inline-block w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#d4af37] ml-1"></span>}
                   </div>
                   {day.topRanker && (
                     <div className="mt-0.5 sm:mt-1 text-[10px] sm:text-xs text-[#1a3a6c] w-full break-words line-clamp-2 overflow-hidden">
@@ -651,7 +651,8 @@ const MainPage = () => {
             </h2>
           </div>
           
-          <div className="max-w-4xl mx-auto bg-gradient-to-br from-[#f8f9fa] to-[#e6f0ff] rounded-xl shadow-lg p-10 border border-gray-200 relative overflow-hidden">            {/* 装飾用の半透明円形要素 */}
+          <div className="max-w-4xl mx-auto bg-gradient-to-br from-[#f8f9fa] to-[#e6f0ff] rounded-xl shadow-lg p-10 border border-gray-200 relative overflow-hidden">
+            {/* 装飾用の半透明円形要素 */}
             <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-[#d4af37] to-[#f0e68c] opacity-10 rounded-full transform translate-x-20 -translate-y-20"></div>
             <div className="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-tr from-[#0166CD] to-[#4dabf5] opacity-10 rounded-full transform -translate-x-16 translate-y-16"></div>
             
