@@ -78,7 +78,7 @@ export default function RootLayout({
       </head>
       <body className={`${inter.className} min-h-screen flex flex-col m-0 p-0 overflow-x-hidden`}>
         <Header />
-        <main className="flex-grow w-full md:pt-0 pt-16"> {/* PC表示ではパディングを使用しない */}
+        <main className="flex-grow w-full"> {/* パディングを使用しない */}
           {children}
         </main>
         <Footer />
