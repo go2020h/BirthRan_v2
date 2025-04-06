@@ -93,7 +93,7 @@ const CastStaffPage: React.FC = () => {
   const staffData = [
     {
       id: 'staff1',
-      name: '芳賀正光',
+      name: 'エムP',
       role: '企画構成',
       birthday: '2月16日生まれ',
       image: '/cast/staff1-1.jpg',
