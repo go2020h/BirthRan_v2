@@ -121,7 +121,7 @@ const CastStaffPage: React.FC = () => {
     {
       id: 'staff4',
       name: '神取美佳',
-      role: 'ミキサー・制作',
+      role: '制作',
       birthday: '9月28日生まれ',
       image: '/cast/staff4-1.jpg',
       detailImage: '/cast/staff4-2.jpg',
