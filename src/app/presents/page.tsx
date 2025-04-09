@@ -43,11 +43,11 @@ const PresentsPage = () => {
       <Menu />
 
       {/* ヒーローセクション */}
-      <section className="py-20 bg-[#0f1429] text-center">
+      <section className="py-20 bg-gradient-to-r from-[#17142E] to-[#1a3a6c] text-center">
         <div className="container mx-auto px-4">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-4 text-[#d4af37]">
-              バースデープレゼント一覧
+              おめありレコメンド一覧
             </h1>
           </div>
         </div>
