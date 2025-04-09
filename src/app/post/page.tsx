@@ -56,7 +56,7 @@ const PostPage: React.FC = () => {
                       onClick={handleOpen}
                       className="inline-flex items-center justify-center bg-[#f5d742] hover:bg-[#f2c464] text-black font-bold py-4 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
                     >
-                      愛メッセージを投稿する
+                      バスランに投票する
                     </button>
                   </div>
                 </div>
@@ -91,7 +91,7 @@ const PostPage: React.FC = () => {
                       rel="noopener noreferrer"
                       className="inline-flex items-center justify-center bg-[#f5d742] hover:bg-[#f2c464] text-black font-bold py-4 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
                     >
-                      メッセージを送る
+                      愛メッセージを応募する
                     </a>
                   </div>
                 </div>

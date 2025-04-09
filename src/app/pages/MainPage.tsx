@@ -485,7 +485,7 @@ const MainPage = () => {
                 href="/post" 
                 className="bg-[#d4af37] hover:bg-[#c9a431] text-white font-bold py-4 px-8 rounded-lg transition-colors inline-block"
               >
-                愛メッセージを投稿する
+                バスランに投票する
               </Link>
             </div>
           </div>
@@ -888,6 +888,7 @@ const MainPage = () => {
                     <span className="inline-block bg-[#d4af37] text-white text-xl font-bold rounded-full w-8 h-8 flex items-center justify-center mr-3">3</span>
                     <h4 className="text-lg font-bold text-[#1a3a6c]">今月のバースデープレゼント</h4>
                   </div>
+                  <p className="text-sm text-gray-600 mb-3">※番組内「おめありレコメンド」でご紹介した商品をプレゼントしております。</p>
                   <div className="flex flex-col md:flex-row gap-6">
                     <div className="md:w-1/3">
                       <img src="/home3.png" alt="SHIBUYA HACHIKO SPICE" className="w-full h-auto object-contain rounded-lg shadow-sm" />

@@ -83,10 +83,10 @@ const Form: React.FC = () => {
 
   return (
     <div className="max-w-2xl mx-auto">
-      <h2 className="text-2xl font-bold text-[#1a3a6c] mb-6 text-center">愛メッセージを投稿する</h2>
+      <h2 className="text-2xl font-bold text-[#1a3a6c] mb-6 text-center">バスランに投票する</h2>
       
       <div className="bg-[#f8f9fa] p-4 rounded-lg mb-6 border-l-4 border-[#0167CC]">
-        <p className="text-gray-700 font-bold">【注意事項】1人＝1通しかカウントされません。あらかじめご了承ください。</p>
+        <p className="text-gray-700 font-bold">【注意事項】1投票＝大切な人1人に対し重複投票しても1通しかカウントされません。あらかじめご了承ください。</p>
       </div>
       
       {submitSuccess && (
@@ -139,7 +139,7 @@ const Form: React.FC = () => {
         
         <div>
           <label className="block text-gray-700 font-bold mb-2">
-            ② 投票する方のお名前を教えてください<span className="text-red-600">*</span>
+            ② 大切な人（投票するお相手）のお名前を教えてください<span className="text-red-600">*</span>
           </label>
           <input 
             type="text" 
@@ -182,6 +182,7 @@ const Form: React.FC = () => {
         <div>
           <label className="block text-gray-700 font-bold mb-2">
             ⑤ 伝えたい誕生日愛メッセージがある方はご記入ください（任意）
+            <p className="text-sm font-normal mt-1 text-gray-600">※『バスラン』内で読み上げる可能性があります。あらかじめご了承ください。</p>
           </label>
           <textarea 
             name="message"

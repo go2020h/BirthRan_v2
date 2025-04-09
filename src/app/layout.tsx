@@ -10,6 +10,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "バスラン - ウィークリー・バースデー・ランキング",
   description: "毎日が誰かの誕生日 最もバースデー愛メッセージが贈られたのは誰なのか 大好きな人、大切なひとが生まれた記念日を一緒にお祝いしよう",
+  metadataBase: new URL("https://www.birth-ran.com"),
   icons: {
     icon: "/favicon.ico",
   },
