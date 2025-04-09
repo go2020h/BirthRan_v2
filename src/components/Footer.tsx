@@ -19,6 +19,30 @@ const Footer = () => {
           </div>
         </div>
         
+        {/* 番組情報セクション */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8 max-w-4xl mx-auto">
+          <div className="bg-[#1a2542] p-4 rounded-lg flex flex-col items-center justify-center">
+            <p className="text-white font-medium mb-2">番組のご意見・ご感想はメールにて♡</p>
+            <a 
+              href="mailto:br@jorf.co.jp" 
+              className="text-white hover:text-[#d4af37] transition-colors"
+            >
+              br@jorf.co.jp
+            </a>
+          </div>
+          <div className="bg-[#1a2542] p-4 rounded-lg flex flex-col items-center">
+            <p className="text-white font-medium mb-2">バスランは、radikoのタイムフリーで<br />放送後1週間聴くことができます♡</p>
+            <a 
+              href="https://radiko.jp/r_seasons/10029307"
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:opacity-80 transition-all"
+            >
+              <img src="/radiko.png" alt="radikou3067u8074u304f" className="h-10" />
+            </a>
+          </div>
+        </div>
+        
         <div className="flex justify-center flex-wrap space-x-4 md:space-x-8 mb-8">
           <Link href="/" className="text-white hover:text-[#d4af37] transition-colors text-base py-1">
             ホーム
@@ -27,7 +51,7 @@ const Footer = () => {
             番組内容
           </Link>
           <Link href="/post" className="text-white hover:text-[#d4af37] transition-colors text-base py-1">
-            投稿しよう
+            投票&投稿しよう
           </Link>
           <Link href="/wanted" className="text-white hover:text-[#d4af37] transition-colors text-base py-1">
             募集中

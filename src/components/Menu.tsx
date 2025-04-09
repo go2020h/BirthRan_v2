@@ -28,7 +28,7 @@ const Menu: React.FC = () => {
               href="/post" 
               className={`${pathname === '/post' ? 'text-[#d4af37]' : 'text-white'} hover:text-[#d4af37] transition-colors px-6 py-2 text-lg font-medium`}
             >
-              投稿しよう
+              投票&投稿しよう
             </Link>
             <div className="h-5 border-r border-white/30 mx-1"></div>
             <Link 

@@ -6,6 +6,8 @@ import { useState, useEffect, useCallback } from 'react';
 import { RankingItem, getRankingByDayIndex, fetchMonthlyRankings, formatDate } from '@/app/utils/rankingService';
 import UpcomingGuest from '../components/UpcomingGuest';
 import { guestArchive } from '../data/guestArchive';
+import MonthlyPresent from '@/components/MonthlyPresent';
+import { getLatestPresent } from '../data/birthdayPresents';
 
 const MainPage = () => {
   // カレンダー用の状態管理
@@ -343,7 +345,7 @@ const MainPage = () => {
             </Link>
             <div className="h-5 border-r border-white/30 mx-1"></div>
             <Link href="/post" className="text-white hover:text-[#d4af37] transition-colors px-6 py-2 text-lg font-medium">
-              投稿しよう
+              投票&投稿しよう
             </Link>
             <div className="h-5 border-r border-white/30 mx-1"></div>
             <Link href="/wanted" className="text-white hover:text-[#d4af37] transition-colors px-6 py-2 text-lg font-medium">
@@ -485,7 +487,7 @@ const MainPage = () => {
                 href="/post" 
                 className="bg-[#d4af37] hover:bg-[#c9a431] text-white font-bold py-4 px-8 rounded-lg transition-colors inline-block"
               >
-                バスランに投票する
+                愛メッセージを投稿しよう
               </Link>
             </div>
           </div>
@@ -889,28 +891,9 @@ const MainPage = () => {
                     <h4 className="text-lg font-bold text-[#1a3a6c]">今月のバースデープレゼント</h4>
                   </div>
                   <p className="text-sm text-gray-600 mb-3">※番組内「おめありレコメンド」でご紹介した商品をプレゼントしております。</p>
-                  <div className="flex flex-col md:flex-row gap-6">
-                    <div className="md:w-1/3">
-                      <img src="/home3.png" alt="SHIBUYA HACHIKO SPICE" className="w-full h-auto object-contain rounded-lg shadow-sm" />
-                    </div>
-                    <div className="md:w-2/3">
-                      <h5 className="font-bold mb-2">SHIBUYA HACHIKO SPICE</h5>
-                      <p className="text-gray-700">
-                        渋谷発の高級スパイス「渋谷八香唐辛子」。厚みのある香りと爽快な辛さが特徴で、和洋問わず様々な料理に一振り加えるだけで深みと高級感を与える至高の一品です。
-                      </p>
-                      <div className="mt-4 text-center">
-                        <a 
-                          href="https://shibuyaspice.tokyo/" 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center justify-center bg-[#0167CC] hover:bg-[#0155a8] text-white font-medium py-2 px-4 rounded-md transition-colors"
-                        >
-                          公式サイトを見る
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="mt-8 text-center">
+                  
+                  <MonthlyPresent present={getLatestPresent()} />
+                  <div className="mt-8 text-center space-y-4">
                     <Link href="/wanted" className="text-[#0167CC] hover:text-[#d4af37] font-medium transition-colors inline-flex items-center justify-center">
                       <span className="sm:hidden">
                         バースデープレゼントの<br/>
@@ -920,6 +903,11 @@ const MainPage = () => {
                         バースデープレゼントのスポンサー募集中！
                       </span>
                     </Link>
+                    <div>
+                      <Link href="/presents" className="text-[#0167CC] hover:text-[#d4af37] font-medium transition-colors inline-flex items-center justify-center">
+                        過去のバースデープレゼントを見る
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>

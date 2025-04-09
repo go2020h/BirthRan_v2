@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { supabase, supabaseAdmin } from '@/app/utils/supabase';
 
 const SponsorApplicationForm: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -11,27 +12,182 @@ const SponsorApplicationForm: React.FC = () => {
     prPoints: ''
   });
 
+  // 画像アップロード用の状態
+  const [productImages, setProductImages] = useState<File[]>([]);
+  const [imageUrls, setImageUrls] = useState<string[]>([]);
+  const [isUploading, setIsUploading] = useState(false);
+  const [uploadError, setUploadError] = useState<string | null>(null);
+  
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
   const [submitError, setSubmitError] = useState(false);
+
+  // デバッグ情報を追加する関数
+  const addDebugInfo = (info: string) => {
+    console.log(info); // コンソールにログを出力
+    // setDebugInfo(prev => [...prev, `${new Date().toLocaleTimeString()}: ${info}`]);
+  };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
+  // 画像選択時の処理
+  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const files = e.target.files;
+    if (!files) return;
+
+    // 最大3枚までの制限
+    const newFiles: File[] = [];
+    const newUrls: string[] = [];
+    
+    for (let i = 0; i < files.length; i++) {
+      if (productImages.length + newFiles.length >= 3) break;
+      
+      const file = files[i];
+      // 5MB以下の制限
+      if (file.size <= 5 * 1024 * 1024) {
+        newFiles.push(file);
+        // FileReaderを使用せずにURL.createObjectURLを使用
+        newUrls.push(URL.createObjectURL(file));
+      } else {
+        alert('画像サイズは5MB以下にしてください。');
+      }
+    }
+    
+    setProductImages([...productImages, ...newFiles]);
+    setImageUrls([...imageUrls, ...newUrls]);
+    setUploadError(null); // エラーメッセージをクリア
+  };
+
+  // 画像削除の処理
+  const handleRemoveImage = (index: number) => {
+    const newImages = [...productImages];
+    const newUrls = [...imageUrls];
+    
+    // URLの解放
+    URL.revokeObjectURL(newUrls[index]);
+    
+    newImages.splice(index, 1);
+    newUrls.splice(index, 1);
+    
+    setProductImages(newImages);
+    setImageUrls(newUrls);
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitSuccess(false);
     setSubmitError(false);
+    setSubmitSuccess(false);
+    setIsSubmitting(true);
+    setUploadError(null);
     
     try {
+      // デバッグ情報をクリア
+      // setDebugInfo([]);
+      
+      if (productImages.length === 0) {
+        setUploadError('商品の写真を少なくとも1枚アップロードしてください');
+        throw new Error('商品の写真を少なくとも1枚アップロードしてください');
+      }
+      
+      addDebugInfo('フォーム送信開始');
+      
+      // 画像アップロード
+      const uploadedImageUrls: string[] = [];
+      
+      if (productImages.length > 0) {
+        setIsUploading(true);
+        
+        try {
+          // バケット名を指定
+          const bucketName = 'birthran-images';
+          
+          // 画像をアップロード
+          for (const file of productImages) {
+            try {
+              // 画像タイプをチェック
+              const fileType = file.type;
+              if (!fileType.startsWith('image/jpeg') && !fileType.startsWith('image/jpg') && !fileType.startsWith('image/png')) {
+                addDebugInfo(`画像タイプエラー: ${fileType} - JPGタイプまたはPNGタイプのみ対応しています`);
+                setUploadError('JPGタイプまたはPNGタイプのみ対応しています');
+                continue; // 次の画像へ
+              }
+              
+              // ファイル名を生成
+              const isJpg = fileType.startsWith('image/jpeg') || fileType.startsWith('image/jpg');
+              const extension = isJpg ? 'jpg' : 'png';
+              const fileName = `${Date.now()}-${Math.random().toString(36).substring(2, 15)}.${extension}`;
+              // sponsor-productsコールを指定
+              const filePath = `sponsor-products/${fileName}`;
+              
+              addDebugInfo(`アップロード開始: ${filePath}, タイプ: ${fileType}`);
+              
+              // 画像をアップロード
+              const { data, error } = await supabaseAdmin.storage
+                .from(bucketName)
+                .upload(filePath, file, {
+                  cacheControl: '3600',
+                  upsert: true,
+                  contentType: fileType // 画像タイプを指定
+                });
+                
+              if (error) {
+                addDebugInfo(`画像アップロードエラー: ${error.message}`);
+                setUploadError(`画像アップロードエラー: ${error.message}`);
+                throw new Error(`画像アップロードエラー: ${error.message}`);
+              }
+              
+              addDebugInfo(`アップロード成功: ${filePath}`);
+              
+              // 公開URLを取得
+              const { data: signedData, error: signedError } = await supabaseAdmin.storage
+                .from(bucketName)
+                .createSignedUrl(filePath, 60 * 60 * 24 * 7); // 7日間有効
+                
+              if (signedError) {
+                addDebugInfo(`公開URL取得エラー: ${signedError.message}`);
+                setUploadError(`公開URL取得エラー: ${signedError.message}`);
+                throw new Error(`公開URL取得エラー: ${signedError.message}`);
+              }
+              
+              if (signedData && signedData.signedUrl) {
+                uploadedImageUrls.push(signedData.signedUrl);
+                addDebugInfo(`公開URL: ${signedData.signedUrl}`);
+              } else {
+                addDebugInfo('公開URL取得エラー');
+                setUploadError('公開URL取得エラー');
+                throw new Error('公開URL取得エラー');
+              }
+            } catch (fileError) {
+              addDebugInfo(`ファイル処理エラー: ${fileError instanceof Error ? fileError.message : '不明なエラー'}`);
+              setUploadError(`ファイル処理エラー: ${fileError instanceof Error ? fileError.message : '不明なエラー'}`);
+              throw fileError;
+            }
+          }
+        } catch (uploadError) {
+          addDebugInfo(`アップロードエラー: ${uploadError instanceof Error ? uploadError.message : '不明なエラー'}`);
+          setUploadError(`アップロードエラー: ${uploadError instanceof Error ? uploadError.message : '不明なエラー'}`);
+          throw uploadError;
+        } finally {
+          setIsUploading(false);
+        }
+      }
+      
       // フォームデータを整形
       // 改行を<br>タグに変換
       const formattedProductDescription = formData.productDescription.replace(/\n/g, '<br>');
       const formattedPrPoints = formData.prPoints.replace(/\n/g, '<br>');
       
+      // 画像URLを整形（URLのみを送信し、アンカータグは使用しない）
+      let imageUrlsText = '画像なし';
+      if (uploadedImageUrls.length > 0) {
+        imageUrlsText = uploadedImageUrls.map((url, index) => 
+          `【${index + 1}枚目】${url}`
+        ).join('<br>');
+      }
+
       // 最終的なフォームデータ
       const formattedContent = [
         `【会社名】${formData.companyName}`,
@@ -42,7 +198,9 @@ const SponsorApplicationForm: React.FC = () => {
         `【レコメンド】`,
         formattedProductDescription,
         `【ゲストへのPRポイント】`,
-        formattedPrPoints
+        formattedPrPoints,
+        `【商品の写真】`,
+        imageUrlsText
       ].join('<br>');
 
       // Webhookに送信
@@ -57,7 +215,7 @@ const SponsorApplicationForm: React.FC = () => {
       });
 
       if (!response.ok) {
-        throw new Error('送信に失敗しました。後ほど再度お試しください。');
+        throw new Error('送信に失敗しました。再度送信してください。');
       }
 
       console.log('送信成功:', formData);
@@ -73,11 +231,28 @@ const SponsorApplicationForm: React.FC = () => {
         productDescription: '',
         prPoints: ''
       });
+      
+      // 画像URLを解放してからリセット
+      imageUrls.forEach(url => {
+        URL.revokeObjectURL(url);
+      });
+      setProductImages([]);
+      setImageUrls([]);
+      
+      // ファイル入力フィールドをリセット
+      const fileInput = document.getElementById('productImages') as HTMLInputElement;
+      if (fileInput) {
+        fileInput.value = '';
+      }
     } catch (error) {
       console.error('エラー:', error);
       setSubmitError(true);
+      if (error instanceof Error) {
+        addDebugInfo(`送信エラー: ${error.message}`);
+      }
     } finally {
       setIsSubmitting(false);
+      setIsUploading(false);
     }
   };
 
@@ -95,6 +270,13 @@ const SponsorApplicationForm: React.FC = () => {
       {submitError && (
         <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-6" role="alert">
           <strong className="font-bold">エラーが発生しました。</strong>
+          <span className="block sm:inline"> 再度送信してください。</span>
+        </div>
+      )}
+      
+      {uploadError && (
+        <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-6" role="alert">
+          <strong className="font-bold">画像アップロードエラーが発生しました。</strong>
           <span className="block sm:inline"> 再度送信してください。</span>
         </div>
       )}
@@ -193,6 +375,35 @@ const SponsorApplicationForm: React.FC = () => {
             onChange={handleChange}
             className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#0167CC] h-32"
           />
+        </div>
+        
+        <div>
+          <label className="block text-gray-700 font-bold mb-2">
+            商品の写真（最大3枚まで）
+          </label>
+          <input 
+            type="file" 
+            multiple
+            id="productImages"
+            onChange={handleImageChange}
+            className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#0167CC]"
+          />
+          {imageUrls.length > 0 && (
+            <div className="mt-2">
+              {imageUrls.map((url, index) => (
+                <div key={index} className="mb-2">
+                  <img src={url} alt="商品の写真" className="w-full h-48 object-cover mb-2" />
+                  <button 
+                    type="button"
+                    onClick={() => handleRemoveImage(index)}
+                    className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
+                  >
+                    削除
+                  </button>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
         
         <div className="pt-4">
