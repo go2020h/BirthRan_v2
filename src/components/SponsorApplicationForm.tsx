@@ -38,8 +38,8 @@ const SponsorApplicationForm: React.FC = () => {
         `【担当者名】${formData.contactName}`,
         `【メールアドレス】${formData.email}`,
         `【商品名】${formData.productName}`,
-        `【商品のURL】${formData.productUrl}`,
-        `【商品概要】`,
+        `【公式WEB】${formData.productUrl}`,
+        `【レコメンド】`,
         formattedProductDescription,
         `【ゲストへのPRポイント】`,
         formattedPrPoints
@@ -158,7 +158,7 @@ const SponsorApplicationForm: React.FC = () => {
         
         <div>
           <label className="block text-gray-700 font-bold mb-2">
-            商品のURL<span className="text-red-600">*</span>
+            公式WEB<span className="text-red-600">*</span>
           </label>
           <input 
             type="url" 
@@ -172,7 +172,7 @@ const SponsorApplicationForm: React.FC = () => {
         
         <div>
           <label className="block text-gray-700 font-bold mb-2">
-            商品概要<span className="text-red-600">*</span>
+            レコメンド<span className="text-red-600">*</span>
           </label>
           <textarea 
             name="productDescription"

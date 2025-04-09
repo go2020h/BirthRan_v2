@@ -35,7 +35,7 @@ const Form: React.FC = () => {
       // 最終的なフォーマット
       const formattedContent = [
         `【誕生日】${birthDate}`,
-        `【投票する方のお名前】${formData.recipientName}`,
+        `【大切な人のお名前】${formData.recipientName}`,
         `【送信者名】${formData.senderName}`,
         `【メールアドレス】${formData.email}`,
         `【誕生日愛メッセージ】`,
