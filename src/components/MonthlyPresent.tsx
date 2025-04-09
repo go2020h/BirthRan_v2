@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { BirthdayPresent } from '@/app/data/birthdayPresents';
 
 interface MonthlyPresentProps {
@@ -38,10 +39,12 @@ const MonthlyPresent: React.FC<MonthlyPresentProps> = ({ present, asTableRow }) 
         </td>
         
         <td className="py-4 px-6">
-          <img 
+          <Image 
             src={present.imagePath} 
             alt={present.imageAlt} 
-            className="w-96 h-48 object-cover rounded-lg mx-auto" 
+            width={384}
+            height={192}
+            className="object-cover rounded-lg mx-auto" 
           />
         </td>
         
@@ -75,10 +78,12 @@ const MonthlyPresent: React.FC<MonthlyPresentProps> = ({ present, asTableRow }) 
     return (
       <div className="flex flex-col md:flex-row gap-6">
         <div className="md:w-1/3">
-          <img 
+          <Image 
             src={present.imagePath} 
             alt={present.imageAlt} 
-            className="w-full h-auto object-contain rounded-lg shadow-sm" 
+            width={400} 
+            height={300} 
+            className="object-contain rounded-lg shadow-sm" 
           />
         </div>
         <div className="md:w-2/3">

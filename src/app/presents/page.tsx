@@ -24,12 +24,6 @@ const PresentsPage = () => {
     return Array.from(options).sort().reverse(); // 新しい順に並べる
   }, [allPresents]);
 
-  // 日付を年月の形式に変換する関数
-  const formatYearMonth = (dateString: string) => {
-    const date = new Date(dateString);
-    return `${date.getFullYear()}年${date.getMonth() + 1}月`;
-  };
-
   // フィルタリングされたプレゼントのリスト
   const filteredPresents = useMemo(() => {
     if (selectedYearMonth === 'all') {

@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
-import { supabase, supabaseAdmin } from '@/app/utils/supabase';
+import React, { useState, useRef } from 'react';
+// supabaseu306fu4f7fu7528u3055u308cu3066u3044u306au3044u306eu3067u30a4u30f3u30ddu30fcu30c8u3092u524au9664
+import { supabaseAdmin } from '@/app/utils/supabase';
 
 const SponsorApplicationForm: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -15,8 +16,6 @@ const SponsorApplicationForm: React.FC = () => {
   // 画像アップロード用の状態
   const [productImages, setProductImages] = useState<File[]>([]);
   const [imageUrls, setImageUrls] = useState<string[]>([]);
-  const [isUploading, setIsUploading] = useState(false);
-  const [uploadError, setUploadError] = useState<string | null>(null);
   
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
@@ -58,7 +57,6 @@ const SponsorApplicationForm: React.FC = () => {
     
     setProductImages([...productImages, ...newFiles]);
     setImageUrls([...imageUrls, ...newUrls]);
-    setUploadError(null); // エラーメッセージをクリア
   };
 
   // 画像削除の処理
@@ -81,14 +79,12 @@ const SponsorApplicationForm: React.FC = () => {
     setSubmitError(false);
     setSubmitSuccess(false);
     setIsSubmitting(true);
-    setUploadError(null);
     
     try {
       // デバッグ情報をクリア
       // setDebugInfo([]);
       
       if (productImages.length === 0) {
-        setUploadError('商品の写真を少なくとも1枚アップロードしてください');
         throw new Error('商品の写真を少なくとも1枚アップロードしてください');
       }
       
@@ -98,8 +94,6 @@ const SponsorApplicationForm: React.FC = () => {
       const uploadedImageUrls: string[] = [];
       
       if (productImages.length > 0) {
-        setIsUploading(true);
-        
         try {
           // バケット名を指定
           const bucketName = 'birthran-images';
@@ -111,8 +105,7 @@ const SponsorApplicationForm: React.FC = () => {
               const fileType = file.type;
               if (!fileType.startsWith('image/jpeg') && !fileType.startsWith('image/jpg') && !fileType.startsWith('image/png')) {
                 addDebugInfo(`画像タイプエラー: ${fileType} - JPGタイプまたはPNGタイプのみ対応しています`);
-                setUploadError('JPGタイプまたはPNGタイプのみ対応しています');
-                continue; // 次の画像へ
+                throw new Error('JPGタイプまたはPNGタイプのみ対応しています');
               }
               
               // ファイル名を生成
@@ -135,7 +128,6 @@ const SponsorApplicationForm: React.FC = () => {
                 
               if (error) {
                 addDebugInfo(`画像アップロードエラー: ${error.message}`);
-                setUploadError(`画像アップロードエラー: ${error.message}`);
                 throw new Error(`画像アップロードエラー: ${error.message}`);
               }
               
@@ -144,34 +136,28 @@ const SponsorApplicationForm: React.FC = () => {
               // 公開URLを取得
               const { data: signedData, error: signedError } = await supabaseAdmin.storage
                 .from(bucketName)
-                .createSignedUrl(filePath, 60 * 60 * 24 * 7); // 7日間有効
+                .createSignedUrl(filePath, 60 * 60 * 24 * 30); // 30日間有効
                 
               if (signedError) {
                 addDebugInfo(`公開URL取得エラー: ${signedError.message}`);
-                setUploadError(`公開URL取得エラー: ${signedError.message}`);
                 throw new Error(`公開URL取得エラー: ${signedError.message}`);
               }
               
-              if (signedData && signedData.signedUrl) {
+              if (signedData?.signedUrl) {
                 uploadedImageUrls.push(signedData.signedUrl);
                 addDebugInfo(`公開URL: ${signedData.signedUrl}`);
               } else {
                 addDebugInfo('公開URL取得エラー');
-                setUploadError('公開URL取得エラー');
                 throw new Error('公開URL取得エラー');
               }
             } catch (fileError) {
               addDebugInfo(`ファイル処理エラー: ${fileError instanceof Error ? fileError.message : '不明なエラー'}`);
-              setUploadError(`ファイル処理エラー: ${fileError instanceof Error ? fileError.message : '不明なエラー'}`);
               throw fileError;
             }
           }
         } catch (uploadError) {
           addDebugInfo(`アップロードエラー: ${uploadError instanceof Error ? uploadError.message : '不明なエラー'}`);
-          setUploadError(`アップロードエラー: ${uploadError instanceof Error ? uploadError.message : '不明なエラー'}`);
           throw uploadError;
-        } finally {
-          setIsUploading(false);
         }
       }
       
@@ -252,7 +238,6 @@ const SponsorApplicationForm: React.FC = () => {
       }
     } finally {
       setIsSubmitting(false);
-      setIsUploading(false);
     }
   };
 
@@ -270,13 +255,6 @@ const SponsorApplicationForm: React.FC = () => {
       {submitError && (
         <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-6" role="alert">
           <strong className="font-bold">エラーが発生しました。</strong>
-          <span className="block sm:inline"> 再度送信してください。</span>
-        </div>
-      )}
-      
-      {uploadError && (
-        <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-6" role="alert">
-          <strong className="font-bold">画像アップロードエラーが発生しました。</strong>
           <span className="block sm:inline"> 再度送信してください。</span>
         </div>
       )}
