@@ -1,6 +1,7 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 // supabaseu306fu4f7fu7528u3055u308cu3066u3044u306au3044u306eu3067u30a4u30f3u30ddu30fcu30c8u3092u524au9664
 import { supabaseAdmin } from '@/app/utils/supabase';
+import Image from 'next/image';
 
 const SponsorApplicationForm: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -136,7 +137,7 @@ const SponsorApplicationForm: React.FC = () => {
               // 公開URLを取得
               const { data: signedData, error: signedError } = await supabaseAdmin.storage
                 .from(bucketName)
-                .createSignedUrl(filePath, 60 * 60 * 24 * 30); // 30日間有効
+                .createSignedUrl(filePath, 60 * 60 * 24 * 7); // 7日間有効
                 
               if (signedError) {
                 addDebugInfo(`公開URL取得エラー: ${signedError.message}`);
@@ -369,14 +370,22 @@ const SponsorApplicationForm: React.FC = () => {
           {imageUrls.length > 0 && (
             <div className="mt-2">
               {imageUrls.map((url, index) => (
-                <div key={index} className="mb-2">
-                  <img src={url} alt="商品の写真" className="w-full h-48 object-cover mb-2" />
-                  <button 
+                <div key={index} className="relative group">
+                  <Image 
+                    src={url} 
+                    alt={`商品の写真 ${index + 1}`} 
+                    width={150}
+                    height={150}
+                    className="object-cover rounded-md" 
+                  />
+                  <button
                     type="button"
                     onClick={() => handleRemoveImage(index)}
-                    className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
+                    className="absolute top-1 right-1 bg-red-500 text-white rounded-full p-1 opacity-0 group-hover:opacity-100 transition-opacity"
                   >
-                    削除
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
                   </button>
                 </div>
               ))}
