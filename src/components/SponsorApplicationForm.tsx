@@ -119,7 +119,7 @@ const SponsorApplicationForm: React.FC = () => {
               addDebugInfo(`アップロード開始: ${filePath}, タイプ: ${fileType}`);
               
               // 画像をアップロード
-              const { data, error } = await supabaseAdmin.storage
+              const { error } = await supabaseAdmin.storage
                 .from(bucketName)
                 .upload(filePath, file, {
                   cacheControl: '3600',
