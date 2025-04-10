@@ -64,7 +64,7 @@ export default function GuestArchivePage() {
                       <p className={`text-gray-700 text-sm ${expandedBios[index] ? '' : 'line-clamp-3'}`}>
                         {guest.bio}
                       </p>
-                      {guest.bio.length > 150 && (
+                      {guest.bio.length > 100 && (
                         <button 
                           onClick={() => toggleBio(index)}
                           className="text-[#0166CD] hover:text-[#d4af37] text-sm mt-2 font-medium transition-colors focus:outline-none"
