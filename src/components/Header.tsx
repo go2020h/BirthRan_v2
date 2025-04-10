@@ -13,7 +13,7 @@ const Header = () => {
   const menuItems = [
     { href: '/', label: 'ホーム' },
     { href: '/about', label: '番組内容' },
-    { href: '/post', label: '投稿しよう' },
+    { href: '/post', label: '投票&投稿しよう' },
     { href: '/wanted', label: '募集中' },
     { href: '/cast', label: 'キャスト＆STAFF' },
     { href: '/purpose', label: '番組の目的' }
