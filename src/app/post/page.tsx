@@ -41,14 +41,14 @@ const PostPage: React.FC = () => {
                 <img src="post1.jpg" alt="post1" />
               </div>
               <div className="w-full md:w-2/3 lg:w-2/3 xl:w-2/3 p-4">
-                <h2 className="text-3xl font-bold text-[#1a3a6c] mb-8 text-center">バースデー・ランキングに投票&投稿しよう</h2>
+                <h2 className="text-3xl font-bold text-[#1a3a6c] mb-8 text-center">バースデー・ランキングに投票しよう</h2>
                 
                 <div className="text-center max-w-2xl mx-auto">
                   <p className="text-xl font-bold text-[#0167CC] mb-4">皆様の投票&投稿がランキングを決める！</p>
                   <p className="text-lg text-gray-700 mb-6">
-                    大切な人、愛する人へ<br />
-                    「おめでとう」「ありがとう」の気持ちを<br />
-                    愛あふれるメッセージで届けましょう♡
+                    大好きな人、大切な人に<br />
+                    生まれてきてくれて「ありがとう」の<br />
+                    気持ちを込めて投票しよう♡
                   </p>
                   
                   <div className="mt-8">
@@ -56,7 +56,7 @@ const PostPage: React.FC = () => {
                       onClick={handleOpen}
                       className="inline-flex items-center justify-center bg-[#f5d742] hover:bg-[#f2c464] text-black font-bold py-4 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
                     >
-                      投票&投稿する
+                      バスランに投票する
                     </button>
                   </div>
                 </div>
@@ -69,7 +69,7 @@ const PostPage: React.FC = () => {
                 <img src="post2.jpg" alt="post2" />
               </div>
               <div className="w-full md:w-2/3 lg:w-2/3 xl:w-2/3 p-4">
-                <h2 className="text-3xl font-bold text-[#1a3a6c] mb-8 text-center">渋谷愛ビジョンで放映しよう</h2>
+                <h2 className="text-3xl font-bold text-[#1a3a6c] mb-8 text-center">渋谷愛ビジョンに放映しよう</h2>
                 
                 <div className="text-center max-w-2xl mx-auto">
                   <p className="text-lg text-gray-700 mb-6">

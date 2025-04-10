@@ -455,10 +455,10 @@ const MainPage = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4 text-[#1a3a6c]">
-              バースデー・ランキングに投稿しよう！
+              バースデー・ランキングに投票&投稿しよう！
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              皆様の投稿がランキングを決める！
+              皆様の投票&投稿がランキングを決める！
             </p>
           </div>
           
@@ -487,7 +487,7 @@ const MainPage = () => {
                 href="/post" 
                 className="bg-[#d4af37] hover:bg-[#c9a431] text-white font-bold py-4 px-8 rounded-lg transition-colors inline-block"
               >
-                愛メッセージを投稿しよう
+                投票＆投稿しよう
               </Link>
             </div>
           </div>
