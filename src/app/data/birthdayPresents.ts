@@ -20,7 +20,7 @@ const birthdayPresents: BirthdayPresent[] = [
     imageAlt: "SHIBUYA HACHIKO SPICE",
     url: "https://shibuyaspice.tokyo/",
     date: "2025-04-01",
-    company: "株式会社モトイチエンタテイメント"
+    company: "株式会社智立商事"
   },
   // 今後、新しいプレゼントをここに追加していく
   // {
