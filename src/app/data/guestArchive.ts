@@ -26,7 +26,7 @@ export const guestArchive: GuestData[] = [
   {
     name: "早河ルカ",
     image: "/guest/guest2.jpg",
-    bio: "小悪魔ageha専属モデル。プラチナムプロダクション所属。以前はRanzuki専属モデルとして活動、現在は小悪魔ageha専属モデルとして活躍中。主演映画「恐解釈桃太郎」が2025年12月8日に全国ロードショー公開予定。また、日本エクスプレスの「サステナブルNX」CMに出演するなど、モデルだけでなく女優としても活躍の場を広げている。",
+    bio: "小悪魔ageha専属モデル。プラチナムプロダクション所属。以前はRanzuki専属モデルとして活動、現在は小悪魔ageha専属モデルとして活躍中。主演映画「恐解釈桃太郎」が2025年12月8日に全国ロードショー公開予定。映画やCMなど、モデルだけでなく女優としても活躍の場を広げている。",
     appearanceDate: "2025年4月10日", 
     birthDate: "2003年4月19日",
     officialSite: "https://platinumproduction.jp/talent/hayakawaruka/",
