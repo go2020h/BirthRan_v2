@@ -32,5 +32,15 @@ export const guestArchive: GuestData[] = [
     officialSite: "https://platinumproduction.jp/talent/hayakawaruka/",
     twitter: "https://x.com/ruka15321",
     instagram: "https://www.instagram.com/ru_4519"
+  },
+  {
+    name: "ひなたまる",
+    image: "/guest/guest3.jpg",
+    bio: "趣味はメイク、料理、お菓子作り、シーシャ、ゲーム、ギャンブル、カラオケ。特技は声真似、変顔、複雑な料理をギャルでも作れるようにアレンジすること。SNSでも人気を集めており、モデル活動の他、バラエティ番組やイベントなどでも活躍中。",
+    appearanceDate: "2025年4月24日", 
+    birthDate: "2003年4月29日",
+    officialSite: "https://platinumproduction.jp/talent/hinatamaru/",
+    twitter: "https://x.com/NATAMARU041",
+    instagram: "https://www.instagram.com/natamaru041/"
   }
 ];
