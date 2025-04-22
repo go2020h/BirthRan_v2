@@ -744,7 +744,7 @@ const MainPage = () => {
                 <div className="relative pb-[56.25%] h-0 overflow-hidden">
                   <iframe 
                     className="absolute top-0 left-0 w-full h-full"
-                    src="https://www.youtube.com/embed/frp2DX9D3tc" 
+                    src="https://www.youtube.com/embed/3tfX62ntZbA" 
                     title="【LIVE】渋谷愛ビジョンの眼（AI）／SHIBUYA AI Vision" 
                     frameBorder="0" 
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -759,7 +759,7 @@ const MainPage = () => {
                   </div>
                   <div className="mt-3 flex justify-end items-center">
                     <a 
-                      href="https://www.youtube.com/watch?v=frp2DX9D3tc" 
+                      href="https://www.youtube.com/watch?v=3tfX62ntZbA" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="text-[#0166CD] hover:text-[#d4af37] text-sm font-medium inline-flex items-center transition-colors"
