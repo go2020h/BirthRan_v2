@@ -393,7 +393,7 @@ const MainPage = () => {
           </div>
           <div className="mt-4 md:mt-6">
             <Link href="https://x.com/birth_ran_" className="inline-block bg-[#1a3a6c] hover:bg-[#0166CD] text-white font-bold py-3 px-8 rounded-full transition-colors shadow-lg hover:shadow-xl border border-white/10" target="_blank" rel="noopener noreferrer">
-              What's News - 最新情報はXから！
+              What&apos;s News - 最新情報はXから！
             </Link>
           </div>
         </div>
