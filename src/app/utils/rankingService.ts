@@ -5,6 +5,7 @@ export interface RankingItem {
   song: string;
   rank: number;
   message: string;
+  reason?: string;
 }
 
 // Supabaseから返されるデータの型を定義
@@ -14,6 +15,7 @@ interface RankingData {
   song: string;
   rank: number;
   message: string;
+  reason?: string;
 }
 
 // 指定した日付のランキングデータを取得する関数
@@ -43,7 +45,8 @@ export const fetchRankingByDate = async (date: string): Promise<RankingItem[]> =
       name: item.name || '',
       song: item.song || '',
       rank: item.rank,
-      message: item.message || ''
+      message: item.message || '',
+      reason: item.reason || ''
     }));
   } catch (error) {
     console.error('ランキングデータの取得中にエラーが発生しました', error);
@@ -80,7 +83,8 @@ export const fetchAllPastRankings = async (): Promise<Record<string, RankingItem
         name: item.name || '',
         song: item.song || '',
         rank: item.rank,
-        message: item.message || ''
+        message: item.message || '',
+        reason: item.reason || ''
       });
     });
     
@@ -108,9 +112,9 @@ export const getRankingByDayIndex = async (dayIndex: number, weekDates: string[]
     if (rankings.length === 0) {
       console.log(`[DEBUG] No data found, returning '集計中'`);
       return [
-        { name: '集計中', song: '集計中', rank: 1, message: '' },
-        { name: '集計中', song: '集計中', rank: 2, message: '' },
-        { name: '集計中', song: '集計中', rank: 3, message: '' }
+        { name: '集計中', song: '集計中', rank: 1, message: '', reason: '' },
+        { name: '集計中', song: '集計中', rank: 2, message: '', reason: '' },
+        { name: '集計中', song: '集計中', rank: 3, message: '', reason: '' }
       ];
     }
     
@@ -118,7 +122,7 @@ export const getRankingByDayIndex = async (dayIndex: number, weekDates: string[]
     return rankings;
   } catch (error) {
     console.error('ランキングデータの取得中にエラーが発生しました', error);
-    return [{ name: 'データなし', song: 'データなし', rank: 1, message: '' }];
+    return [{ name: 'データなし', song: 'データなし', rank: 1, message: '', reason: '' }];
   }
 };
 
@@ -162,7 +166,8 @@ export async function fetchMonthlyRankings(): Promise<Record<string, RankingItem
           name: item.name || '',
           song: item.song || '',
           rank: item.rank,
-          message: item.message || ''
+          message: item.message || '',
+          reason: item.reason || ''
         });
       });
     }

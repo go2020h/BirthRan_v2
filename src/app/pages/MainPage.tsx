@@ -265,7 +265,7 @@ const MainPage = () => {
     console.log('月間ランキングデータ:', monthlyRankings);
   }, [monthlyRankings]);
 
-  // u65e5u4ed8u306eu67a0u3092u30afu30eau30c3u30afu3057u307eu305fu3068u304du306bu30ddu30c3u30d7u6a5fu80fdu3092u8ffdu52a0u3057u307eu3059u3002
+  // 日付の枠をクリックしたときにポップアップを表示する
   const [isPopupOpen, setIsPopupOpen] = useState<boolean>(false);
   const [selectedDateData, setSelectedDateData] = useState<{date: string, ranking: RankingItem | null}>({date: '', ranking: null});
 
@@ -283,12 +283,26 @@ const MainPage = () => {
     }
   };
 
+  // 曲の理由を表示するポップアップの状態管理
+  const [isSongReasonPopupOpen, setIsSongReasonPopupOpen] = useState<boolean>(false);
+  const [selectedSongData, setSelectedSongData] = useState<{date: string, ranking: RankingItem | null}>({date: '', ranking: null});
+
+  const handleSongClick = (date: string, ranking: RankingItem) => {
+    console.log('曲がクリックされました:', ranking.song);
+    setSelectedSongData({date, ranking});
+    setIsSongReasonPopupOpen(true);
+  };
+
   const closePopup = () => {
     setIsPopupOpen(false);
   };
 
-  // u65e5u4ed8u3092u300c2024u5e744u67083u65e5u300du5f62u5f0fu306bu30d5u30a9u30fcu30deu30c8u3059u308bu95a2u6570
-  const formatDateJapanese = (dateStr: string): string => {
+  const closeSongReasonPopup = () => {
+    setIsSongReasonPopupOpen(false);
+  };
+
+  // 日付をフォーマットする関数
+  function formatDateJapanese(dateStr: string): string {
     const parts = dateStr.split('-');
     if (parts.length !== 3) return dateStr;
     
@@ -370,12 +384,17 @@ const MainPage = () => {
             <h2 className="text-xl sm:text-2xl md:text-4xl text-[#d4af37] font-bold mb-4 md:mb-8 tracking-wide drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]">
               ⭐毎日が誰かの誕生日⭐
             </h2>
-            <p className="text-base sm:text-lg md:text-2xl text-white mb-3 md:mb-8 leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]">
+            <p className="text-base sm:text-lg md:text-2xl text-white mb-3 md:mb-6 leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]">
               最もバースデー愛メッセージが贈られたのは誰なのか♡
             </p>
             <p className="text-base sm:text-lg md:text-2xl text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]">
               大好きな人、大切なひとが生まれた記念日を一緒にお祝いしよう♡
             </p>
+          </div>
+          <div className="mt-4 md:mt-6">
+            <Link href="https://x.com/birth_ran_" className="inline-block bg-[#1a3a6c] hover:bg-[#0166CD] text-white font-bold py-3 px-8 rounded-full transition-colors shadow-lg hover:shadow-xl border border-white/10" target="_blank" rel="noopener noreferrer">
+              What's News - 最新情報はXから！
+            </Link>
           </div>
         </div>
       </section>
@@ -450,7 +469,7 @@ const MainPage = () => {
         </div>
       </section>
 
-      {/* バースデー・ランキングに投稿しよう！ */}
+      {/* バースデー・ランキングに投票&投稿しよう！ */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -586,7 +605,12 @@ const MainPage = () => {
                           {(rankingData[0].message ? rankingData[0].message.replace(/\\n/g, '\n') : '') || '集計中'}
                         </td>
                         <td className="py-4 px-4">
-                          {rankingData[0].song}
+                          <button 
+                            onClick={() => handleSongClick(formatDate(getWeekDates(currentWeekStart)[selectedDayIndex]), rankingData[0])}
+                            className="text-[#0166CD] hover:text-[#d4af37] transition-colors"
+                          >
+                            {rankingData[0].song}
+                          </button>
                         </td>
                       </tr>
                     )}
@@ -609,7 +633,12 @@ const MainPage = () => {
                             {(rankingData[1]?.message ? rankingData[1].message.replace(/\\n/g, '\n') : '') || '集計中'}
                           </td>
                           <td className="py-4 px-4">
-                            {rankingData[1]?.song}
+                            <button 
+                              onClick={() => handleSongClick(formatDate(getWeekDates(currentWeekStart)[selectedDayIndex]), rankingData[1])}
+                              className="text-[#0166CD] hover:text-[#d4af37] transition-colors"
+                            >
+                              {rankingData[1]?.song}
+                            </button>
                           </td>
                         </tr>
                         {/* 3位 */}
@@ -628,7 +657,12 @@ const MainPage = () => {
                               {(rankingData[2]?.message ? rankingData[2].message.replace(/\\n/g, '\n') : '') || '集計中'}
                             </td>
                             <td className="py-4 px-4">
-                              {rankingData[2]?.song}
+                              <button 
+                                onClick={() => handleSongClick(formatDate(getWeekDates(currentWeekStart)[selectedDayIndex]), rankingData[2])}
+                                className="text-[#0166CD] hover:text-[#d4af37] transition-colors"
+                              >
+                                {rankingData[2]?.song}
+                              </button>
                             </td>
                           </tr>
                         )}
@@ -648,7 +682,7 @@ const MainPage = () => {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4 text-[#1a3a6c] inline-block relative">
+            <h2 className="text-3xl font-bold mb-4 text-[#1a3a6c]">
               バスラン！の夢
             </h2>
           </div>
@@ -675,7 +709,8 @@ const MainPage = () => {
               </div>
               
               <div className="bg-white bg-opacity-80 rounded-lg shadow-md mb-6">
-                <div className="birthran-broadcast-info grid grid-cols-1 md:grid-cols-2 gap-4 text-left p-6">                  <div className="birthran-info-col">
+                <div className="birthran-broadcast-info grid grid-cols-1 md:grid-cols-2 gap-4 text-left p-6">
+                  <div className="birthran-info-col">
                     <p className="text-gray-700 mb-3 text-center sm:text-left"><span className="font-bold sm:inline block sm:after:content-[':'] after:content-['']">放送開始</span><span className="sm:inline"> </span>2025年4月3日<br className="sm:hidden" />（木曜日）</p>
                     <p className="text-gray-700 text-center sm:text-left"><span className="font-bold sm:inline block sm:after:content-[':'] after:content-['']">放送時間</span><span className="sm:inline"> </span>毎週木曜日18:00～20:30<br className="sm:hidden" />（生放送）</p>
                   </div>
@@ -1038,6 +1073,54 @@ const MainPage = () => {
             <div className="mt-6 text-center">
               <button 
                 onClick={closePopup}
+                className="bg-[#1a3a6c] hover:bg-[#15305a] text-white font-medium py-2 px-4 rounded-md transition-colors"
+              >
+                閉じる
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+      
+      {/* 曲の理由ポップアップ */}
+      {isSongReasonPopupOpen && selectedSongData.ranking && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50" onClick={closeSongReasonPopup}>
+          <div className="bg-white rounded-lg shadow-xl p-6 max-w-lg w-full max-h-[80vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
+            <div className="flex justify-between items-center mb-4">
+              <h3 className="text-xl font-bold text-[#1a3a6c]">{formatDateJapanese(selectedSongData.date)} ？どうしてこの曲を？</h3>
+              <button 
+                onClick={closeSongReasonPopup}
+                className="text-gray-500 hover:text-gray-700 transition-colors"
+                aria-label="閉じる"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            
+            <div className="space-y-6">
+              <div className="pb-4">
+                <div className="flex items-center mb-2">
+                  <span className="font-medium text-[#1a3a6c]">{selectedSongData.ranking.name}さん</span>
+                </div>
+                {selectedSongData.ranking.reason && (
+                  <div className="mt-4 bg-gradient-to-br from-[#f8f9fa] to-[#e6f0ff] p-4 rounded-lg border border-[#d4af37] shadow-md">
+                    <div className="flex flex-col items-center justify-center">
+                      <div className="inline-block text-center">
+                        <p className="text-[#1a3a6c] whitespace-pre-wrap font-medium text-lg leading-relaxed">
+                          {selectedSongData.ranking.reason.replace(/\\n/g, '\n')}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+            
+            <div className="mt-6 text-center">
+              <button 
+                onClick={closeSongReasonPopup}
                 className="bg-[#1a3a6c] hover:bg-[#15305a] text-white font-medium py-2 px-4 rounded-md transition-colors"
               >
                 閉じる
