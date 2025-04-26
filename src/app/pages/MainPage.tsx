@@ -585,7 +585,7 @@ const MainPage = () => {
                       <th className="py-3 px-4 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-[60px] min-w-[60px]">順位</th>
                       <th className="py-3 px-4 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-[150px] min-w-[150px]">名前</th>
                       <th className="py-3 px-4 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-[300px] min-w-[300px]">愛メッセージ</th>
-                      <th className="py-3 px-4 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-[180px] min-w-[180px]">川村所長の選曲</th>
+                      <th className="py-3 px-4 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-[220px] min-w-[220px]">川村所長の選曲<br />(選曲理由は曲名をタップ)</th>
                     </tr>
                   </thead>
                   <tbody className="bg-white divide-y divide-gray-200">
@@ -779,7 +779,7 @@ const MainPage = () => {
                 <div className="relative pb-[56.25%] h-0 overflow-hidden">
                   <iframe 
                     className="absolute top-0 left-0 w-full h-full"
-                    src="https://www.youtube.com/embed/3tfX62ntZbA" 
+                    src="https://www.youtube.com/embed/kM5WsU7Cj4Q" 
                     title="【LIVE】渋谷愛ビジョンの眼（AI）／SHIBUYA AI Vision" 
                     frameBorder="0" 
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -794,7 +794,7 @@ const MainPage = () => {
                   </div>
                   <div className="mt-3 flex justify-end items-center">
                     <a 
-                      href="https://www.youtube.com/watch?v=3tfX62ntZbA" 
+                      href="https://www.youtube.com/watch?v=kM5WsU7Cj4Q" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="text-[#0166CD] hover:text-[#d4af37] text-sm font-medium inline-flex items-center transition-colors"
