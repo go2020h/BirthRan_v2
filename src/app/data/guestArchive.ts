@@ -42,5 +42,16 @@ export const guestArchive: GuestData[] = [
     officialSite: "https://platinumproduction.jp/talent/hinatamaru/",
     twitter: "https://x.com/NATAMARU041",
     instagram: "https://www.instagram.com/natamaru041/"
+  },
+  {
+    name: "瀬戸千花",
+    image: "/guest/guest4.jpg",
+    bio: "d-girls 黄色担当の瀬戸千花です。d-girlsは、トランスやユーロビート中心のダンスサウンドを基調とした5人組のユニットです。5人組名のですが、基本1ボーカルか2ボーカルの楽曲で、ボーカルを担当するメンバーが作詞をしているところや、歌わないメンバーはダンサーに徹したりする珍しい体制にも注目してほしいです！個人的には舞台や声優などのお芝居のお仕事もさせていただいています。趣味は妄想と運転、特技は寝ることです！",
+    appearanceDate: "2025年5月2日", 
+    birthDate: "5月9日",
+    officialSite: "http://d-girls.info/",
+    twitter: "https://x.com/seto_chika",
+    instagram: ""
   }
+
 ];
