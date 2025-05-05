@@ -779,7 +779,7 @@ const MainPage = () => {
                 <div className="relative pb-[56.25%] h-0 overflow-hidden">
                   <iframe 
                     className="absolute top-0 left-0 w-full h-full"
-                    src="https://www.youtube.com/watch?v=ZTR8FFdF0x8" 
+                    src="https://www.youtube.com/embed/ZTR8FFdF0x8" 
                     title="【LIVE】渋谷愛ビジョンの眼（AI）／SHIBUYA AI Vision" 
                     frameBorder="0" 
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
