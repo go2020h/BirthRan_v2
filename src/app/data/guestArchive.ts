@@ -52,6 +52,16 @@ export const guestArchive: GuestData[] = [
     officialSite: "http://d-girls.info/",
     twitter: "https://x.com/seto_chika",
     instagram: ""
+  },
+   {
+    name: "ChumuNote",
+    image: "/guest/guest5.jpg",
+    bio: "レメディ・アンド・カンパニー株式会社所属音楽系釣り好きVTuberのChumuNote（チュムノート）です。バスラン第５週のパーソナリティも担当しています！",
+    appearanceDate: "2025年5月8日", 
+    birthDate: "5月19日",
+    officialSite: "https://chumunote.info/",
+    twitter: "https://x.com/tmgnrei",
+    instagram: ""
   }
 
 ];
