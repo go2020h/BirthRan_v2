@@ -794,7 +794,7 @@ const MainPage = () => {
                   </div>
                   <div className="mt-3 flex justify-end items-center">
                     <a 
-                      href="https://www.youtube.com/watch?v=kM5WsU7Cj4Q" 
+                      href="https://www.youtube.com/watch?v=ZTR8FFdF0x8" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="text-[#0166CD] hover:text-[#d4af37] text-sm font-medium inline-flex items-center transition-colors"
