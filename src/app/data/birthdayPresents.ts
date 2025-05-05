@@ -22,6 +22,16 @@ const birthdayPresents: BirthdayPresent[] = [
     date: "2025-04-01",
     company: "株式会社智立商事"
   },
+  {
+    id: 2,
+    name: "「今日もワインの香りがするほうへ」（幻冬舎）と「おめあり」の場に最適なワインをセレクトしてくれます",
+    description: "Amazonのワインランキングで１位を獲得した「今日もワインの香りがするほうへ」（幻冬舎）年間400本のワインを飲み干すワイン党夫婦が書き上げた珠玉のエッセイ集を読んでワインの魅力をもっと×２感じてください。",
+    imagePath: "/home4.png",
+    imageAlt: "「今日もワインの香りがするほうへ」（幻冬舎）と「おめあり」の場に最適なワインをセレクトしてくれます",
+    url: "https://www.amazon.co.jp/dp/4344938909?ref=cm_sw_r_ffobk_cp_ud_dp_S6E7XP3GXA5Y2YT1FHW5&ref_=cm_sw_r_ffobk_cp_ud_dp_S6E7XP3GXA5Y2YT1FHW5&social_share=cm_sw_r_ffobk_cp_ud_dp_S6E7XP3GXA5Y2YT1FHW5&bestFormat=true&previewDoh=1",
+    date: "2025-05-05",
+    company: "株式会社幻冬舎"
+  },
   // 今後、新しいプレゼントをここに追加していく
   // {
   //   id: 2,
