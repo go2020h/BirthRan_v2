@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { BirthdayPresent } from '@/app/data/birthdayPresents';
+import ReactMarkdown from 'react-markdown';
 
 interface MonthlyPresentProps {
   present: BirthdayPresent;
@@ -12,6 +13,8 @@ interface MonthlyPresentProps {
 const MonthlyPresent: React.FC<MonthlyPresentProps> = ({ present, asTableRow }) => {
   // 表示タイプを判断するための状態を追加
   const [isTableRow, setIsTableRow] = useState(asTableRow || false);
+  // 説明文の展開状態を管理
+  const [isExpanded, setIsExpanded] = useState(false);
   
   // クライアントサイドでのみ実行
   useEffect(() => {
@@ -23,7 +26,7 @@ const MonthlyPresent: React.FC<MonthlyPresentProps> = ({ present, asTableRow }) 
   // 日付をフォーマットするための関数
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
-    return `${date.getFullYear()}年${date.getMonth() + 1}月`;
+    return `${date.getFullYear()}年${date.getMonth() + 1}月${date.getDate()}日`;
   };
   
   if (isTableRow) {
@@ -50,7 +53,17 @@ const MonthlyPresent: React.FC<MonthlyPresentProps> = ({ present, asTableRow }) 
         
         <td className="py-4 px-6">
           <div className="max-w-md overflow-hidden text-sm">
-            {present.description}
+            <div className={`${isExpanded ? '' : 'line-clamp-3'}`}>
+              <ReactMarkdown>{present.descriptionMarkdown}</ReactMarkdown>
+            </div>
+            {present.description.length > 100 && (
+              <button 
+                onClick={() => setIsExpanded(!isExpanded)}
+                className="text-[#0166CD] hover:text-[#d4af37] text-sm mt-2 font-medium transition-colors focus:outline-none"
+              >
+                {isExpanded ? '折りたたむ' : '続きを読む'}
+              </button>
+            )}
           </div>
         </td>
         
@@ -88,9 +101,19 @@ const MonthlyPresent: React.FC<MonthlyPresentProps> = ({ present, asTableRow }) 
         </div>
         <div className="md:w-2/3">
           <h5 className="font-bold mb-2">{present.name}</h5>
-          <p className="text-gray-700">
-            {present.description}
-          </p>
+          <div className="text-gray-700">
+            <div className={`${isExpanded ? '' : 'line-clamp-3'}`}>
+              <ReactMarkdown>{present.descriptionMarkdown}</ReactMarkdown>
+            </div>
+            {present.description.length > 100 && (
+              <button 
+                onClick={() => setIsExpanded(!isExpanded)}
+                className="text-[#0166CD] hover:text-[#d4af37] text-sm mt-2 font-medium transition-colors focus:outline-none"
+              >
+                {isExpanded ? '折りたたむ' : '続きを読む'}
+              </button>
+            )}
+          </div>
           <div className="mt-4 text-center">
             <a 
               href={present.url} 

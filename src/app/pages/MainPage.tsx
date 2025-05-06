@@ -8,6 +8,7 @@ import UpcomingGuest from '../components/UpcomingGuest';
 import { guestArchive } from '../data/guestArchive';
 import MonthlyPresent from '@/components/MonthlyPresent';
 import { getLatestPresent } from '../data/birthdayPresents';
+import ReactMarkdown from 'react-markdown';
 
 const MainPage = () => {
   // カレンダー用の状態管理
