@@ -62,6 +62,16 @@ export const guestArchive: GuestData[] = [
     officialSite: "https://chumunote.info/",
     twitter: "https://x.com/tmgnrei",
     instagram: ""
+  },
+  {
+    name: "リアクション ザ ブッタ",
+    image: "/guest/guest6.jpg",
+    bio: "2007 年結成。埼玉県発3 ピースロックバンド。10代の頃からバンド選手権で入賞を重ね数々の大型フェスに出演を果たし、年々その知名度を上げている。TikTokを中心に＜共感できる恋愛ソング＞として楽曲「ドラマのあとで」が話題となり、Spotify日本のバイラルチャートに24週連続チャートインし最高位7位までランクイン、今もなお広がり続けている。",
+    appearanceDate: "2025年5月15日", 
+    birthDate: "5月18日",
+    officialSite: "https://rtb-music.com/",
+    twitter: "https://x.com/RTB_info",
+    instagram: ""
   }
 
 ];
