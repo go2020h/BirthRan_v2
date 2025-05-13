@@ -3,8 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState, useEffect, useCallback } from 'react';
-import Dialog from '../components/Dialog';
-import Form from '../components/Form';
+
 import { RankingItem, getRankingByDayIndex, fetchMonthlyRankings, formatDate } from '@/app/utils/rankingService';
 import UpcomingGuest from '../components/UpcomingGuest';
 import { guestArchive } from '../data/guestArchive';
