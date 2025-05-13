@@ -3,6 +3,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState, useEffect, useCallback } from 'react';
+import Dialog from '../components/Dialog';
+import Form from '../components/Form';
 import { RankingItem, getRankingByDayIndex, fetchMonthlyRankings, formatDate } from '@/app/utils/rankingService';
 import UpcomingGuest from '../components/UpcomingGuest';
 import { guestArchive } from '../data/guestArchive';
@@ -399,7 +401,78 @@ const MainPage = () => {
         </div>
       </section>
 
-      {/* バスランカレンダー */}
+      {/* コンテンツセクション */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            {/* バスランに投稿しようセクション */}
+            <div className="bg-white p-8 rounded-xl shadow-lg mb-12 flex flex-wrap items-center">
+              <div className="w-full md:w-1/3 lg:w-1/3 xl:w-1/3 p-4 flex justify-center">
+                <Image src="/post1.jpg" alt="post1" width={300} height={200} />
+              </div>
+              <div className="w-full md:w-2/3 lg:w-2/3 xl:w-2/3 p-4">
+                <h2 className="text-3xl font-bold text-[#1a3a6c] mb-8 text-center">バースデー・ランキングに投票しよう</h2>
+                
+                <div className="text-center max-w-2xl mx-auto">
+                  <p className="text-xl font-bold text-[#0167CC] mb-4">皆様の投票&投稿がランキングを決める！</p>
+                  <p className="text-lg text-gray-700 mb-6">
+                    大好きな人、大切な人に<br />
+                    生まれてきてくれて「ありがとう」の<br />
+                    気持ちを込めて投票しよう♡
+                  </p>
+                  
+                  <div className="mt-8">
+                    <Link 
+                      href="/post"
+                      className="inline-flex items-center justify-center bg-[#f5d742] hover:bg-[#f2c464] text-black font-bold py-4 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+                    >
+                      バスランに投票する
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* 渋谷愛ビジョンに関するセクション */}
+            <div className="bg-white p-8 rounded-xl shadow-lg mb-12 flex flex-wrap items-center">
+              <div className="w-full md:w-1/3 lg:w-1/3 xl:w-1/3 p-4 flex justify-center">
+                <Image src="/post2.jpg" alt="post2" width={300} height={200} />
+              </div>
+              <div className="w-full md:w-2/3 lg:w-2/3 xl:w-2/3 p-4">
+                <h2 className="text-3xl font-bold text-[#1a3a6c] mb-8 text-center">渋谷愛ビジョンに放映しよう</h2>
+                
+                <div className="text-center max-w-2xl mx-auto">
+                  <p className="text-lg text-gray-700 mb-6">
+                    渋谷愛ビジョンで愛メッセージを放映したい方はコチラから投稿してください。
+                  </p>
+                  
+                  <div className="bg-[#f8f9fa] p-4 rounded-lg mb-6 border-l-4 border-[#0167CC]">
+                    <p className="text-gray-700 font-bold text-left">【注意事項】</p>
+                    <ul className="text-left text-gray-700 list-disc pl-5 mt-2">
+                      <li>渋谷愛ビジョン公式ホームページからの投稿となります。</li>
+                      <li>無料投稿は、誕生日の2日前に投稿していただいた愛メッセージが放映の対象となります。</li>
+                      <li>無料放映は抽選となります。予めご了承ください。</li>
+                    </ul>
+                  </div>
+                  
+                  <div className="mt-8">
+                    <a 
+                      href="https://ec.saivision.jp/" 
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center bg-[#f5d742] hover:bg-[#f2c464] text-black font-bold py-4 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+                    >
+                      愛メッセージを投稿する
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* バスランカレンダー 
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -457,7 +530,6 @@ const MainPage = () => {
             </div>
           </div>
 
-          {/* 過去のランキングを見るボタン */}
           <div className="mt-8 text-center">
             <Link 
               href="/backnumber"
@@ -468,8 +540,9 @@ const MainPage = () => {
           </div>
         </div>
       </section>
+      */}
 
-      {/* バースデー・ランキングに投票&投稿しよう！ */}
+      {/* バースデー・ランキングに投票&投稿しよう！ 
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -482,7 +555,7 @@ const MainPage = () => {
           </div>
           
           <div className="bg-gradient-to-br from-[#f8f9fa] to-[#e6f0ff] rounded-xl shadow-lg p-10 max-w-4xl mx-auto border border-gray-200 relative overflow-hidden">
-            {/* 装飾用の半透明円形要素 */}
+            
             <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-[#d4af37] to-[#f0e68c] opacity-10 rounded-full transform translate-x-20 -translate-y-20"></div>
             <div className="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-tr from-[#0166CD] to-[#4dabf5] opacity-10 rounded-full transform -translate-x-16 translate-y-16"></div>
             
@@ -512,9 +585,30 @@ const MainPage = () => {
           </div>
         </div>
       </section>
+      */}
+
+<section>
+<div className="w-full bg-[#0f1429] text-white py-8">
+      <div className="container mx-auto px-4 text-center">
+        
+        {/* 番組情報セクション */}
+        <div className="grid grid-cols-1 md:grid-cols-1 gap-6 mb-0 max-w-4xl mx-auto">
+          <div className="bg-[#1a2542] p-4 rounded-lg flex flex-col items-center justify-center">
+            <p className="text-white font-medium mb-2">番組のご意見・ご感想はメールにて♡</p>
+            <a 
+              href="mailto:br@jorf.co.jp" 
+              className="text-white hover:text-[#d4af37] transition-colors"
+            >
+              br@jorf.co.jp
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
 
       {/* バスラン！デイリーランキングベスト３ */}
-      <section className="py-20 bg-gray-50">
+      <section className="pt-28 pb-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4 text-[#1a3a6c]">
@@ -673,8 +767,76 @@ const MainPage = () => {
               </div>
             )}
           </div>
+        </div>
+      </section>
+
+      {/* バスランカレンダー */}
+      <section className="pt-0 pb-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4 text-[#1a3a6c]">
+              バスランカレンダー
+            </h2>
+          </div>
           
-          
+          <div className="bg-white rounded-xl shadow-lg p-4 sm:p-8 max-w-4xl mx-auto border border-gray-200">
+            <div className="flex justify-center items-center mb-4 sm:mb-8">
+              <button 
+                className="text-[#1a3a6c] hover:text-[#d4af37] transition-colors mr-3 sm:mr-6 p-1 sm:p-2" 
+                onClick={() => goToPreviousMonth()}
+                type="button"
+                aria-label="前月へ移動"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 sm:h-6 sm:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+              <h3 className="text-xl sm:text-2xl font-bold mx-2 sm:mx-4 text-[#1a3a6c]">{getMonthName(currentDate)}</h3>
+              <button 
+                className="text-[#1a3a6c] hover:text-[#d4af37] transition-colors ml-3 sm:ml-6 p-1 sm:p-2" 
+                onClick={() => goToNextMonth()}
+                type="button"
+                aria-label="翌月へ移動"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 sm:h-6 sm:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+            
+            <div className="grid grid-cols-7 gap-1 sm:gap-2">
+              {['日', '月', '火', '水', '木', '金', '土'].map((day) => (
+                <div key={day} className="text-center font-medium py-1 sm:py-2 text-gray-600 text-xs sm:text-base">{day}</div>
+              ))}
+              {generateCalendarDays().map((day, index) => (
+                <div 
+                  key={index} 
+                  className={`h-16 sm:h-20 bg-gray-50 hover:bg-[#f0f8ff] rounded-lg flex flex-col items-start p-1 sm:p-2 cursor-pointer transition-colors border border-gray-100 ${!day.currentMonth ? 'text-gray-400' : day.isToday ? 'text-[#d4af37] font-bold' : 'text-gray-700'} font-medium`}
+                  onClick={() => handleDayClick(day.dateStr)}
+                >
+                  <div className="calendar-day-content self-start w-full text-left">
+                    <span className="text-xs sm:text-sm">{day.day}</span>
+                    {day.isToday && <span className="inline-block w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#d4af37] ml-1"></span>}
+                  </div>
+                  {day.topRanker && (
+                    <div className="mt-0.5 sm:mt-1 text-[10px] sm:text-xs text-[#1a3a6c] w-full break-words line-clamp-2 overflow-hidden">
+                      {day.topRanker}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* 過去のランキングを見るボタン */}
+          <div className="mt-8 text-center">
+            <Link 
+              href="/backnumber"
+              className="bg-[#1a3a6c] hover:bg-[#15305a] text-white font-medium py-2 px-4 rounded-md transition-colors inline-block"
+            >
+              過去のランキングを見る
+            </Link>
+          </div>
         </div>
       </section>
 
