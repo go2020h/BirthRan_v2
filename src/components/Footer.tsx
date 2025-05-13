@@ -20,8 +20,8 @@ const Footer = () => {
         </div>
         
         {/* 番組情報セクション */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8 max-w-4xl mx-auto">
-          <div className="bg-[#1a2542] p-4 rounded-lg flex flex-col items-center justify-center">
+        <div className="grid grid-cols-1 md:grid-cols-1 gap-6 mb-8 max-w-md mx-auto">
+          {/*<div className="bg-[#1a2542] p-4 rounded-lg flex flex-col items-center justify-center">
             <p className="text-white font-medium mb-2">番組のご意見・ご感想はメールにて♡</p>
             <a 
               href="mailto:br@jorf.co.jp" 
@@ -29,7 +29,7 @@ const Footer = () => {
             >
               br@jorf.co.jp
             </a>
-          </div>
+          </div>*/}
           <div className="bg-[#1a2542] p-4 rounded-lg flex flex-col items-center">
             <p className="text-white font-medium mb-2">バスランは、radikoのタイムフリーで<br />放送後1週間聴くことができます♡</p>
             <a 

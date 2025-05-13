@@ -591,7 +591,7 @@ const MainPage = () => {
       <div className="container mx-auto px-4 text-center">
         
         {/* 番組情報セクション */}
-        <div className="grid grid-cols-1 md:grid-cols-1 gap-6 mb-0 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-1 gap-6 mb-0 max-w-md mx-auto">
           <div className="bg-[#1a2542] p-4 rounded-lg flex flex-col items-center justify-center">
             <p className="text-white font-medium mb-2">番組のご意見・ご感想はメールにて♡</p>
             <a 
