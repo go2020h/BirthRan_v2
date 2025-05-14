@@ -37,7 +37,7 @@ const MainPage = () => {
 
   // ランキング表示用の状態管理
   const [currentWeekStart, setCurrentWeekStart] = useState<Date>(getLastWeekStartDate(getLastWeekStartDate(today)));
-  const [selectedDayIndex, setSelectedDayIndex] = useState<number>(0); // 金曜日（インデックスは0が金曜日）
+  const [selectedDayIndex, setSelectedDayIndex] = useState<number>(6); // 木曜日（インデックスは6が木曜日）
   const [rankingData, setRankingData] = useState<RankingItem[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   
