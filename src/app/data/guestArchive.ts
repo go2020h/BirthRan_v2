@@ -79,8 +79,18 @@ export const guestArchive: GuestData[] = [
     bio: "LEEVELLES（リーベルス）は、ファミリーネームとして「森林を切り開いた場所に住む人」という意味を持つ lee と「願望」の意味を持つ velle に複数形 s をつけた「開拓を望む者達」という造語で、 メンバー全員で革新的なエンターテイメントを作り、新しい音楽とバンドの未来を開拓していこうという意を込めて命名された。すべての録音行程をメンバーで完結。アルバムジャケットのメインイラストはボーカルの小川が描き、 MV もほぼ全ての作品をメンバーで完結。ロック、ポップス、エレクトロ等、邦楽洋楽の多彩なジャンルから影響を受けた楽曲と、心の奥底にあるノスタルジー、夢、希望を描いた歌詞やフィクションの物語を紡いだ言葉を優しくも力強い歌声と演奏で表現した楽曲が持ち味。日本の音楽シーンに新たなエンターテイメントの風を吹かせる。",
     appearanceDate: "2025年5月22日", 
     birthDate: "5月25日",
-    officialSite: " https://leevelles.jp/",
+    officialSite: "https://leevelles.jp/",
     twitter: "https://x.com/leevelles",
+    instagram: ""
+  },
+  {
+    name: "tonun",
+    image: "/guest/guest8.jpg",
+    bio: "甘くスモーキーな歌声と、グルーヴィーで心地良いトラックが魅力のシンガーソングライター。特徴的な甘い声と絶対的なメロディーセンスを武器に、洋楽の影響を色濃く受けたサウンドを掛け合わせることで独自の世界観を作り上げている。「YouTube Music Sessions」、「Spotify RADAR:Early Noise」などに選出、さらにファーストアルバム「Intro」はCDショップ大賞2024に入賞し話題となった。誕生日にもらったプレゼントで嬉しかったもの→ギター",
+    appearanceDate: "2025年5月29日", 
+    birthDate: "6月12日",
+    officialSite: "https://tonun.jp/",
+    twitter: "https://x.com/tonun_official?s=21&t=yFiC3o3Bku78q-p_1LbtKQ",
     instagram: ""
   }
 
