@@ -92,6 +92,16 @@ export const guestArchive: GuestData[] = [
     officialSite: "https://tonun.jp/",
     twitter: "https://x.com/tonun_official?s=21&t=yFiC3o3Bku78q-p_1LbtKQ",
     instagram: ""
+  },
+  {
+    name: "新木宏典",
+    image: "/guest/guest9.jpg",
+    bio: "兵庫県波市出身。2007 年「獣拳戦隊ゲキレンジャー」理央役で注目を集め、舞台を中心に活動。地元・丹波市の観光アンバサダーも務める。近年の主な出演作は、ミュージカル『刀剣乱舞』シリーズ、ヒプノシスマイク-Division Rap Battle-』Rule the Stage シリーズ、明治座創業150 周年記念『赤ひげ』など。今後の待機作に、ミュージカル『刀剣乱舞』 目出度歌誉花舞十周年祝賀祭（7 月29 日、30 日、東京ドーム）、ミュージカル「Fate/Zero」～A Hero of Justice～（2025 年9 月、THEATER MILANO-Za）などがあります。",
+    appearanceDate: "2025年6月5日", 
+    birthDate: "6月14日",
+    officialSite: " https://www.watanabepro.co.jp/mypage/10000022/",
+    twitter: "https://x.com/araki_hiro0614",
+    instagram: ""
   }
 
 ];
