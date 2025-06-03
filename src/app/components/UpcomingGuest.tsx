@@ -35,7 +35,7 @@ export default function UpcomingGuest({
           </p>
         </div>
         
-        <div className="bg-gradient-to-br from-[#f8f9fa] to-[#e6f0ff] rounded-xl shadow-lg p-6 max-w-5xl mx-auto border border-gray-200 relative overflow-hidden">
+        <div className="bg-gradient-to-br from-[#f8f9fa] to-[#e6f0ff] rounded-xl shadow-lg p-6 max-w-4xl mx-auto border border-gray-200 relative overflow-hidden">
           <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-[#d4af37] to-[#f0e68c] opacity-10 rounded-full transform translate-x-20 -translate-y-20"></div>
           <div className="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-tr from-[#0166CD] to-[#4dabf5] opacity-10 rounded-full transform -translate-x-16 translate-y-16"></div>
           <div className="guest-profile-container flex flex-col md:flex-row items-start md:items-center relative z-10">
