@@ -235,17 +235,6 @@ const ProgramPage: React.FC = () => {
                   <p className="text-gray-700 ml-10">本日発表したバスランベスト３の振り返りと翌週明日から来週木曜日までに誕生日を迎えた方の昨年の第一位を発表します。</p>
                 </div>
                 
-                <div className="bg-white rounded-lg p-6 shadow-sm border-l-4 border-[#FF6B6B] hover:shadow-md transition-all duration-300">
-                  <div className="flex items-center mb-3">
-                    <div className="bg-[#FF6B6B] text-white rounded-full p-2 mr-3">
-                      <FaHeart className="h-5 w-5" />
-                    </div>
-                    <h3 className="text-xl font-bold text-[#1a3a6c]">20時30分頃／『おめでとう！ありがとう！愛言葉』</h3>
-                  </div>
-                  <p className="text-gray-700 ml-10">リスナーの皆様から頂いた「おめでとう」「ありがとう」の愛言葉をご紹介するコーナーです。<br/>
-                  皆様からの愛言葉をお待ちしております。</p>
-                </div>
-                
                 <div className="bg-white rounded-lg p-6 shadow-sm border-l-4 border-[#0167CC] hover:shadow-md transition-all duration-300">
                   <div className="flex items-center mb-3">
                     <div className="bg-[#0167CC] text-white rounded-full p-2 mr-3">
