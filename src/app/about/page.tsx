@@ -78,24 +78,12 @@ const ProgramPage: React.FC = () => {
                   <p className="text-gray-700 ml-10">先週金曜日に誕生日を迎えた方へのバースデーメッセージランキングを発表します。</p>
                 </div>
                 
-                <div className="bg-white rounded-lg p-6 shadow-sm border-l-4 border-[#FF6B6B] hover:shadow-md transition-all duration-300">
-                  <div className="flex items-center mb-3">
-                    <div className="bg-[#FF6B6B] text-white rounded-full p-2 mr-3">
-                      <FaGift className="h-5 w-5" />
-                    </div>
-                    <h3 className="text-xl font-bold text-[#1a3a6c]">18時15分頃／『おめありレコメンド』</h3>
-                  </div>
-                  <p className="text-gray-700 ml-10">お客様やSTAFFから「おめでとう」「ありがとう」という言葉が集まっていいる愛ある商品やサービス、会社をご紹介するコーナーです。<br/>
-                  「おめありレコメンド」でご紹介した商品やサービスを『もうすぐ誕生日！ようこそバスランへ！』にご出演頂いたゲストへの誕生日プレゼントとさせていただいております。<br/>
-                  お楽しみに～♡</p>
-                </div>
-                
                 <div className="bg-white rounded-lg p-6 shadow-sm border-l-4 border-[#d4af37] hover:shadow-md transition-all duration-300">
                   <div className="flex items-center mb-3">
                     <div className="bg-[#d4af37] text-white rounded-full p-2 mr-3">
                       <FaTrophy className="h-5 w-5" />
                     </div>
-                    <h3 className="text-xl font-bold text-[#1a3a6c]">18時21分頃／（先週土曜日の）『バスランベスト３の発表！』</h3>
+                    <h3 className="text-xl font-bold text-[#1a3a6c]">18時18分頃／（先週土曜日の）『バスランベスト３の発表！』</h3>
                   </div>
                   <p className="text-gray-700 ml-10">先週土曜日に誕生日を迎えた方へのバースデーメッセージランキングを発表します。</p>
                 </div>
@@ -105,7 +93,7 @@ const ProgramPage: React.FC = () => {
                     <div className="bg-[#d4af37] text-white rounded-full p-2 mr-3">
                       <FaTrophy className="h-5 w-5" />
                     </div>
-                    <h3 className="text-xl font-bold text-[#1a3a6c]">18時31分頃／（先週日曜日の）『バスランベスト３の発表！』</h3>
+                    <h3 className="text-xl font-bold text-[#1a3a6c]">18時28分頃／（先週日曜日の）『バスランベスト３の発表！』</h3>
                   </div>
                   <p className="text-gray-700 ml-10">先週日曜日に誕生日を迎えた方へのバースデーメッセージランキングを発表します。</p>
                 </div>
@@ -115,7 +103,7 @@ const ProgramPage: React.FC = () => {
                     <div className="bg-[#d4af37] text-white rounded-full p-2 mr-3">
                       <FaTrophy className="h-5 w-5" />
                     </div>
-                    <h3 className="text-xl font-bold text-[#1a3a6c]">18時39分頃／（今週月曜日の）『バスランベスト３の発表！』</h3>
+                    <h3 className="text-xl font-bold text-[#1a3a6c]">18時36分頃／（今週月曜日の）『バスランベスト３の発表！』</h3>
                   </div>
                   <p className="text-gray-700 ml-10">今週月曜日に誕生日を迎えた方へのバースデーメッセージランキングを発表します。</p>
                 </div>
@@ -154,17 +142,17 @@ const ProgramPage: React.FC = () => {
                   </div>
                   <p className="text-gray-700 ml-10">今週火曜日に誕生日を迎えた方へのバースデーメッセージランキングを発表します。</p>
                 </div>
-                
-                <div className="bg-white rounded-lg p-6 shadow-sm border-l-4 border-[#0167CC] hover:shadow-md transition-all duration-300">
+
+                <div className="bg-white rounded-lg p-6 shadow-sm border-l-4 border-[#FF6B6B] hover:shadow-md transition-all duration-300">
                   <div className="flex items-center mb-3">
-                    <div className="bg-[#0167CC] text-white rounded-full p-2 mr-3">
-                      <FaHeart className="h-5 w-5" />
+                    <div className="bg-[#FF6B6B] text-white rounded-full p-2 mr-3">
+                      <FaGift className="h-5 w-5" />
                     </div>
-                    <h3 className="text-xl font-bold text-[#1a3a6c]">19時12分頃／『パーソナリティにありがとう』</h3>
+                    <h3 className="text-xl font-bold text-[#1a3a6c]">19時12分頃／『おめありレコメンド』</h3>
                   </div>
-                  <p className="text-gray-700 ml-10">毎週・週替わりでパーソナリティを務める皆様がリスナーの皆様に自信を持ってお届けする情報が満載のコーナーです。このコーナーを聴いたあとに、思わず<br/>
-                  「パーソナリティさん♡ありがとう」素敵な愛言葉を贈ることになりますよ～。<br/>
-                  こうご期待です！</p>
+                  <p className="text-gray-700 ml-10">お客様やSTAFFから「おめでとう」「ありがとう」という言葉が集まっていいる愛ある商品やサービス、会社をご紹介するコーナーです。<br/>
+                  「おめありレコメンド」でご紹介した商品やサービスを『もうすぐ誕生日！ようこそバスランへ！』にご出演頂いたゲストへの誕生日プレゼントとさせていただいております。<br/>
+                  お楽しみに～♡</p>
                 </div>
                 
                 <div className="bg-white rounded-lg p-6 shadow-sm border-l-4 border-[#d4af37] hover:shadow-md transition-all duration-300">
@@ -172,7 +160,7 @@ const ProgramPage: React.FC = () => {
                     <div className="bg-[#d4af37] text-white rounded-full p-2 mr-3">
                       <FaTrophy className="h-5 w-5" />
                     </div>
-                    <h3 className="text-xl font-bold text-[#1a3a6c]">19時20分頃／（今週水曜日の）『バスランベスト３の発表！』</h3>
+                    <h3 className="text-xl font-bold text-[#1a3a6c]">19時19分頃／（今週水曜日の）『バスランベスト３の発表！』</h3>
                   </div>
                   <p className="text-gray-700 ml-10">今週水曜日に誕生日を迎えた方へのバースデーメッセージランキングを発表します。</p>
                 </div>
@@ -188,6 +176,17 @@ const ProgramPage: React.FC = () => {
                   今まで一番思い出に残っている誕生日やとっても嬉しかった誕生日プレゼント等、誕生日に纏わる素敵なお話をお伺いするコーナーです。<br/>
                   ご出演いただいたゲストの皆様には、少し早いですが愛が詰まったおめありGIFTを誕生日プレゼントとしてご用意しております。</p>
                 </div>
+
+                <div className="bg-white rounded-lg p-6 shadow-sm border-l-4 border-[#FF6B6B] hover:shadow-md transition-all duration-300">
+                  <div className="flex items-center mb-3">
+                    <div className="bg-[#FF6B6B] text-white rounded-full p-2 mr-3">
+                      <FaHeart className="h-5 w-5" />
+                    </div>
+                    <h3 className="text-xl font-bold text-[#1a3a6c]">19時57分頃／『おめでとう！ありがとう！愛言葉』</h3>
+                  </div>
+                  <p className="text-gray-700 ml-10">リスナーの皆様から頂いた「おめでとう」「ありがとう」の愛言葉をご紹介するコーナーです。<br/>
+                  皆様からの愛言葉をお待ちしております。</p>
+                </div>
               </div>
             )}
             
@@ -199,9 +198,21 @@ const ProgramPage: React.FC = () => {
                     <div className="bg-[#FF6B6B] text-white rounded-full p-2 mr-3">
                       <FaEnvelope className="h-5 w-5" />
                     </div>
-                    <h3 className="text-xl font-bold text-[#1a3a6c]">20時04分頃／『ピックアップ！愛メッセージ！！』</h3>
+                    <h3 className="text-xl font-bold text-[#1a3a6c]">20時00分頃／『ピックアップ！愛メッセージ！！』</h3>
                   </div>
                   <p className="text-gray-700 ml-10">渋谷愛ビジョンには誕生日の愛メッセージだけでなく、結婚記念日や母の日、父の日、友人へのお礼、何気ない「おめでとう」「ありがとう」の愛メッセージが溢れています。その中から番組パーソナリティが1通をピックアップしてご紹介！愛の伝道師を担っていただくコーナーです。</p>
+                </div>
+
+                <div className="bg-white rounded-lg p-6 shadow-sm border-l-4 border-[#0167CC] hover:shadow-md transition-all duration-300">
+                  <div className="flex items-center mb-3">
+                    <div className="bg-[#0167CC] text-white rounded-full p-2 mr-3">
+                      <FaHeart className="h-5 w-5" />
+                    </div>
+                    <h3 className="text-xl font-bold text-[#1a3a6c]">20時10分頃／『パーソナリティにありがとう』</h3>
+                  </div>
+                  <p className="text-gray-700 ml-10">毎週・週替わりでパーソナリティを務める皆様がリスナーの皆様に自信を持ってお届けする情報が満載のコーナーです。このコーナーを聴いたあとに、思わず<br/>
+                  「パーソナリティさん♡ありがとう」素敵な愛言葉を贈ることになりますよ～。<br/>
+                  こうご期待です！</p>
                 </div>
                 
                 <div className="bg-white rounded-lg p-6 shadow-sm border-l-4 border-[#d4af37] hover:shadow-md transition-all duration-300">
@@ -209,7 +220,7 @@ const ProgramPage: React.FC = () => {
                     <div className="bg-[#d4af37] text-white rounded-full p-2 mr-3">
                       <FaTrophy className="h-5 w-5" />
                     </div>
-                    <h3 className="text-xl font-bold text-[#1a3a6c]">20時13分頃／（今週木曜日の）『バスランベスト３の発表！』</h3>
+                    <h3 className="text-xl font-bold text-[#1a3a6c]">20時19分頃／（今週木曜日の）『バスランベスト３の発表！』</h3>
                   </div>
                   <p className="text-gray-700 ml-10">今週木曜日に誕生日を迎えた方へのバースデーメッセージランキングを発表します。</p>
                 </div>
@@ -219,7 +230,7 @@ const ProgramPage: React.FC = () => {
                     <div className="bg-[#0167CC] text-white rounded-full p-2 mr-3">
                       <FaChartBar className="h-5 w-5" />
                     </div>
-                    <h3 className="text-xl font-bold text-[#1a3a6c]">20時22分頃／ランキングの振り返り</h3>
+                    <h3 className="text-xl font-bold text-[#1a3a6c]">20時25分頃／ランキングの振り返り</h3>
                   </div>
                   <p className="text-gray-700 ml-10">本日発表したバスランベスト３の振り返りと翌週明日から来週木曜日までに誕生日を迎えた方の昨年の第一位を発表します。</p>
                 </div>
@@ -240,7 +251,7 @@ const ProgramPage: React.FC = () => {
                     <div className="bg-[#0167CC] text-white rounded-full p-2 mr-3">
                       <FaMicrophone className="h-5 w-5" />
                     </div>
-                    <h3 className="text-xl font-bold text-[#1a3a6c]">20時40分頃／『エンディングトーク』</h3>
+                    <h3 className="text-xl font-bold text-[#1a3a6c]">20時28分頃／『エンディングトーク』</h3>
                   </div>
                   <p className="text-gray-700 ml-10">パーソナリティの皆様が今週の放送を振り返り、来週の放送に向けてのお話をします。</p>
                 </div>
