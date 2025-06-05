@@ -1111,7 +1111,7 @@ const MainPage = () => {
               </div>
               
               <p className="text-lg text-gray-700 mb-8 text-center">
-                以上、愛が詰まった３つのサービス＆商品をプレゼントさせていただきます。
+                以上、愛が詰まった２つのサービス＆商品をプレゼントさせていただきます。
               </p>
               
               <div className="text-center mb-4">
