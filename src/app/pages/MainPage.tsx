@@ -1054,6 +1054,7 @@ const MainPage = () => {
                   </div>
                 </div>
                 
+                {/* 
                 <div className="bg-white rounded-lg p-5 shadow-md">
                   <div className="flex items-center mb-4">
                     <span className="inline-block bg-[#d4af37] text-white text-xl font-bold rounded-full w-8 h-8 flex items-center justify-center mr-3">2</span>
@@ -1080,10 +1081,11 @@ const MainPage = () => {
                     </div>
                   </div>
                 </div>
+                 */}
                 
                 <div className="bg-white rounded-lg p-5 shadow-md">
                   <div className="flex items-center mb-4">
-                    <span className="inline-block bg-[#d4af37] text-white text-xl font-bold rounded-full w-8 h-8 flex items-center justify-center mr-3">3</span>
+                    <span className="inline-block bg-[#d4af37] text-white text-xl font-bold rounded-full w-8 h-8 flex items-center justify-center mr-3">2</span>
                     <h4 className="text-lg font-bold text-[#1a3a6c]">今月のバースデープレゼント</h4>
                   </div>
                   <p className="text-sm text-gray-600 mb-3">※番組内「おめありレコメンド」でご紹介した商品をプレゼントしております。</p>
