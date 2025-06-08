@@ -102,6 +102,16 @@ export const guestArchive: GuestData[] = [
     officialSite: " https://www.watanabepro.co.jp/mypage/10000022/",
     twitter: "https://x.com/araki_hiro0614",
     instagram: ""
+  },
+  {
+    name: "Misaki（The Biscats）",
+    image: "/guest/guest10.jpg",
+    bio: "The Biscats(ザ・ビスキャッツ)はモデル、ファッション・プロデューサーとしての顔を持つVo.Misaki(青野美沙稀)を 中心として、Kenji(Gt)、Suke (W.ba) のハイブリッド・ロカビリーバンドとして2019年に結成。 同年4月ラスベガスで行われた「VIVA LASVEGAS ROCKABILLY WEEKEND #22」で初ライブを敢行。日本のロカビリーシーンを率引するレジェンド・久米浩司 (ex: BLACKCATS、 MAGIC RODEO etc.)のDNAを受け継ぐ Misakiは、ソロ名義(青野美沙稀)で2016年 ミニ・アルバム 『1959~Magical Rockabily Night~』、2017年 ミニ・アルバム 『Sweet Devil』 をリリース。2018年 世界33カ国のiTunesアルバムチャートで1位を獲得した5Seconds Of Summer の 『Youngblood』のMVに出演。",
+    appearanceDate: "2025年6月12日", 
+    birthDate: "6月29日",
+    officialSite: "https://thebiscats.com/",
+    twitter: "https://x.com/misax2_629",
+    instagram: ""
   }
 
 ];
