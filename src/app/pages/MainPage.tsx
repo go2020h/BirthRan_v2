@@ -1087,7 +1087,17 @@ const MainPage = () => {
                           rel="noopener noreferrer"
                           className="inline-flex items-center justify-center bg-[#0167CC] hover:bg-[#0155a8] text-white font-medium py-2 px-4 rounded-md transition-colors"
                         >
-                          公式ホームページを見る
+                          公式サイトを見る
+                        </a>
+                      </div>
+                      <div className="mt-4 text-center">
+                        <a 
+                          href="https://up-t.jp/collabo/saivision2025" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center justify-center bg-[#0167CC] hover:bg-[#0155a8] text-white font-medium py-2 px-4 rounded-md transition-colors"
+                        >
+                          渋谷愛ビジョングッズ販売ページ
                         </a>
                       </div>
                     </div>
