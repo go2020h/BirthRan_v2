@@ -14,6 +14,7 @@ const MainPage = () => {
   // カレンダー用の状態管理
   const [currentDate, setCurrentDate] = useState(new Date()); // 現在の日付を取得
   const today = new Date(); // 現在日
+  const [isTextExpanded, setIsTextExpanded] = useState(false); // テキストの折りたたみ状態を管理
   
   // 最初の週の開始日（2025年3月28日）を定義
   const firstAllowedWeekStart = new Date(2025, 2, 28); // 2025年3月28日
@@ -1071,9 +1072,19 @@ const MainPage = () => {
                       <p className="text-gray-700">
                       世界に一枚しかない渋谷愛メッセージ入りのTシャツをプレゼントさせていただきます☆彡
                       </p>
-                      <p className="text-gray-700 mt-4">
-                      渋谷愛ビジョンで放送した『愛メッセージ』がTシャツにプリントされています。そして愛メッセージを放映した動画のQRコードもプリントされています。<br></br><br></br>『UP-T』・・・AKB48、らぶいーずのテレビCMでお馴染みのオリジナルプリントTシャツ最大手 UP-Tの公式ホームページはコチラ！
-                      </p>
+                      <div className="text-gray-700 mt-4">
+                        <div className="overflow-hidden">
+                          <div className={`${isTextExpanded ? '' : 'line-clamp-1'}`}>
+                            渋谷愛ビジョンで放送した『愛メッセージ』がTシャツにプリントされています。そして愛メッセージを放映した動画のQRコードもプリントされています。<br></br><br></br>『UP-T』・・・AKB48、らぶいーずのテレビCMでお馴染みのオリジナルプリントTシャツ最大手 UP-Tの公式ホームページはコチラ！
+                          </div>
+                          <button 
+                            onClick={() => setIsTextExpanded(!isTextExpanded)}
+                            className="text-[#0166CD] hover:text-[#d4af37] text-sm mt-2 font-medium transition-colors focus:outline-none"
+                          >
+                            {isTextExpanded ? '折りたたむ' : '続きを読む'}
+                          </button>
+                        </div>
+                      </div>
                       <div className="mt-4 text-center">
                         <a 
                           href="https://up-t.jp/" 
