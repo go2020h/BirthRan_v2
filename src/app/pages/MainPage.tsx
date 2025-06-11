@@ -1040,21 +1040,33 @@ const MainPage = () => {
                       <p className="text-gray-700 mt-3">
                         ミュージックビデオや映画・ドラマのPRはもちろんのこと、自らが発信したい映像を放映して渋谷で注目を浴びましょう。
                       </p>
+                      <p className="text-gray-700 mt-4 mb-4">
+                      渋谷愛ビジョンで放送した『愛メッセージ』がTシャツにプリントされています。
+                      </p>
+                      <p className="text-gray-700 mt-3">
+                      そして愛メッセージを放映した動画のQRコードもプリントされています。
+                      </p>
+                      <p className="text-gray-700 mt-4 mb-4">
+                      『UP-T』・・・AKB48、らぶいーずのテレビCMでお馴染みのオリジナルプリントTシャツ最大手
+                      </p>
+                      <p className="text-gray-700 mt-3">
+                      UP-Tの公式ホームページはコチラ！
+                      </p>
                       <div className="mt-4 text-center">
                         <a 
-                          href="https://saivision.jp/" 
+                          href="https://up-t.jp/" 
                           target="_blank" 
                           rel="noopener noreferrer"
                           className="inline-flex items-center justify-center bg-[#0167CC] hover:bg-[#0155a8] text-white font-medium py-2 px-4 rounded-md transition-colors"
                         >
-                          公式サイトを見る
+                          公式ホームページを見る
                         </a>
                       </div>
                     </div>
                   </div>
                 </div>
                 
-                {/* 
+          
                 <div className="bg-white rounded-lg p-5 shadow-md">
                   <div className="flex items-center mb-4">
                     <span className="inline-block bg-[#d4af37] text-white text-xl font-bold rounded-full w-8 h-8 flex items-center justify-center mr-3">2</span>
@@ -1066,7 +1078,10 @@ const MainPage = () => {
                     </div>
                     <div className="md:w-2/3">
                       <p className="text-gray-700">
-                        世界初の充電不要ウェアラブルデバイスで、体温だけで充電し24時間365日あなたの健康を見守ります。貯めたエナジーで寄付やギフト交換も可能な、あなたの健康と社会貢献を同時に実現する革新的なブレスレットです。
+                      渋谷愛ビジョン公認SHOPの『UP-T』からゲスト出演されましたもうすぐお誕生日の方へ
+                      </p>
+                      <p className="text-gray-700">
+                      世界に一枚しかない渋谷愛メッセージ入りのTシャツをプレゼントさせていただきます☆彡
                       </p>
                       <div className="mt-4 text-center">
                         <a 
@@ -1081,11 +1096,11 @@ const MainPage = () => {
                     </div>
                   </div>
                 </div>
-                 */}
+        
                 
                 <div className="bg-white rounded-lg p-5 shadow-md">
                   <div className="flex items-center mb-4">
-                    <span className="inline-block bg-[#d4af37] text-white text-xl font-bold rounded-full w-8 h-8 flex items-center justify-center mr-3">2</span>
+                    <span className="inline-block bg-[#d4af37] text-white text-xl font-bold rounded-full w-8 h-8 flex items-center justify-center mr-3">3</span>
                     <h4 className="text-lg font-bold text-[#1a3a6c]">今月のバースデープレゼント</h4>
                   </div>
                   <p className="text-sm text-gray-600 mb-3">※番組内「おめありレコメンド」でご紹介した商品をプレゼントしております。</p>
@@ -1111,7 +1126,7 @@ const MainPage = () => {
               </div>
               
               <p className="text-lg text-gray-700 mb-8 text-center">
-                以上、愛が詰まった２つのサービス＆商品をプレゼントさせていただきます。
+                以上、愛が詰まった３つのサービス＆商品をプレゼントさせていただきます。
               </p>
               
               <div className="text-center mb-4">
