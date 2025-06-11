@@ -1124,7 +1124,7 @@ const MainPage = () => {
         </div>
       </section>  
 
-      {/* バイタルデータセクション */}
+      {/* バイタルデータセクション 
       <section className="py-20 bg-gradient-to-r from-[#f0f8ff] to-[#e6f0ff]">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -1134,7 +1134,7 @@ const MainPage = () => {
           </div>
           
           <div className="max-w-4xl mx-auto">
-            {/*
+           
             <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
               <div className="flex flex-col md:flex-row gap-8 items-center">
                 <div className="md:w-1/3">
@@ -1168,7 +1168,7 @@ const MainPage = () => {
                 </div>
               </div>
             </div>
-            */}
+           
             
             <div className="bg-white rounded-xl shadow-lg p-8">
               <h3 className="text-xl font-bold text-[#1a3a6c] mb-6 text-center">バイタルデータ</h3>
@@ -1195,6 +1195,7 @@ const MainPage = () => {
           </div>
         </div>
       </section>
+      */}
 
       {/* メッセージポップアップ */}
       {isPopupOpen && selectedDateData.ranking && (
