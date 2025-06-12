@@ -112,6 +112,16 @@ export const guestArchive: GuestData[] = [
     officialSite: "https://thebiscats.com/",
     twitter: "https://x.com/misax2_629",
     instagram: ""
+  },
+  {
+    name: "山内あいな（SILENT SIREN）",
+    image: "/guest/guest11.jpg",
+    bio: "バンドのメインアイコン「サイサイくん」や「バンドロゴ」やライブキービジュアル、その他オフィシャルグッズのデザインなど、イラストレーターとしての才能も発揮している。番組の企画でスタートした絵本制作企画で、コンテスト入賞し2019年絵本作家デビュー。スラップ奏法が代名詞になるほど超絶技巧な演奏に定評がある。また最近では自動車運転免許を取得し友人や愛犬を連れてのドライブにはまっている。メンバーの中で一番のお酒好きでライブ後の打ち上げはスタッフを引き連れて飲みに行くことも！現在、Skream!コラム、月刊カーセンサーで連載を持っている。",
+    appearanceDate: "2025年6月26日", 
+    birthDate: "7月3日",
+    officialSite: "https://silent-siren.com/",
+    twitter: "https://x.com/aina0703",
+    instagram: "https://www.instagram.com/ainayamauchi3131/?hl=jaN"
   }
 
 ];
