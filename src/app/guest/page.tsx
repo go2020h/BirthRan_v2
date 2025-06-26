@@ -86,6 +86,17 @@ export default function GuestArchivePage() {
                           <span className="text-base font-bold">𝕏</span>
                         </a>
                       )}
+                      {guest.twitter2 && (
+                        <a 
+                          href={guest.twitter2} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center justify-center bg-black rounded-full w-8 h-8 text-white hover:opacity-80 transition-all"
+                          aria-label="Twitter"
+                        >
+                          <span className="text-base font-bold">𝕏</span>
+                        </a>
+                      )}
                       {guest.instagram && (
                         <a 
                           href={guest.instagram} 
