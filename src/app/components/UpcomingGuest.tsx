@@ -10,6 +10,7 @@ interface GuestProps {
   birthDate: string;
   officialSite?: string;
   twitter?: string;
+  twitter2?: string;
   instagram?: string;
 }
 

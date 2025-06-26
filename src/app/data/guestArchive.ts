@@ -9,6 +9,7 @@ export interface GuestData {
   birthDate: string;
   officialSite?: string;
   twitter?: string;
+  twitter2?: string;
   instagram?: string;
 }
 
@@ -131,6 +132,7 @@ export const guestArchive: GuestData[] = [
     birthDate: "7月8日",
     officialSite: "https://magipun.com/",
     twitter: "https://x.com/haru_yoshizawa?s=21&t=TYIFUolCTOsorY55LKxm5w",
+    twitter2: "https://x.com/magipunofficial?s=21&t=TYIFUolCTOsorY55LKxm5w",
     instagram: "https://www.instagram.com/ainayamauchi3131/?hl=jaN"
   }
 

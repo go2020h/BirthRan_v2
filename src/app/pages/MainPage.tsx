@@ -983,6 +983,7 @@ const MainPage = () => {
         birthDate={guestArchive[guestArchive.length - 1].birthDate}
         officialSite={guestArchive[guestArchive.length - 1].officialSite}
         twitter={guestArchive[guestArchive.length - 1].twitter}
+        twitter2={guestArchive[guestArchive.length - 1].twitter2}
         instagram={guestArchive[guestArchive.length - 1].instagram}
       />
 
