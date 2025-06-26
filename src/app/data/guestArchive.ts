@@ -9,6 +9,7 @@ export interface GuestData {
   birthDate: string;
   officialSite?: string;
   twitter?: string;
+  twitter2?: string;
   instagram?: string;
 }
 
@@ -21,6 +22,7 @@ export const guestArchive: GuestData[] = [
     birthDate: "2000年4月19日",
     officialSite: "https://furutachi-project.co.jp/profile/kamiya-asa/",
     twitter: "https://x.com/AsaKamiya",
+    twitter2: "",
     instagram: "https://www.instagram.com/asa_kamiya/"
   },
   {
@@ -31,6 +33,7 @@ export const guestArchive: GuestData[] = [
     birthDate: "2003年4月19日",
     officialSite: "https://platinumproduction.jp/talent/hayakawaruka/",
     twitter: "https://x.com/ruka15321",
+    twitter2: "",
     instagram: "https://www.instagram.com/ru_4519"
   },
   {
@@ -41,6 +44,7 @@ export const guestArchive: GuestData[] = [
     birthDate: "2003年4月29日",
     officialSite: "https://platinumproduction.jp/talent/hinatamaru/",
     twitter: "https://x.com/NATAMARU041",
+    twitter2: "",
     instagram: "https://www.instagram.com/natamaru041/"
   },
   {
@@ -51,6 +55,7 @@ export const guestArchive: GuestData[] = [
     birthDate: "5月9日",
     officialSite: "http://d-girls.info/",
     twitter: "https://x.com/seto_chika",
+    twitter2: "",
     instagram: ""
   },
    {
@@ -61,6 +66,7 @@ export const guestArchive: GuestData[] = [
     birthDate: "5月19日",
     officialSite: "https://chumunote.info/",
     twitter: "https://x.com/tmgnrei",
+    twitter2: "",
     instagram: ""
   },
   {
@@ -71,6 +77,7 @@ export const guestArchive: GuestData[] = [
     birthDate: "5月18日",
     officialSite: "https://rtb-music.com/",
     twitter: "https://x.com/RTB_info",
+    twitter2: "",
     instagram: ""
   },
   {
@@ -81,6 +88,7 @@ export const guestArchive: GuestData[] = [
     birthDate: "5月25日",
     officialSite: "https://leevelles.jp/",
     twitter: "https://x.com/leevelles",
+    twitter2: "",
     instagram: ""
   },
   {
@@ -91,6 +99,7 @@ export const guestArchive: GuestData[] = [
     birthDate: "6月12日",
     officialSite: "https://tonun.jp/",
     twitter: "https://x.com/tonun_official?s=21&t=yFiC3o3Bku78q-p_1LbtKQ",
+    twitter2: "",
     instagram: ""
   },
   {
@@ -101,6 +110,7 @@ export const guestArchive: GuestData[] = [
     birthDate: "6月14日",
     officialSite: " https://www.watanabepro.co.jp/mypage/10000022/",
     twitter: "https://x.com/araki_hiro0614",
+    twitter2: "",
     instagram: ""
   },
   {
@@ -111,17 +121,30 @@ export const guestArchive: GuestData[] = [
     birthDate: "6月29日",
     officialSite: "https://thebiscats.com/",
     twitter: "https://x.com/misax2_629",
+    twitter2: "",
     instagram: ""
   },
   {
     name: "山内あいな（SILENT SIREN）",
     image: "/guest/guest11.jpg",
-    bio: "“サイサイ”の愛称で親しまれるガールズバンド・SILENT SIRENのベーシスト。メンバーと共に自主レーベル「YOUTHFUL TUNE」を設立。2025年1月15日にSILENT SIRENの新ミニアルバム「more than pink」を発売。今年9月7日でSILENT SIREN 結成15周年を迎える。また、イラストレーターとしての才能も発揮し、バンドのメインアイコンやバンドロゴを制作。また、絵本制作企画でコンテストに入賞し、2019年絵本作家デビュー。現在までに2 作品をリリースしている。抽象画の個展やポップアップストアも開催している。♪ 今までで特に印象に残っている誕生日プレゼントは？ 毎年メンバーでお祝いをし合ってしるのですが、当時ジープに憧れて免許を取った私に、メンバーがダンボールで作った手作りジープをくれました。",
+    bio: "“サイサイ”の愛称で親しまれるガールズバンド・SILENT SIRENのベーシスト。メンバーと共に自主レーベル「YOUTHFUL TUNE」を設立。2025年1月15日にSILENT SIRENの新ミニアルバム「more than pink」を発売。今年9月7日でSILENT SIREN 結成15周年を迎える。また、イラストレーターとしての才能も発揮し、バンドのメインアイコンやバンドロゴを制作。また、絵本制作企画でコンテストに入賞し、2019年絵本作家デビュー。現在までに2 作品をリリースしていています。抽象画の個展やポップアップストアも開催していています。♪ 今までで特に印象に残っている誕生日プレゼントは？ 毎年メンバーでお祝いをし合ってしるのですが、当時ジープに憧れて免許を取った私に、メンバーがダンボールで作った手作りジープをくれました。",
     appearanceDate: "2025年6月26日", 
     birthDate: "7月3日",
     officialSite: "https://silent-siren.com/",
     twitter: "https://x.com/aina0703",
+    twitter2: "",
     instagram: "https://www.instagram.com/ainayamauchi3131/?hl=jaN"
+  },
+  {
+    name: "澤 悠華 (ヨシザワ ハルカ)",
+    image: "/guest/guest12.jpg",
+    bio: "2003.7.8生まれ、東京都出身の21歳。5人組アイドルグループ「マジカル・パンチライン」のメンバーとして活動中。グループの衣装デザインを担当しており、メンバーカラーは水色。ニックネームは「はるるん」 ♪ 今までで特に印象に残っている誕生日プレゼントは? メンバーの沖口優奈ちゃんが20歳の誕生日にプレゼントしてくれた持ち歩き用のストレートアイロンです！",
+    appearanceDate: "2025年7月3日", 
+    birthDate: "7月8日",
+    officialSite: "https://magipun.com/",
+    twitter: "https://x.com/haru_yoshizawa?s=21&t=TYIFUolCTOsorY55LKxm5w",
+    twitter2: "https://x.com/magipunofficial?s=21&t=TYIFUolCTOsorY55LKxm5w",
+    instagram: ""
   }
 
 ];
