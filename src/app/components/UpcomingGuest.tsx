@@ -10,7 +10,6 @@ interface GuestProps {
   birthDate: string;
   officialSite?: string;
   twitter?: string;
-  twitter2?: string;
   instagram?: string;
 }
 
@@ -88,7 +87,7 @@ export default function UpcomingGuest({
                         </a>
                       </p>
                     )}
-                    {(twitter || twitter2 || instagram) && (
+                    {(twitter || instagram) && (
                       <p className="text-gray-700 mb-2 text-sm sm:text-base">
                         <span className="font-bold">SNS：</span>
                         {twitter && (
@@ -99,16 +98,6 @@ export default function UpcomingGuest({
                             className="text-[#0166CD] hover:text-[#d4af37] transition-colors mr-2"
                           >
                             X（Twitter）
-                          </a>
-                        )}
-                        {twitter2 && (
-                          <a 
-                            href={twitter2} 
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            className="text-[#0166CD] hover:text-[#d4af37] transition-colors mr-2"
-                          >
-                            X（Twitter）2
                           </a>
                         )}
                         {instagram && (
