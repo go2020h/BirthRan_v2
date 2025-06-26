@@ -22,6 +22,7 @@ export default function UpcomingGuest({
   birthDate,
   officialSite,
   twitter,
+  twitter2,
   instagram
 }: GuestProps) {
   return (
@@ -111,16 +112,7 @@ export default function UpcomingGuest({
                             X（Twitter）2
                           </a>
                         )}
-                        {instagram && (
-                          <a 
-                            href={twitter} 
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            className="text-[#0166CD] hover:text-[#d4af37] transition-colors mr-2"
-                          >
-                            X（Twitter）
-                          </a>
-                        )}
+
                         {instagram && (
                           <a 
                             href={instagram} 
