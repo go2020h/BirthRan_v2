@@ -74,7 +74,7 @@ export default function UpcomingGuest({
               </p>
               
               <div className="guest-details bg-white bg-opacity-80 rounded-lg p-4 sm:p-6 shadow-md mb-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
+                <div className="grid grid-cols-1 gap-4 text-left">{/* md:grid-cols-2を削除しました */}
                   <div className="guest-links">
                     {officialSite && (
                       <p className="text-gray-700 mb-2 text-sm sm:text-base">
@@ -109,7 +109,7 @@ export default function UpcomingGuest({
                             rel="noopener noreferrer"
                             className="text-[#0166CD] hover:text-[#d4af37] transition-colors mr-2"
                           >
-                            X（Twitter）2
+                            X（Twitter）
                           </a>
                         )}
 
