@@ -133,7 +133,6 @@ export const guestArchive: GuestData[] = [
     officialSite: "https://magipun.com/",
     twitter: "https://x.com/haru_yoshizawa?s=21&t=TYIFUolCTOsorY55LKxm5w",
     twitter2: "https://x.com/magipunofficial?s=21&t=TYIFUolCTOsorY55LKxm5w",
-    instagram: "https://www.instagram.com/ainayamauchi3131/?hl=jaN"
   }
 
 ];
