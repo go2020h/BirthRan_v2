@@ -123,16 +123,6 @@ export const guestArchive: GuestData[] = [
     officialSite: "https://silent-siren.com/",
     twitter: "https://x.com/aina0703",
     instagram: "https://www.instagram.com/ainayamauchi3131/?hl=jaN"
-  },
-  {
-    name: "澤 悠華 (ヨシザワ ハルカ)",
-    image: "/guest/guest12.jpg",
-    bio: "2003.7.8生まれ、東京都出身の21歳。5人組アイドルグループ「マジカル・パンチライン」のメンバーとして活動中。グループの衣装デザインを担当しており、メンバーカラーは水色。ニックネームは「はるるん」 ♪ 今までで特に印象に残っている誕生日プレゼントは? メンバーの沖口優奈ちゃんが20歳の誕生日にプレゼントしてくれた持ち歩き用のストレートアイロンです！",
-    appearanceDate: "2025年7月3日", 
-    birthDate: "7月8日",
-    officialSite: "https://magipun.com/",
-    twitter: "https://x.com/haru_yoshizawa?s=21&t=TYIFUolCTOsorY55LKxm5w",
-    twitter2: "https://x.com/magipunofficial?s=21&t=TYIFUolCTOsorY55LKxm5w",
   }
 
 ];
