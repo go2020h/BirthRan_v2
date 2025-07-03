@@ -1117,8 +1117,9 @@ const MainPage = () => {
                     <h4 className="text-lg font-bold text-[#1a3a6c]">今月のバースデープレゼント</h4>
                   </div>
                   <p className="text-sm text-gray-600 mb-3">※番組内「おめありレコメンド」でご紹介した商品をプレゼントしております。</p>
-                  
+                   {/* 今月のプレゼントを一旦非表示にする
                   <MonthlyPresent present={getLatestPresent()} />
+                  */}
                   <div className="mt-8 text-center space-y-4">
                     <Link href="/wanted" className="text-[#0167CC] hover:text-[#d4af37] font-medium transition-colors inline-flex items-center justify-center">
                       <span className="sm:hidden">
