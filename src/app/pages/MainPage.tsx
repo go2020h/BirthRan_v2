@@ -877,7 +877,7 @@ const MainPage = () => {
                     <p className="text-gray-700 text-center sm:text-left"><span className="font-bold sm:inline block sm:after:content-[':'] after:content-['']">放送時間</span><span className="sm:inline"> </span>毎週木曜日18:00～20:30<br className="sm:hidden" />（生放送）</p>
                   </div>
                   <div className="birthran-info-col">
-                    <p className="text-gray-700 mb-3 text-center sm:text-left"><span className="font-bold sm:inline block sm:after:content-[':'] after:content-['']">放送局</span><span className="sm:inline"> </span>ラジオ日本<br className="sm:hidden" />（FM92.4、AM1424）</p>
+                    <p className="text-gray-700 mb-3 text-center sm:text-left"><span className="font-bold sm:inline block sm:after:content-[':'] after:content-['']">放送局</span><span className="sm:inline"> </span>ラジオ日本<br className="sm:hidden" />（FM92.4、AM1422）</p>
                     <p className="text-gray-700 text-center sm:text-left"><span className="font-bold sm:inline block sm:after:content-[':'] after:content-['']">ビジョン</span><span className="sm:inline"> </span>渋谷愛ビジョン<br className="sm:hidden" />（宮益坂交差点下）</p>
                   </div>
                 </div>
