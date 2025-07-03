@@ -7,8 +7,8 @@ import { useState, useEffect, useCallback } from 'react';
 import { RankingItem, getRankingByDayIndex, fetchMonthlyRankings, formatDate } from '@/app/utils/rankingService';
 import UpcomingGuest from '../components/UpcomingGuest';
 import { guestArchive } from '../data/guestArchive';
-import MonthlyPresent from '@/components/MonthlyPresent';
-import { getLatestPresent } from '../data/birthdayPresents';
+{/* 今月のプレゼントを一旦非表示にする import MonthlyPresent from '@/components/MonthlyPresent';*/}
+{/* 今月のプレゼントを一旦非表示にする import { getLatestPresent } from '../data/birthdayPresents';*/}
 
 const MainPage = () => {
   // カレンダー用の状態管理
