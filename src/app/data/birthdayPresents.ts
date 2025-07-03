@@ -46,17 +46,7 @@ const birthdayPresents: BirthdayPresent[] = [
     date: "2025-06-05",
     company: "株式会社ワン・パブリッシング"
   },
-  {
-    id: 4,
-    name: ,
-    description: ,
-    descriptionMarkdown: ,
-    imagePath: ,
-    imageAlt: ,
-    url: ,
-    date: ,
-    company: 
-  },
+  
   
   // 今後、新しいプレゼントをここに追加していく
   // {
