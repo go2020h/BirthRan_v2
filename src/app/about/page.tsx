@@ -77,6 +77,18 @@ const ProgramPage: React.FC = () => {
                   </div>
                   <p className="text-gray-700 ml-10">先週金曜日に誕生日を迎えた方へのバースデーメッセージランキングを発表します。</p>
                 </div>
+
+                <div className="bg-white rounded-lg p-6 shadow-sm border-l-4 border-[#0167CC] hover:shadow-md transition-all duration-300">
+                  <div className="flex items-center mb-3">
+                    <div className="bg-[#0167CC] text-white rounded-full p-2 mr-3">
+                      <FaHeart className="h-5 w-5" />
+                    </div>
+                    <h3 className="text-xl font-bold text-[#1a3a6c]">18時20分頃／『パーソナリティにありがとう』</h3>
+                  </div>
+                  <p className="text-gray-700 ml-10">毎週・週替わりでパーソナリティを務める皆様がリスナーの皆様に自信を持ってお届けする情報が満載のコーナーです。このコーナーを聴いたあとに、思わず<br/>
+                  「パーソナリティさん♡ありがとう」素敵な愛言葉を贈ることになりますよ～。<br/>
+                  こうご期待です！</p>
+                </div>
                 
                 <div className="bg-white rounded-lg p-6 shadow-sm border-l-4 border-[#d4af37] hover:shadow-md transition-all duration-300">
                   <div className="flex items-center mb-3">
@@ -169,7 +181,7 @@ const ProgramPage: React.FC = () => {
                   ご出演いただいたゲストの皆様には、少し早いですが愛が詰まったおめありGIFTを誕生日プレゼントとしてご用意しております。</p>
                 </div>
 
-                <div className="bg-white rounded-lg p-6 shadow-sm border-l-4 border-[#FF6B6B] hover:shadow-md transition-all duration-300">
+                {/*<div className="bg-white rounded-lg p-6 shadow-sm border-l-4 border-[#FF6B6B] hover:shadow-md transition-all duration-300">
                   <div className="flex items-center mb-3">
                     <div className="bg-[#FF6B6B] text-white rounded-full p-2 mr-3">
                       <FaHeart className="h-5 w-5" />
@@ -178,7 +190,7 @@ const ProgramPage: React.FC = () => {
                   </div>
                   <p className="text-gray-700 ml-10">リスナーの皆様から頂いた「おめでとう」「ありがとう」の愛言葉をご紹介するコーナーです。<br/>
                   皆様からの愛言葉をお待ちしております。</p>
-                </div>
+                </div>*/}
               </div>
             )}
             
@@ -207,19 +219,9 @@ const ProgramPage: React.FC = () => {
                   <p className="text-gray-700 ml-10">渋谷愛ビジョンには誕生日の愛メッセージだけでなく、結婚記念日や母の日、父の日、友人へのお礼、何気ない「おめでとう」「ありがとう」の愛メッセージが溢れています。その中から番組パーソナリティが1通をピックアップしてご紹介！愛の伝道師を担っていただくコーナーです。</p>
                 </div>
 
-                <div className="bg-white rounded-lg p-6 shadow-sm border-l-4 border-[#0167CC] hover:shadow-md transition-all duration-300">
-                  <div className="flex items-center mb-3">
-                    <div className="bg-[#0167CC] text-white rounded-full p-2 mr-3">
-                      <FaHeart className="h-5 w-5" />
-                    </div>
-                    <h3 className="text-xl font-bold text-[#1a3a6c]">20時11分頃／『パーソナリティにありがとう』</h3>
-                  </div>
-                  <p className="text-gray-700 ml-10">毎週・週替わりでパーソナリティを務める皆様がリスナーの皆様に自信を持ってお届けする情報が満載のコーナーです。このコーナーを聴いたあとに、思わず<br/>
-                  「パーソナリティさん♡ありがとう」素敵な愛言葉を贈ることになりますよ～。<br/>
-                  こうご期待です！</p>
-                </div>
+                
 
-                <div className="bg-white rounded-lg p-6 shadow-sm border-l-4 border-[#0167CC] hover:shadow-md transition-all duration-300">
+                 {/*<div className="bg-white rounded-lg p-6 shadow-sm border-l-4 border-[#0167CC] hover:shadow-md transition-all duration-300">
                   <div className="flex items-center mb-3">
                     <div className="bg-[#0167CC] text-white rounded-full p-2 mr-3">
                       <FaChartBar className="h-5 w-5" />
@@ -227,7 +229,7 @@ const ProgramPage: React.FC = () => {
                     <h3 className="text-xl font-bold text-[#1a3a6c]">20時13分頃／今週のおめありスポットライト～</h3>
                   </div>
                   <p className="text-gray-700 ml-10"></p>
-                </div>
+                </div>*/}
                 
                 <div className="bg-white rounded-lg p-6 shadow-sm border-l-4 border-[#d4af37] hover:shadow-md transition-all duration-300">
                   <div className="flex items-center mb-3">
