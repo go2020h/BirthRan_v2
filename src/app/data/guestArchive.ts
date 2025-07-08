@@ -132,6 +132,15 @@ export const guestArchive: GuestData[] = [
     officialSite: "https://magipun.com/",
     twitter: "https://x.com/haru_yoshizawa?s=21&t=TYIFUolCTOsorY55LKxm5w",
     twitter2: "https://x.com/magipunofficial?s=21&t=TYIFUolCTOsorY55LKxm5w",
+  } ,{
+    name: "西森 杏弥(僕が見たかった青空)",
+    image: "/guest/guest13.jpg",
+    bio: "2003年7月18生まれ、高知県出身。僕が見たかった青空は2023年にデビューした23人のアイドルグループです。 ♪ 今までで特に印象に残っている誕生日プレゼントは? 10歳のときに1/2成人式ということで誕生石であるルビーのネックレスを母からプレゼントしてもらいました！それまでのプレゼントより高価で大人っぽいものだったので、頻繁に箱を開けてニヤニヤしたり友達に自慢していました。",
+    appearanceDate: "2025年7月10日", 
+    birthDate: "7月18日",
+    officialSite: "https://bokuao.com/",
+    twitter: "https://x.com/BOKUAOofficial",
+    twitter2: "",
   } 
 
 ];
