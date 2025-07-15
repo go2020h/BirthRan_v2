@@ -141,6 +141,15 @@ export const guestArchive: GuestData[] = [
     officialSite: "https://bokuao.com/",
     twitter: "https://x.com/BOKUAOofficial",
     twitter2: "",
+  } ,{
+    name: "くまだまさし",
+    image: "/guest/guest14.jpg",
+    bio: "1973年生まれ。東京都荒川区出身。東京NSC（吉本総合芸能学院）に2期生として入学し、1997年にデビュー。小道具を使ったネタを武器に「エンタの神様」（日本テレビ系）、「爆笑レッドカーペット」（フジテレビ系）などに出演し、人気を博す。 ♪　今までで特に印象に残っている誕生日プレゼントは？ 子供の頃のファミコン。あといつも被っている帽子です。",
+    appearanceDate: "2025年7月17日", 
+    birthDate: "7月26日",
+    officialSite: "https://profile.yoshimoto.co.jp/talent/detail?id=681",
+    twitter: "https://x.com/kumadamasashi",
+    twitter2: "",
   } 
 
 ];
