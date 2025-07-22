@@ -150,15 +150,6 @@ export const guestArchive: GuestData[] = [
     officialSite: "https://profile.yoshimoto.co.jp/talent/detail?id=681",
     twitter: "https://x.com/kumadamasashi",
     twitter2: "",
-  } ,{
-    name: "海蔵亮太",
-    image: "/guest/guest15.jpg",
-    bio: "1990年8月8日生まれ、愛知県名古屋市出身。2016、2017年KWC(Karaoke World Championships)に出場し二連覇を経て2018年に「愛のカタチ」でメジャーデビュー。2024年にはギネス世界記録「毎週連続配信」63週を樹立。数ある歌番組で優勝を経験現在、BS日テレ「現役歌王JAPAN」に挑戦中。♪　今まで特に印象に残っている誕生日プレゼントは？ デビュー後、ファンの方と一緒に過ごしたバースデーライブで直接いただいた「おめでとう」のお声が何にも変えられないプレゼントです。",
-    appearanceDate: "2025年7月24日", 
-    birthDate: "8月8日",
-    officialSite: "https://www.ryota-kaizo.com/",
-    twitter: "https://x.com/uuuumin_88?s=21&t=yFiC3o3Bku78q-p_1LbtKQ",
-    twitter2: "",
   } 
 
 ];
