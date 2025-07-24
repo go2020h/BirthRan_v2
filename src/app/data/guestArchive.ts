@@ -159,6 +159,16 @@ export const guestArchive: GuestData[] = [
     officialSite: "https://www.ryota-kaizo.com/",
     twitter: "https://x.com/uuuumin_88?s=21&t=yFiC3o3Bku78q-p_1LbtKQ",
     twitter2: "",
+  } ,{
+    name: "金子みゆ",
+    image: "/guest/guest16.jpg",
+    bio: "福岡県宗像市出身です。20歳の時に福岡から上京して、いまはインフルエンサーをしつつ、アーティスト活動も頑張っています！ ♪　これまでにもらった誕生日プレゼントで一番印象に残っているものは？ 20歳の時にお父さんから貰ったネックレスです！初めてアクセサリーを貰ったのでとっても嬉しかったです！今でも大事につけてます。",
+    appearanceDate: "2025年8月7日", 
+    birthDate: "8月13日",
+    officialSite: "https://uniiique.jp/talent/miyu-kaneko/",
+    twitter: "https://x.com/kaneko_miyu",
+    twitter2: "",
+    instagram: "https://www.instagram.com/kaneko_miyu0813/"
   } 
 
 ];
