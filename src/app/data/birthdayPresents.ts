@@ -74,7 +74,7 @@ const birthdayPresents: BirthdayPresent[] = [
     description: "番組を聴いているリスナーへ抽選で3名様にプレゼント。「グルテンフリー」「アレルギー特定原材料等28品目不使用」「保存料不使用」更に「人工甘味料不使用」「上白糖不使用」そして、身体が喜ぶ食材のみで丁寧に作った『発酵オートミールクランチ・ハルクル』です。",
     descriptionMarkdown: "番組を聴いているリスナーへ抽選で3名様にプレゼント。「グルテンフリー」「アレルギー特定原材料等28品目不使用」「保存料不使用」更に「人工甘味料不使用」「上白糖不使用」そして、身体が喜ぶ食材のみで丁寧に作った『発酵オートミールクランチ・ハルクル』です。",
     imagePath: "/home8.png",
-    imageAlt: "ニューロオン株式会社",
+    imageAlt: "ニューロ・オン株式会社",
     url: "https://hugandtreat.jp/Form/Product/ProductList.aspx?shop=0&cat=hlc",
     date: "2025-07-25",
     company: "ニューロ・オン株式会社"
