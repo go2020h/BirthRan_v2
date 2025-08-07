@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { useState } from 'react';
 
 interface GuestProps {
   name: string;
@@ -25,6 +26,11 @@ export default function UpcomingGuest({
   twitter2,
   instagram
 }: GuestProps) {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const bioLines = bio.split('\n');
+  const needsTruncate = bioLines.length > 10;
+  const displayedBio = needsTruncate && !isExpanded ? bioLines.slice(0, 10).join('\n') + '...' : bio;
+
   return (
     <div className="py-20 bg-white">
       <div className="container mx-auto px-4">
@@ -69,9 +75,19 @@ export default function UpcomingGuest({
                 </div>
               </div>
               
-              <p className="guest-bio text-gray-700 mb-6 text-sm sm:text-base">
-                {bio}
+              {/* ゲスト紹介文（10行超でアコーディオン表示） */}
+              <p className="guest-bio text-gray-700 mb-2 text-sm sm:text-base whitespace-pre-line">
+                {displayedBio}
               </p>
+              {needsTruncate && (
+                <button
+                  type="button"
+                  onClick={() => setIsExpanded((prev) => !prev)}
+                  className="text-[#0166CD] hover:text-[#d4af37] transition-colors mb-4 text-sm sm:text-base"
+                >
+                  {isExpanded ? '閉じる' : '続きを読む'}
+                </button>
+              )}
               
               <div className="guest-details bg-white bg-opacity-80 rounded-lg p-4 sm:p-6 shadow-md mb-6">
                 <div className="grid grid-cols-1 gap-4 text-left">{/* md:grid-cols-2を削除しました */}
