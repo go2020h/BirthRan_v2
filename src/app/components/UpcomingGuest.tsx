@@ -28,8 +28,12 @@ export default function UpcomingGuest({
 }: GuestProps) {
   const [isExpanded, setIsExpanded] = useState(false);
   const bioLines = bio.split('\n');
-  const needsTruncate = bioLines.length > 10;
-  const displayedBio = needsTruncate && !isExpanded ? bioLines.slice(0, 10).join('\n') + '...' : bio;
+  const needsTruncate = bioLines.length > 102 || bio.length > 388;
+  const displayedBio = needsTruncate && !isExpanded
+    ? (bioLines.length > 102
+        ? bioLines.slice(0, 102).join('\n') + '...'
+        : bio.slice(0, 388) + '...')
+    : bio;
 
   return (
     <div className="py-20 bg-white">
