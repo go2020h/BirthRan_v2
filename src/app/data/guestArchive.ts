@@ -169,6 +169,16 @@ export const guestArchive: GuestData[] = [
     twitter: "https://x.com/kaneko_miyu",
     twitter2: "",
     instagram: "https://www.instagram.com/kaneko_miyu0813/"
+  } ,{
+    name: "早見優",
+    image: "/guest/guest17.jpg",
+    bio: "日本生まれ。3歳から14歳までをグァム、ハワイで育つ。14歳でスカウトされ82年「急いで!初恋」で歌手デビュー。「夏色のナンシー」や「PASSION」などのヒット曲を持つ。1991年に上智大学比較文化学部日本文化学科を卒業。翌年には「地球サミット」に参加。2008年にワインエキスパート認定。2018年にダンスフィットネス ZUMBA®のインストラクター認定。2022年デビュー40周年迎え、ベストアルバム「Affection~Yu Hayami 40th Anniversary Collection~」をリリース。2023年配信シングル「Shampoo」 ーDJ Night Tempo feat.YU HAYAMIをリリース、作詞を手掛ける。2024年、早見優名義の新曲「DISCO de DISCO」（作詞:早見優／作曲:DJ Night Tempo）を配信リリース。レギュラーでNHKラジオ「深夜便ビギナーズ」、NHKWorld「Dining with the Chef」に出演。BS-TBS「MUSIC X（ミュージッククロス）」の司会も務める。毎夏恒例となるソロライブ 『夏色のナンシー祭り 2025』を7月13日に大手町三井ホールにて開催。近年、ジャズの魅力に魅せられ、最近はジャズライブの活動も開始。ポップスと共に音楽の新たな可能性を追求している ♪　今までにもらった誕生日プレゼントで特に印象に残っているものは？ 娘たちがサプライズで作ってくれた動画です。小さい頃の思い出や、私へのメッセージを一生懸命編集してくれて…嬉しかったです。",
+    appearanceDate: "2025年8月14日", 
+    birthDate: "9月2日",
+    officialSite: "https://www.yu-hayami.com/",
+    twitter: "",
+    twitter2: "",
+    instagram: "https://www.instagram.com/yuyuhayami/?hl=ja"
   } 
 
 ];
