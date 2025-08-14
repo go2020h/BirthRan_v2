@@ -179,6 +179,16 @@ export const guestArchive: GuestData[] = [
     twitter: "",
     twitter2: "",
     instagram: "https://www.instagram.com/yuyuhayami/?hl=ja"
+  } ,{
+    name: "竹島宏",
+    image: "/guest/guest18.jpg",
+    bio: "2002年デビュー。一昨年、レコード大賞企画賞を受賞したヨーロッパ3部作をモチーフにして作られたミュージカル「プラハの橋」で今年１月・２月にミュージカルに初挑戦しました。♪　これまでにもらった誕生日プレゼントで一番印象に残っているものは？小学1年生の誕生日に祖父がプレゼントしてくれたミッキーマウスの目覚まし時計。なんと今も動いてます。",
+    appearanceDate: "2025年8月21日", 
+    birthDate: "8月28日",
+    officialSite: "https://takeshimahiroshi.com/",
+    twitter: "https://x.com/takeshima_staff",
+    twitter2: "",
+    instagram: ""
   } 
 
 ];
