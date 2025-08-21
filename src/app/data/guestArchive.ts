@@ -189,6 +189,16 @@ export const guestArchive: GuestData[] = [
     twitter: "https://x.com/takeshima_staff",
     twitter2: "",
     instagram: ""
+  } ,{
+    name: "えまちぃ",
+    image: "/guest/guest19.jpg",
+    bio: "＜あっとせぶんてぃーん プロフィール＞あっとせぶんてぃーんとは、秋葉原のメイドカフェ『あっとほぉーむカフェ』で給仕する現役のメイドたち（＝永遠の17歳）から生まれたユニット。2016年に期間限定で結成後、2017年より現役メイド350人（当時）の中から選ばれたメンバーで現役のメイドとアーティスト活動を両立させている。あっとせぶんてぃーんは、 『あっとほぉーむカフェ』という非日常感（メルヘン）いっぱいのテーマパークから飛び出してきたメイドたちが、それぞれの夢に向かって羽ばたいていく、ひとつの成長物語でもある。2024年９月15日に新メンバーを加え、７人組の新体制で2024年12月18日氣志團・綾小路 翔プロデュース「メイド in Nippon」でメジャーデビュー。綾小路 翔プロデュース作品三部作を完成させ、2025年9月、あっとせぶんてぃーん史上最大規模のワンマンライブがLINE CUBE SHIBUYA（渋谷公会堂）にて開催される。",
+    appearanceDate: "2025年8月28日", 
+    birthDate: "9月15日",
+    officialSite: "https://at17.jp/",
+    twitter: "https://x.com/maid_emachii?s=21&t=yFiC3o3Bku78q-p_1LbtKQ",
+    twitter2: "",
+    instagram: ""
   } 
 
 ];
