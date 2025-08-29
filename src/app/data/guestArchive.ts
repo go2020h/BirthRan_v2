@@ -199,6 +199,16 @@ export const guestArchive: GuestData[] = [
     twitter: "https://x.com/maid_emachii?s=21&t=yFiC3o3Bku78q-p_1LbtKQ",
     twitter2: "",
     instagram: ""
+  } ,{
+    name: "藤宮めい(Appare!)",
+    image: "/guest/guest20.jpg",
+    bio: "2016年に天晴れ！原宿というグループ名で結成されたアイドルグループ。同年7月にアイドルフェス「アイドル横丁夏まつり!!～2016～」でステージデビューし、12月に自主レーベルのTAKENOKO Music より1stアルバム「APPARE! WORLD」を発表。2018年8月にはアイドルフェス「@JAM EXPO 2018」のメインステージ争奪戦決勝ライブで優勝した。2020年3月に新宿BLAZEで開催したワンマンライブをもって充電期間に入り、7月の結成4周年記念配信ライブにて新体制をお披露目。天晴れ！原宿からAppare!に改名し、新章の活動をスタートさせた。2024年8月に日本武道館公演が開催中止に、その後2025年1月に改めて開催し、無事成功させた。♪ 　今までにもらった誕生日プレゼントで特に印象に残っているものは？ アルバム",
+    appearanceDate: "2025年9月4日", 
+    birthDate: "9月27日",
+    officialSite: "https://appare-official.jp/",
+    twitter: "https://x.com/appare_may",
+    twitter2: "",
+    instagram: ""
   } 
 
 ];
