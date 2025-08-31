@@ -192,12 +192,12 @@ const PurposePage: React.FC = () => {
                   投稿者からの誕生日メッセージがWEBサイトやラジオ番組に届き、それがさらに渋谷の街頭ビジョンで放映される流れを作り出しています。
                 </p>
 
-                <h3 className="text-xl font-bold text-[#1a3a6c] mb-4 mt-6">
+                 {/*<h3 className="text-xl font-bold text-[#1a3a6c] mb-4 mt-6">
                   バイタルデータ連携
                 </h3>
                 <p className="text-gray-700 leading-relaxed">
                   MOTHERブレスレットと連携し、出演者のリアルタイムバイタルデータを表示します。
-                </p>
+                </p>*/}
               </div>
 
               {/* コンテンツの展開タブ (非表示デフォルト) */}
