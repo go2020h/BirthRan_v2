@@ -35,7 +35,7 @@ export default function GuestArchivePage() {
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {guestArchive.map((guest, index) => (
+              {[...guestArchive].reverse().map((guest, index) => (
                 <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200 transition-transform hover:scale-[1.02]">
                   <div className="relative pb-[120%] overflow-hidden">
                     <img 
