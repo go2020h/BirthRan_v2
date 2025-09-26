@@ -119,6 +119,16 @@ const birthdayPresents: BirthdayPresent[] = [
     url: "https://be-story.jp/",
     date: "2025-09-22",
     company: "株式会社光文社"
+  },{
+    id: 11,
+    name: "今回ご紹介させていただくのは、このバスランがはじまった当初、ゲストとしてお越しいただいた世界初のスイーツ専用香辛料として人気を博している『渋谷八香唐辛子』を販売している智立商事の位田智子さんにスタジオにお越しいただきました。",
+    description: "ゲストの高輝さんに渋谷八香唐辛子１０本用意しました。そして直営店でもある白金台のSTARBRIDGE TEAで販売している焼き菓子もプレゼントしていただきました。",
+    descriptionMarkdown: "ゲストの高輝さんに渋谷八香唐辛子１０本用意しました。そして直営店でもある白金台のSTARBRIDGE TEAで販売している焼き菓子もプレゼントしていただきました。",
+    imagePath: "/home13.jpg",
+    imageAlt: "株式会社モトイチエンタテイメント",
+    url: "https://shibuyaspice.tokyo/",
+    date: "2025-09-26",
+    company: "株式会社モトイチエンタテイメント"
   }
   
   
