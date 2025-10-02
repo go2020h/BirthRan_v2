@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Menu from '@/components/Menu';
-import { FaTrophy, FaGift, FaHeart, FaEnvelope, FaMicrophone, FaNewspaper, FaVideo, FaChartBar } from 'react-icons/fa';
+import { FaTrophy, FaGift, FaEnvelope, FaMicrophone, FaNewspaper, FaVideo, FaChartBar } from 'react-icons/fa';
 
 const ProgramPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState<string>('18');
