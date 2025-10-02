@@ -79,7 +79,7 @@ const ProgramPage: React.FC = () => {
                   <p className="text-gray-700 ml-10">先週金曜日に誕生日を迎えた方へのバースデーメッセージランキングを発表します。</p>
                 </div>
 
-                <div className="bg-white rounded-lg p-6 shadow-sm border-l-4 border-[#0167CC] hover:shadow-md transition-all duration-300">
+                {/*<div className="bg-white rounded-lg p-6 shadow-sm border-l-4 border-[#0167CC] hover:shadow-md transition-all duration-300">
                   <div className="flex items-center mb-3">
                     <div className="bg-[#0167CC] text-white rounded-full p-2 mr-3">
                       <FaHeart className="h-5 w-5" />
@@ -89,7 +89,7 @@ const ProgramPage: React.FC = () => {
                   <p className="text-gray-700 ml-10">毎週・週替わりでパーソナリティを務める皆様がリスナーの皆様に自信を持ってお届けする情報が満載のコーナーです。このコーナーを聴いたあとに、思わず<br/>
                   「パーソナリティさん♡ありがとう」素敵な愛言葉を贈ることになりますよ～。<br/>
                   こうご期待です！</p>
-                </div>
+                </div>*/}
                 
                 <div className="bg-white rounded-lg p-6 shadow-sm border-l-4 border-[#d4af37] hover:shadow-md transition-all duration-300">
                   <div className="flex items-center mb-3">
