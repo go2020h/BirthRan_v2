@@ -2,6 +2,7 @@
 
 import { guestArchive } from '../data/guestArchive';
 import Menu from '@/components/Menu';
+import Image from 'next/image';
 import { useState } from 'react';
 
 export default function GuestArchivePage() {
@@ -38,14 +39,11 @@ export default function GuestArchivePage() {
               {[...guestArchive].reverse().map((guest, index) => (
                 <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200 transition-transform hover:scale-[1.02]">
                   <div className="relative pb-[120%] overflow-hidden">
-                    <img 
-                      src={guest.image} 
-                      alt={guest.name} 
-                      className="absolute inset-0 w-full h-full object-cover"
-                      onError={(e) => {
-                        const target = e.target as HTMLImageElement;
-                        target.src = `https://via.placeholder.com/400x500?text=${guest.name}`;
-                      }}
+                    <Image
+                      src={guest.image}
+                      alt={guest.name}
+                      fill
+                      className="object-cover"
                     />
                   </div>
                   <div className="p-6">

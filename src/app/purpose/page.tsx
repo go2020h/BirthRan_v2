@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 import Menu from '@/components/Menu';
 
 const PurposePage: React.FC = () => {
@@ -131,10 +132,12 @@ const PurposePage: React.FC = () => {
 
             <div className="flex flex-col md:flex-row mb-12">
               <div className="md:w-1/2 mb-8 md:mb-0 flex items-center justify-center">
-                <img 
-                  src="/chart.png" 
-                  alt="クロスメディア展開図" 
-                  className={`max-w-full h-auto rounded-lg shadow-lg ${!isMobile ? 'cursor-pointer hover:opacity-90 transition-opacity' : ''}`} 
+                <Image
+                  src="/chart.png"
+                  alt="クロスメディア展開図"
+                  width={600}
+                  height={400}
+                  className={`max-w-full h-auto rounded-lg shadow-lg ${!isMobile ? 'cursor-pointer hover:opacity-90 transition-opacity' : ''}`}
                   onClick={handleImageClick}
                 />
               </div>
@@ -256,10 +259,12 @@ const PurposePage: React.FC = () => {
       {showImageDialog && (
         <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 p-4 backdrop-blur-sm overflow-y-auto" onClick={handleBackdropClick}>
           <div className="relative max-w-5xl w-full">
-            <img 
-              src="/chart.png" 
-              alt="クロスメディア展開図" 
-              className="w-full h-auto rounded-lg shadow-2xl" 
+            <Image
+              src="/chart.png"
+              alt="クロスメディア展開図"
+              width={1200}
+              height={800}
+              className="w-full h-auto rounded-lg shadow-2xl"
             />
           </div>
         </div>

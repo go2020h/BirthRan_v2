@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Footer = () => {
   return (
@@ -38,7 +39,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="hover:opacity-80 transition-all"
             >
-              <img src="/radiko.png" alt="radikou3067u8074u304f" className="h-10" />
+              <Image src="/radiko.png" alt="radikoで聴く" width={120} height={40} className="h-10 w-auto" />
             </a>
           </div>
         </div>

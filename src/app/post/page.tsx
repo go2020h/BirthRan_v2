@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import Menu from '../../components/Menu';
 import Dialog from '../../components/Dialog';
 import Form from '../../components/Form';
@@ -38,7 +39,7 @@ const PostPage: React.FC = () => {
             {/* バスランに投稿しようセクション */}
             <div className="bg-white p-8 rounded-xl shadow-lg mb-12 flex flex-wrap items-center">
               <div className="w-full md:w-1/3 lg:w-1/3 xl:w-1/3 p-4 flex justify-center">
-                <img src="post1.jpg" alt="post1" />
+                <Image src="/post1.jpg" alt="post1" width={300} height={300} />
               </div>
               <div className="w-full md:w-2/3 lg:w-2/3 xl:w-2/3 p-4">
                 <h2 className="text-3xl font-bold text-[#1a3a6c] mb-8 text-center">バースデー・ランキングに投票しよう</h2>
@@ -66,7 +67,7 @@ const PostPage: React.FC = () => {
             {/* 渋谷愛ビジョンに関するセクション */}
             <div className="bg-white p-8 rounded-xl shadow-lg mb-12 flex flex-wrap items-center">
               <div className="w-full md:w-1/3 lg:w-1/3 xl:w-1/3 p-4 flex justify-center">
-                <img src="post2.jpg" alt="post2" />
+                <Image src="/post2.jpg" alt="post2" width={300} height={300} />
               </div>
               <div className="w-full md:w-2/3 lg:w-2/3 xl:w-2/3 p-4">
                 <h2 className="text-3xl font-bold text-[#1a3a6c] mb-8 text-center">渋谷愛ビジョンに放映しよう</h2>

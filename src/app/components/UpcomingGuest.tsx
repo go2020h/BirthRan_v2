@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 
 interface GuestProps {
@@ -54,14 +55,12 @@ export default function UpcomingGuest({
             {/* ゲスト画像 */}
             <div className="guest-image-wrapper w-full md:w-1/3 mb-6 md:mb-0 flex justify-center">
               <div className="guest-image-container max-w-[250px] w-full overflow-hidden shadow-lg rounded-lg">
-                <img 
-                  src={image} 
-                  alt={name} 
+                <Image
+                  src={image}
+                  alt={name}
+                  width={300}
+                  height={400}
                   className="w-full h-auto object-cover"
-                  onError={(e) => {
-                    const target = e.target as HTMLImageElement;
-                    target.src = `https://via.placeholder.com/300x400?text=${name}`;
-                  }}
                 />
               </div>
             </div>

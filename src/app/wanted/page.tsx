@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import Menu from '../../components/Menu';
 import Dialog from '../../components/Dialog';
 import GuestApplicationForm from '../../components/GuestApplicationForm';
@@ -48,7 +49,7 @@ const RecruitPage: React.FC = () => {
             {/* 誕生日が近い！ゲスト募集中！！セクション */}
             <div className="bg-white p-8 rounded-xl shadow-lg mb-12 flex flex-wrap items-center">
               <div className="w-full md:w-1/3 lg:w-1/3 xl:w-1/3 p-4 flex justify-center">
-                <img src="wanted1.jpg" alt="wanted1" className="object-cover" />
+                <Image src="/wanted1.jpg" alt="wanted1" width={300} height={300} className="object-cover" />
               </div>
               <div className="w-full md:w-2/3 lg:w-2/3 xl:w-2/3 p-4">
                 <h2 className="text-3xl font-bold text-[#1a3a6c] mb-8 text-center">番組では誕生日が近いゲストを大募集中！！</h2>
@@ -75,7 +76,7 @@ const RecruitPage: React.FC = () => {
             {/* バースデープレゼントのスポンサー募集中！！セクション */}
             <div className="bg-white p-8 rounded-xl shadow-lg mb-12 flex flex-wrap items-center">
               <div className="w-full md:w-1/3 lg:w-1/3 xl:w-1/3 p-4 flex justify-center">
-                <img src="wanted2.jpg" alt="wanted2" className="object-cover" />
+                <Image src="/wanted2.jpg" alt="wanted2" width={300} height={300} className="object-cover" />
               </div>
               <div className="w-full md:w-2/3 lg:w-2/3 xl:w-2/3 p-4">
                 <h2 className="text-3xl font-bold text-[#1a3a6c] mb-8 text-center">バースデープレゼントのスポンサー募集中！！</h2>

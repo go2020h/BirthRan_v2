@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import Menu from '@/components/Menu';
 import { FaTrophy, FaGift, FaHeart, FaEnvelope, FaMicrophone, FaNewspaper, FaVideo, FaChartBar } from 'react-icons/fa';
 
@@ -78,7 +79,7 @@ const ProgramPage: React.FC = () => {
                   <p className="text-gray-700 ml-10">先週金曜日に誕生日を迎えた方へのバースデーメッセージランキングを発表します。</p>
                 </div>
 
-                <div className="bg-white rounded-lg p-6 shadow-sm border-l-4 border-[#0167CC] hover:shadow-md transition-all duration-300">
+                {/*<div className="bg-white rounded-lg p-6 shadow-sm border-l-4 border-[#0167CC] hover:shadow-md transition-all duration-300">
                   <div className="flex items-center mb-3">
                     <div className="bg-[#0167CC] text-white rounded-full p-2 mr-3">
                       <FaHeart className="h-5 w-5" />
@@ -88,14 +89,14 @@ const ProgramPage: React.FC = () => {
                   <p className="text-gray-700 ml-10">毎週・週替わりでパーソナリティを務める皆様がリスナーの皆様に自信を持ってお届けする情報が満載のコーナーです。このコーナーを聴いたあとに、思わず<br/>
                   「パーソナリティさん♡ありがとう」素敵な愛言葉を贈ることになりますよ～。<br/>
                   こうご期待です！</p>
-                </div>
+                </div>*/}
                 
                 <div className="bg-white rounded-lg p-6 shadow-sm border-l-4 border-[#d4af37] hover:shadow-md transition-all duration-300">
                   <div className="flex items-center mb-3">
                     <div className="bg-[#d4af37] text-white rounded-full p-2 mr-3">
                       <FaTrophy className="h-5 w-5" />
                     </div>
-                    <h3 className="text-xl font-bold text-[#1a3a6c]">18時20分頃／（先週土曜日の）『バスランベスト３の発表！』</h3>
+                    <h3 className="text-xl font-bold text-[#1a3a6c]">18時18分頃／（先週土曜日の）『バスランベスト３の発表！』</h3>
                   </div>
                   <p className="text-gray-700 ml-10">先週土曜日に誕生日を迎えた方へのバースデーメッセージランキングを発表します。</p>
                 </div>
@@ -105,7 +106,7 @@ const ProgramPage: React.FC = () => {
                     <div className="bg-[#d4af37] text-white rounded-full p-2 mr-3">
                       <FaTrophy className="h-5 w-5" />
                     </div>
-                    <h3 className="text-xl font-bold text-[#1a3a6c]">18時37分頃／（先週日曜日の）『バスランベスト３の発表！』</h3>
+                    <h3 className="text-xl font-bold text-[#1a3a6c]">18時27分頃／（先週日曜日の）『バスランベスト３の発表！』</h3>
                   </div>
                   <p className="text-gray-700 ml-10">先週日曜日に誕生日を迎えた方へのバースデーメッセージランキングを発表します。</p>
                 </div>   
@@ -347,9 +348,11 @@ const ProgramPage: React.FC = () => {
             <div className="bg-white p-8 rounded-xl shadow-xl border border-gray-100">
               <div className="flex flex-col md:flex-row items-center gap-10">
                 <div className="md:w-2/5">
-                  <img 
-                    src="/about1.jpg" 
-                    alt="渋谷愛ビジョン" 
+                  <Image
+                    src="/about1.jpg"
+                    alt="渋谷愛ビジョン"
+                    width={400}
+                    height={300}
                     className="rounded-lg w-full h-auto shadow-md transform hover:scale-102 transition-transform duration-300 border-4 border-white"
                   />
                 </div>

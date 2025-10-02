@@ -898,7 +898,7 @@ const MainPage = () => {
                   </div>
                   <div className="flex flex-col md:flex-row gap-6">
                     <div className="md:w-1/3">
-                      <img src="/home1.jpg" alt="渋谷愛ビジョン" className="w-full h-auto object-contain rounded-lg shadow-sm" />
+                      <Image src="/home1.jpg" alt="渋谷愛ビジョン" width={800} height={600} className="w-full h-auto object-contain rounded-lg shadow-sm" />
                     </div>
                     <div className="md:w-2/3">
                       <p className="text-gray-700 mb-4">
@@ -929,7 +929,7 @@ const MainPage = () => {
                   </div>
                   <div className="flex flex-col md:flex-row gap-6">
                     <div className="md:w-1/3">
-                      <img src="/home2.jpg" alt="MOTHER Bracelet" className="w-full h-auto object-contain rounded-lg shadow-sm" />
+                      <Image src="/home2.jpg" alt="MOTHER Bracelet" width={800} height={600} className="w-full h-auto object-contain rounded-lg shadow-sm" />
                     </div>
                     <div className="md:w-2/3">
                       <p className="text-gray-700">

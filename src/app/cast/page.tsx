@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import Menu from '@/components/Menu';
 
 const CastStaffPage: React.FC = () => {
@@ -209,7 +210,7 @@ const CastStaffPage: React.FC = () => {
                 <div key={cast.id} className="bg-transparent rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 cursor-pointer" onClick={() => openCastDetail(cast)}>
                   <div className="relative">
                     <div className="aspect-square">
-                      <img src={cast.image} alt={cast.name} className="w-full h-full object-cover" />
+                      <Image src={cast.image} alt={cast.name} width={400} height={400} className="w-full h-full object-cover" />
                     </div>
                   </div>
                   <div className="p-6 bg-transparent text-center">
@@ -237,7 +238,7 @@ const CastStaffPage: React.FC = () => {
                 <div key={staff.id} className="bg-transparent rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 cursor-pointer" onClick={() => openStaffDetail(staff)}>
                   <div className="relative">
                     <div className="aspect-square">
-                      <img src={staff.image} alt={staff.name} className="w-full h-full object-cover" />
+                      <Image src={staff.image} alt={staff.name} width={400} height={400} className="w-full h-full object-cover" />
                     </div>
                   </div>
                   <div className="p-6 bg-transparent text-center">
@@ -296,7 +297,7 @@ const CastStaffPage: React.FC = () => {
                   <p className="text-white mb-6">渋谷の街を彩る大型ビジョンで番組情報を放映</p>
                   <div className="flex justify-center p-4 rounded-xl h-32 flex items-center">
                     <a href="https://www.saivision.jp/top.php" target="_blank" rel="noopener noreferrer">
-                      <img src="/logo1.png" alt="渋谷愛ビジョン" className="h-24 object-contain hover:opacity-80 transition-opacity" />
+                      <Image src="/logo1.png" alt="渋谷愛ビジョン" width={200} height={96} className="h-24 w-auto object-contain hover:opacity-80 transition-opacity" />
                     </a>
                   </div>
                 </div>
@@ -307,7 +308,7 @@ const CastStaffPage: React.FC = () => {
                   <p className="text-white mb-6">番組メインスポンサー</p>
                   <div className="flex justify-center bg-white p-4 rounded-xl h-32 flex items-center">
                     <a href="https://efit.co.jp/" target="_blank" rel="noopener noreferrer">
-                      <img src="/logo2.png" alt="efit" className="h-24 object-contain hover:opacity-80 transition-opacity" />
+                      <Image src="/logo2.png" alt="efit" width={200} height={96} className="h-24 w-auto object-contain hover:opacity-80 transition-opacity" />
                     </a>
                   </div>
                 </div>
@@ -332,10 +333,12 @@ const CastStaffPage: React.FC = () => {
             
             <div className="flex flex-col md:flex-row">
               <div className="md:w-1/2 relative">
-                <img 
-                  src={selectedCast.detailImage} 
-                  alt={selectedCast.name} 
-                  className="w-full h-full object-cover" 
+                <Image
+                  src={selectedCast.detailImage}
+                  alt={selectedCast.name}
+                  width={600}
+                  height={600}
+                  className="w-full h-full object-cover"
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#0f1429] to-transparent h-20"></div>
               </div>
@@ -371,10 +374,12 @@ const CastStaffPage: React.FC = () => {
             
             <div className="flex flex-col md:flex-row">
               <div className="md:w-1/2 relative">
-                <img 
-                  src={selectedStaff.detailImage} 
-                  alt={selectedStaff.name} 
-                  className="w-full h-full object-cover" 
+                <Image
+                  src={selectedStaff.detailImage}
+                  alt={selectedStaff.name}
+                  width={600}
+                  height={600}
+                  className="w-full h-full object-cover"
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#0f1429] to-transparent h-20"></div>
               </div>
