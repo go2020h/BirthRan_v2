@@ -49,8 +49,8 @@ const CastStaffPage: React.FC = () => {
       name: '風谷南友',
       week: '第3週',
       birthday: '3月21日生まれ',
-      image: '/cast/cast3-1.jpg',
-      detailImage: '/cast/cast7-1.jpg',
+      image: '/cast/cast7-1.jpg',
+      detailImage: '/cast/cast7-2.jpg',
       description: '生き物と植物が好きで、ナウシカをリスペクトする女優。「ミス小野小町」グランプリ受賞後、アクションや日舞、居合抜刀などを習得。「勝負の姫君」として神事抜刀を執り行う。蠱惑的な声質で声優やナレーションも担当。自然愛からSDGsのラジオ番組MCを務め、BS演技バトル番組で優勝。狂気溢れたホラー演技がtiktoKで注目されている。'
     },
     {
@@ -79,7 +79,7 @@ const CastStaffPage: React.FC = () => {
       image: '/cast/cast6-1.jpg',
       detailImage: '/cast/cast6-2.jpg',
       description: 'これまでMVを500本以上（自分調べで曖昧です）監督してきた映像ディレクターとして、この番組での私の役割は…ランキング１位のかたに、わたしが選曲した１曲をプレゼントすることです。言ってみれば…１位になったその人を主役に据えてMVを撮りたい！（MVの成り立ちとは真逆ですが）といった発想だったりするかもしれませんね。最高の、全力の、選曲で、バースデー・ランキングを飾りたいと思います。'
-    }
+    },
   ];
 
   const staffData = [
