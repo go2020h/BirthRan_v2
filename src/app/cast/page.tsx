@@ -46,12 +46,12 @@ const CastStaffPage: React.FC = () => {
     },
     {
       id: 'cast3',
-      name: '神谷明采',
+      name: '風谷南友',
       week: '第3週',
-      birthday: '4月19日生まれ',
+      birthday: '3月21日生まれ',
       image: '/cast/cast3-1.jpg',
-      detailImage: '/cast/cast3-2.jpg',
-      description: 'タレント、会社経営者、YouTuber。これまでに「ミス東大2020」と「MISS OF MISS CAMPUS QUEEN CONTEST 2021」でグランプリを受賞。幼少期からバレエを始め、中高時代は新体操部で活躍し部長も務める。「One Young World Manchester 2022」に参加し、低糖質スイーツ事業と世界の糖尿病問題について英語でスピーチを行うなど、国内外で活躍の場を広げている。現在は東京大学公共政策大学院経済政策コース在学中。'
+      detailImage: '/cast/cast7-1.jpg',
+      description: '生き物と植物が好きで、ナウシカをリスペクトする女優。「ミス小野小町」グランプリ受賞後、アクションや日舞、居合抜刀などを習得。「勝負の姫君」として神事抜刀を執り行う。蠱惑的な声質で声優やナレーションも担当。自然愛からSDGsのラジオ番組MCを務め、BS演技バトル番組で優勝。狂気溢れたホラー演技がtiktoKで注目されている。'
     },
     {
       id: 'cast4',
@@ -79,16 +79,7 @@ const CastStaffPage: React.FC = () => {
       image: '/cast/cast6-1.jpg',
       detailImage: '/cast/cast6-2.jpg',
       description: 'これまでMVを500本以上（自分調べで曖昧です）監督してきた映像ディレクターとして、この番組での私の役割は…ランキング１位のかたに、わたしが選曲した１曲をプレゼントすることです。言ってみれば…１位になったその人を主役に据えてMVを撮りたい！（MVの成り立ちとは真逆ですが）といった発想だったりするかもしれませんね。最高の、全力の、選曲で、バースデー・ランキングを飾りたいと思います。'
-    },
-    {
-      id: 'cast7',
-      name: '風谷南友',
-      week: '勝負の姫君',
-      birthday: '3月21日生まれ',
-      image: '/cast/cast7-1.jpg',
-      detailImage: '/cast/cast7-2.jpg',
-      description: '生き物と植物が好きで、ナウシカをリスペクトする女優。「ミス小野小町」グランプリ受賞後、アクションや日舞、居合抜刀などを習得。「勝負の姫君」として神事抜刀を執り行う。蠱惑的な声質で声優やナレーションも担当。自然愛からSDGsのラジオ番組MCを務め、BS演技バトル番組で優勝。狂気溢れたホラー演技がtiktoKで注目されている。'
-    },
+    }
   ];
 
   const staffData = [
