@@ -137,7 +137,7 @@ const birthdayPresents: BirthdayPresent[] = [
     imagePath: "/home14.jpg",
     imageAlt: "国連支援交流協会",
     url: "https://ngo-fsun.org/",
-    date: "2025-10-3",
+    date: "2025-10-03",
     company: "国連支援交流協会"
   }
   
