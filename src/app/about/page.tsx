@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Menu from '@/components/Menu';
-import { FaTrophy, FaGift, FaEnvelope, FaMicrophone, FaNewspaper, FaVideo, FaChartBar } from 'react-icons/fa';
+import { FaTrophy, FaHeart, FaGift, FaEnvelope, FaMicrophone, FaNewspaper, FaVideo, FaChartBar } from 'react-icons/fa';
 
 const ProgramPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState<string>('18');
@@ -310,18 +310,19 @@ const ProgramPage: React.FC = () => {
                 </p>
               </div>
 
-              {/*　<div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-[#0167CC] hover:shadow-lg transition-all duration-300">
+              <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-[#0167CC] hover:shadow-lg transition-all duration-300">
                 <h3 className="text-2xl font-bold text-[#1a3a6c] mb-4 flex items-center">
                   <div className="bg-[#0167CC] text-white rounded-full p-2 mr-3">
                     <FaHeart className="h-6 w-6" />
                   </div>
-                  <span>パーソナリティへありがとう</span>
+                  <span>もうすぐ誕生日！ようこそバスランへ！</span>
                 </h3>
                 <p className="text-gray-700 leading-relaxed ml-12">
-                  個性豊かなバスランのパーソナリティが得意とする分野、世の中に発信したい愛ある情報を紹介するコーナーです。<br/>
-                  このコーナーを聴いたリスナーは、パーソナリティに素敵な情報を『ありがとう』と伝えたくなること間違いなし！こうご期待！！
+                1カ月以内に誕生日を迎えるゲストをご招待。<br/>
+                  今まで一番思い出に残っている誕生日やとっても嬉しかった誕生日プレゼント等、誕生日に纏わる素敵なお話をお伺いするコーナーです。<br/>
+                  ご出演いただいたゲストの皆様には、少し早いですが愛が詰まったおめありGIFTを誕生日プレゼントとしてご用意しております。
                 </p>
-              </div>　*/}
+              </div>
 
               <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-[#FF6B6B] hover:shadow-lg transition-all duration-300">
                 <h3 className="text-2xl font-bold text-[#1a3a6c] mb-4 flex items-center">
