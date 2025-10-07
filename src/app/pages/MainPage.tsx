@@ -322,9 +322,9 @@ const MainPage = () => {
         {/* スマホ表示用画像 */}
         <div className="relative w-full h-full md:hidden">
           <div className="relative w-full h-full">
-            <Image 
-              src="/hero2.png" 
-              alt="バースデーランキング" 
+            <Image
+              src="/hero2.png"
+              alt="バースデーランキング"
               className="w-full h-full object-contain"
               fill
               priority
@@ -332,13 +332,13 @@ const MainPage = () => {
             />
           </div>
         </div>
-        
+
         {/* デスクトップ表示用画像 */}
         <div className="relative w-full h-full hidden md:block">
           <div className="relative w-full h-full">
-            <Image 
-              src="/hero1.png" 
-              alt="バースデーランキング" 
+            <Image
+              src="/hero1.png"
+              alt="バースデーランキング"
               className="w-full h-full object-contain"
               fill
               priority
@@ -382,6 +382,15 @@ const MainPage = () => {
       {/* キャッチコピーセクション */}
       <section className="py-12 md:py-20 bg-gradient-to-r from-[#17142E] to-[#1a3a6c] text-center">
         <div className="container mx-auto px-3 md:px-4">
+          {/* 番組へのお便りボタン */}
+          <div className="bottom-8 transform z-10 px-4 w-4/5 max-w-xs mx-auto mb-12 sm:mb-20">
+            <a
+              href="mailto:yama.munehiro@gmail.com"
+              className="block w-full bg-[#f5d742] hover:bg-[#f2c464] text-black font-bold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl text-center whitespace-nowrap transform hover:scale-105"
+            >
+              番組へのお便りはこちら
+            </a>
+          </div>
           <div className="max-w-4xl mx-auto bg-white/5 backdrop-blur-sm p-4 md:p-10 rounded-lg shadow-xl border border-white/10">
             <h2 className="text-xl sm:text-2xl md:text-4xl text-[#d4af37] font-bold mb-4 md:mb-8 tracking-wide drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]">
               ⭐毎日が誰かの誕生日⭐
