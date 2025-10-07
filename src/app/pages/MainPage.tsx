@@ -385,7 +385,7 @@ const MainPage = () => {
           {/* 番組へのお便りボタン */}
           <div className="bottom-8 transform z-10 px-4 w-4/5 max-w-xs mx-auto mb-12 sm:mb-20">
             <a
-              href="mailto:yama.munehiro@gmail.com"
+              href="mailto:br@jorf.co.jp"
               className="block w-full bg-[#f5d742] hover:bg-[#f2c464] text-black font-bold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl text-center whitespace-nowrap transform hover:scale-105"
             >
               番組へのお便りはこちら
