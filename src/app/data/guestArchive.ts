@@ -249,6 +249,16 @@ export const guestArchive: GuestData[] = [
     twitter: "https://x.com/DOCKSON_GANG",
     twitter2: "https://x.com/NARU_GANG",
     instagram: ""
+  } ,{
+    name: "立嶋迅留・岡島源武",
+    image: "/guest/guest25.jpg",
+    bio: "プロテアの花言葉 “変幻自在” をコンセプトに、 多種多彩な音楽と掛け合わさっていく8人組ダンス&ボーカルグループ。YouTube・smash.で配信された『プラチナムピクセル1st BOYS GROUP AUDITION』から誕生 2025年2月には「BAMBOO SHOT」がTBS系列「ひるおび」エンディングテーマに決定。2026年7月20日(月祝)にはZepp Shinjukuにてワンマンライブ開催決定。",
+    appearanceDate: "2025年10月16日", 
+    birthDate: "11月11日・11月13日",
+    officialSite: "https://platinumpixel.co.jp/talent/protea",
+    twitter: "https://x.com/hayato_protea",
+    twitter2: "https://x.com/motomu_protea",
+    instagram: ""
   } 
 
 ];
