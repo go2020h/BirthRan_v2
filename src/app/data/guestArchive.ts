@@ -10,6 +10,8 @@ export interface GuestData {
   officialSite?: string;
   twitter?: string;
   twitter2?: string;
+  twitterName1?: string;
+  twitterName2?: string;
   instagram?: string;
 }
 
@@ -258,6 +260,8 @@ export const guestArchive: GuestData[] = [
     officialSite: "https://platinumpixel.co.jp/talent/protea",
     twitter: "https://x.com/hayato_protea",
     twitter2: "https://x.com/motomu_protea",
+    twitterName1: "X(立嶋)",
+    twitterName2: "X(岡島)",
     instagram: ""
   } 
 

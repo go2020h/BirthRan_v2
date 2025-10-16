@@ -13,6 +13,8 @@ interface GuestProps {
   officialSite?: string;
   twitter?: string;
   twitter2?: string;
+  twitterName1?: string;
+  twitterName2?: string;
   instagram?: string;
 }
 
@@ -25,6 +27,8 @@ export default function UpcomingGuest({
   officialSite,
   twitter,
   twitter2,
+  twitterName1,
+  twitterName2,
   instagram
 }: GuestProps) {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -112,30 +116,30 @@ export default function UpcomingGuest({
                       <p className="text-gray-700 mb-2 text-sm sm:text-base">
                         <span className="font-bold">SNS：</span>
                         {twitter && (
-                          <a 
-                            href={twitter} 
-                            target="_blank" 
+                          <a
+                            href={twitter}
+                            target="_blank"
                             rel="noopener noreferrer"
                             className="text-[#0166CD] hover:text-[#d4af37] transition-colors mr-2"
                           >
-                            X（Twitter）
+                            {twitterName1 || 'X（Twitter）'}
                           </a>
                         )}
                         {twitter2 && (
-                          <a 
-                            href={twitter2} 
-                            target="_blank" 
+                          <a
+                            href={twitter2}
+                            target="_blank"
                             rel="noopener noreferrer"
                             className="text-[#0166CD] hover:text-[#d4af37] transition-colors mr-2"
                           >
-                            X（Twitter）
+                            {twitterName2 || 'X（Twitter）'}
                           </a>
                         )}
 
                         {instagram && (
-                          <a 
-                            href={instagram} 
-                            target="_blank" 
+                          <a
+                            href={instagram}
+                            target="_blank"
                             rel="noopener noreferrer"
                             className="text-[#0166CD] hover:text-[#d4af37] transition-colors"
                           >
