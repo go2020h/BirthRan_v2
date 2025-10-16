@@ -849,7 +849,7 @@ const MainPage = () => {
       </section>
 
       {/* もうすぐ誕生日！ようこそバスランへ */}
-      <UpcomingGuest 
+      <UpcomingGuest
         name={guestArchive[guestArchive.length - 1].name}
         image={guestArchive[guestArchive.length - 1].image}
         bio={guestArchive[guestArchive.length - 1].bio}
@@ -858,6 +858,8 @@ const MainPage = () => {
         officialSite={guestArchive[guestArchive.length - 1].officialSite}
         twitter={guestArchive[guestArchive.length - 1].twitter}
         twitter2={guestArchive[guestArchive.length - 1].twitter2}
+        twitterName1={guestArchive[guestArchive.length - 1].twitterName1}
+        twitterName2={guestArchive[guestArchive.length - 1].twitterName2}
         instagram={guestArchive[guestArchive.length - 1].instagram}
       />
 
