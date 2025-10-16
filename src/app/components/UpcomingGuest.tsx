@@ -70,10 +70,10 @@ export default function UpcomingGuest({
               <h3 className="text-2xl font-bold text-[#1a3a6c] mb-2 text-center md:text-left">{name}</h3>
               
               <div className="flex flex-col sm:flex-row items-center sm:items-start gap-2 sm:gap-4 mb-4">
-                <div className="guest-date-badge bg-[#1a3a6c] text-white px-4 py-1.5 rounded-full text-base font-medium shadow-sm w-full sm:w-auto text-center">
+                <div className="guest-date-badge bg-[#1a3a6c] text-white px-4 py-1.5 rounded-full text-sm font-medium shadow-sm w-full sm:w-auto text-center">
                   <span className="mr-1">出演日：</span>{appearanceDate}
                 </div>
-                <div className="guest-birthday-badge bg-[#d4af37] text-white px-4 py-1.5 rounded-full text-base font-medium shadow-sm w-full sm:w-auto text-center">
+                <div className="guest-birthday-badge bg-[#d4af37] text-white px-4 py-1.5 rounded-full text-sm font-medium shadow-sm w-full sm:w-auto text-center">
                   <span className="mr-1">誕生日：</span>{birthDate}
                 </div>
               </div>
