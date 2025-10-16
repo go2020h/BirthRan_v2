@@ -263,6 +263,16 @@ export const guestArchive: GuestData[] = [
     twitterName1: "X(立嶋)",
     twitterName2: "X(岡島)",
     instagram: ""
+  } ,{
+    name: "稲川英里",
+    image: "/guest/guest26.jpg",
+    bio: "『アイドルマスター ミリオンライブ！』大神環役や『SHOW BY ROCK!!』シアン役、『不滅のあなたへ』トナリ役などを演じるフリーの声優さん。アニメだけでなく、吹き替えやドラマになど幅広く活躍されています。",
+    appearanceDate: "2025年10月23日", 
+    birthDate: "10月28日",
+    officialSite: "https://eri-inagawa.studio.site/",
+    twitter: "https://x.com/greentea_senbei?s=11&t=YF5X7XblfHzTuB7isvFDfg",
+    twitter2: "",
+    instagram: ""
   } 
 
 ];
