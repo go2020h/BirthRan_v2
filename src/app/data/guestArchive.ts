@@ -250,11 +250,11 @@ export const guestArchive: GuestData[] = [
     twitter2: "https://x.com/NARU_GANG",
     instagram: ""
   } ,{
-    name: "立嶋迅留・岡島源武",
+    name: "立嶋迅留(たてしまはやと)・岡島源武(おかじまもとむ)",
     image: "/guest/guest25.jpg",
-    bio: "プロテアの花言葉 “変幻自在” をコンセプトに、 多種多彩な音楽と掛け合わさっていく8人組ダンス&ボーカルグループ。YouTube・smash.で配信された『プラチナムピクセル1st BOYS GROUP AUDITION』から誕生 2025年2月には「BAMBOO SHOT」がTBS系列「ひるおび」エンディングテーマに決定。2026年7月20日(月祝)にはZepp Shinjukuにてワンマンライブ開催決定。\n♪　これまでにもらった誕生日プレゼントで印象に残ってるものは？ （立嶋）高校生の時、今もなんですけど、コーラが大好きで、親友から誕プレでコーラ500mlをケースを学校内でいただいたのがすごく色んな意味で印象に残ってます。（岡島）誕生日の日に父親から送られてきたpaypay 1113ポイントが今でも印象に残ってます。誕生日と同じポイントでつい笑ってしまいました。",
+    bio: "プロテアの花言葉 “変幻自在” をコンセプトに、多種多彩な音楽と掛け合わさっていくダンス＆ボーカルグループ「Protea*」(読み方：バイプロテア)。YouTube・smash.で配信された『プラチナムピクセル1st BOYS GROUP AUDITION』から誕生 2025年2月には「BAMBOO SHOT」がTBS系列「ひるおび」エンディングテーマに決定。2026年7月20日(月祝)にはZepp Shinjukuにてワンマンライブ開催決定。\n♪　これまでにもらった誕生日プレゼントで印象に残ってるものは？ （立嶋）高校生の時、今もなんですけど、コーラが大好きで、親友から誕プレでコーラ500mlをケースを学校内でいただいたのがすごく色んな意味で印象に残ってます。（岡島）誕生日の日に父親から送られてきたpaypay 1113ポイントが今でも印象に残ってます。誕生日と同じポイントでつい笑ってしまいました。",
     appearanceDate: "2025年10月16日", 
-    birthDate: "11月11日・11月13日",
+    birthDate: "(立嶋)11月11日・(岡島)11月13日",
     officialSite: "https://platinumpixel.co.jp/talent/protea",
     twitter: "https://x.com/hayato_protea",
     twitter2: "https://x.com/motomu_protea",
