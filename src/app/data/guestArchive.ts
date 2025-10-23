@@ -273,6 +273,16 @@ export const guestArchive: GuestData[] = [
     twitter: "https://x.com/greentea_senbei?s=11&t=YF5X7XblfHzTuB7isvFDfg",
     twitter2: "",
     instagram: ""
+  } ,{
+    name: "中西圭三",
+    image: "/guest/guest27.jpg",
+    bio: "91年デビュー。この年ダンスユニットZOOに提供した シングル「Choo Choo TRAIN」 （03年にはEXILEにより再びヒット）はミリオンヒット。90年代のポップダンスシーンを牽引する代表曲となり、第13回JAM広告音楽大競技会作曲賞を受賞。翌92 年自らの楽曲「Woman」もヒット。この年同曲で日本レコード大賞作曲賞を受賞、並びに第31回紅白歌合戦へ出場。続くアルバム「STEPS」 「STARTING OVER」はオリコンチャートNO１に輝く。94年には企画ユニットICEBOXに参加。シングル「冷たいキス」がヒット。 95年以降はWendyMoton ・PeaboBryson ・ChristinaAguileraなど海外の アーティストとも楽曲をリリース。98年には「ウッチャンナンチャンのウリナリ!!」（NTV)の企画でビビアンスー・南原清隆・天野ひろゆきが在籍したブラックビスケッツ に提供した「タイミング」がミリオンヒット(2022年Klang  Rulerによりカバーされた同曲はTikTokにおいてHOTチャート6週連続１位を記録。総再生回数は20億回を突破）。その他提供楽曲も多数。2005年以降はNHK 「おかあさんといっしょ」の体操曲「ぱわわぷ体操」の歌唱。2006年月の歌として好評を博した「ぼよよん行進曲」や2008年「まんまるスマイル」2019年「あさペラ！」の制作など活動の幅も広がっている。2020年コロナ禍による緊急事態宣言の最中よしお兄さん（おかあさんと一緒の体操のお兄さん）の声がけによりリモートで歴代お兄さんお姉さんが大集合して歌われた「ぼよよん行進曲」はYouTubeチャンネルで公開され現在までで3000万回を超える再生数を数えている。2020年秋、自主レーベル『TAO LIFE RECORDS』を設立、その第一弾シングルとして『流れ星/愛することを信じて〜Amazing Grace For You〜』がリリースされた。現在CS旅チャンネルにおいて「中西圭三の朝ぶら散歩」出演中。",
+    appearanceDate: "2025年10月30日", 
+    birthDate: "11月11日",
+    officialSite: "https://www.keizo.net/",
+    twitter: "https://x.com/keizo1111?s=21&t=yFiC3o3Bku78q-p_1LbtKQ",
+    twitter2: "",
+    instagram: ""
   } 
 
 ];
