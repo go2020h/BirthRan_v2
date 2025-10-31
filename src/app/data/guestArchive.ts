@@ -283,6 +283,16 @@ export const guestArchive: GuestData[] = [
     twitter: "https://x.com/keizo1111?s=21&t=yFiC3o3Bku78q-p_1LbtKQ",
     twitter2: "",
     instagram: ""
+  } ,{
+    name: "中川心",
+    image: "/guest/guest28.jpg",
+    bio: "インターネット上で「令和版・“奇跡の1枚”」でライブ中の写真が話題となり、日本テレビ系「スター発掘バラエティー あとは見つかるだけ」に出演し、“NEXT 橋本環奈”と紹介される。雑誌『週刊FLASH』にて、表紙＆巻頭10ページでの掲載やグラビア掲載など被写体としても人気を誇る。\n♪　これまでにもらった誕生日プレゼントで印象に残ってるものは？ 小学生の時家族でハワイに行きました！お母さんの退職金で！初海外で思い出に残っています",
+    appearanceDate: "2025年11月6日", 
+    birthDate: "12月1日",
+    officialSite: "https://twinplanet.co.jp/4361/",
+    twitter: "https://x.com/556_nakagawa",
+    twitter2: "",
+    instagram: ""
   } 
 
 ];
