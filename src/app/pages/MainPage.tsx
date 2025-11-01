@@ -32,7 +32,7 @@ const MainPage = () => {
   function getLastWeekStartDate(date: Date): Date {
     const weekStart = getWeekStartDate(date);
     const lastWeekStart = new Date(weekStart);
-    lastWeekStart.setDate(weekStart.getDate() - 14);
+    lastWeekStart.setDate(weekStart.getDate() - 7);
     return lastWeekStart;
   };
 
