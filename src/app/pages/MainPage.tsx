@@ -986,7 +986,7 @@ const MainPage = () => {
                   </div>
                 </div>
 
-                <div className="bg-white rounded-lg p-5 shadow-md">
+                {/*<div className="bg-white rounded-lg p-5 shadow-md">
                   <div className="flex items-center mb-4">
                     <span className="inline-block bg-[#d4af37] text-white text-xl font-bold rounded-full w-8 h-8 flex items-center justify-center mr-3">3</span>
                     <h4 className="text-lg font-bold text-[#1a3a6c]">愛カード</h4>
@@ -1014,12 +1014,12 @@ const MainPage = () => {
                       </div>
                     </div>
                   </div>
-                </div>
+                </div>*/}
           
                 
                 <div className="bg-white rounded-lg p-5 shadow-md">
                   <div className="flex items-center mb-4">
-                    <span className="inline-block bg-[#d4af37] text-white text-xl font-bold rounded-full w-8 h-8 flex items-center justify-center mr-3">4</span>
+                    <span className="inline-block bg-[#d4af37] text-white text-xl font-bold rounded-full w-8 h-8 flex items-center justify-center mr-3">3</span>
                     <h4 className="text-lg font-bold text-[#1a3a6c]">今週のバースデープレゼント</h4>
                   </div>
                   <p className="text-sm text-gray-600 mb-3">※番組内「おめありレコメンド」でご紹介した商品をプレゼントしております。</p>
@@ -1044,7 +1044,7 @@ const MainPage = () => {
               </div>
               
               <p className="text-lg text-gray-700 mb-8 text-center">
-                以上、愛が詰まった4つのサービス＆商品をプレゼントさせていただきます。
+                以上、愛が詰まった3つのサービス＆商品をプレゼントさせていただきます。
               </p>
               
               {/*<div className="text-center mb-4">
