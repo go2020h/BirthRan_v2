@@ -996,12 +996,10 @@ const MainPage = () => {
                       <Image src="/home3b.jpg" alt="渋谷愛ビジョン" width={800} height={600} className="w-full h-auto object-contain rounded-lg shadow-sm" />
                     </div>
                     <div className="md:w-2/3">
-                      {/*<p className="text-gray-700 mb-4">
-                        20時00分30秒～20時5分00秒（4分30秒間）を1週間無償でご提供
+                      <p className="text-gray-700 mb-4">
                       </p>
                       <p className="text-gray-700 mt-3">
-                        ミュージックビデオや映画・ドラマのPRはもちろんのこと、自らが発信したい映像を放映して渋谷で注目を浴びましょう。
-                      </p>*/}
+                      </p>
                       <div className="mt-4 text-center">
                         <a 
                           href="https://ec.saivision.jp/aicard" 
