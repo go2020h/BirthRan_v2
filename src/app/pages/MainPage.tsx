@@ -985,11 +985,41 @@ const MainPage = () => {
                     </div>
                   </div>
                 </div>
+
+                <div className="bg-white rounded-lg p-5 shadow-md">
+                  <div className="flex items-center mb-4">
+                    <span className="inline-block bg-[#d4af37] text-white text-xl font-bold rounded-full w-8 h-8 flex items-center justify-center mr-3">3</span>
+                    <h4 className="text-lg font-bold text-[#1a3a6c]">渋谷愛ビジョンの放映枠</h4>
+                  </div>
+                  <div className="flex flex-col md:flex-row gap-6">
+                    <div className="md:w-1/3">
+                      <Image src="/home3b.jpg" alt="渋谷愛ビジョン" width={800} height={600} className="w-full h-auto object-contain rounded-lg shadow-sm" />
+                    </div>
+                    <div className="md:w-2/3">
+                      {/*<p className="text-gray-700 mb-4">
+                        20時00分30秒～20時5分00秒（4分30秒間）を1週間無償でご提供
+                      </p>
+                      <p className="text-gray-700 mt-3">
+                        ミュージックビデオや映画・ドラマのPRはもちろんのこと、自らが発信したい映像を放映して渋谷で注目を浴びましょう。
+                      </p>*/}
+                      <div className="mt-4 text-center">
+                        <a 
+                          href="https://ec.saivision.jp/aicard" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center justify-center bg-[#0167CC] hover:bg-[#0155a8] text-white font-medium py-2 px-4 rounded-md transition-colors"
+                        >
+                          公式サイトを見る
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
           
                 
                 <div className="bg-white rounded-lg p-5 shadow-md">
                   <div className="flex items-center mb-4">
-                    <span className="inline-block bg-[#d4af37] text-white text-xl font-bold rounded-full w-8 h-8 flex items-center justify-center mr-3">3</span>
+                    <span className="inline-block bg-[#d4af37] text-white text-xl font-bold rounded-full w-8 h-8 flex items-center justify-center mr-3">4</span>
                     <h4 className="text-lg font-bold text-[#1a3a6c]">今週のバースデープレゼント</h4>
                   </div>
                   <p className="text-sm text-gray-600 mb-3">※番組内「おめありレコメンド」でご紹介した商品をプレゼントしております。</p>
