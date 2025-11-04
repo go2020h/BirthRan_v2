@@ -997,8 +997,10 @@ const MainPage = () => {
                     </div>
                     <div className="md:w-2/3">
                       <p className="text-gray-700 mb-4">
+
                       </p>
                       <p className="text-gray-700 mt-3">
+                        
                       </p>
                       <div className="mt-4 text-center">
                         <a 
