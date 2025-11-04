@@ -920,7 +920,7 @@ const MainPage = () => {
                       </p>
                       <div className="mt-4 text-center">
                         <a 
-                          href="https://saivision.jp/" 
+                          href="https://www.saivision.jp/timetable.html" 
                           target="_blank" 
                           rel="noopener noreferrer"
                           className="inline-flex items-center justify-center bg-[#0167CC] hover:bg-[#0155a8] text-white font-medium py-2 px-4 rounded-md transition-colors"
@@ -1017,11 +1017,11 @@ const MainPage = () => {
                 以上、愛が詰まった３つのサービス＆商品をプレゼントさせていただきます。
               </p>
               
-              <div className="text-center mb-4">
+              {/*<div className="text-center mb-4">
                 <Link href="/wanted" className="bg-[#d4af37] hover:bg-[#c9a431] text-white font-bold py-3 px-8 rounded-lg transition-colors inline-block text-lg">
                   応募する
                 </Link>
-              </div>
+              </div>*/}
             </div>
           </div>
         </div>
