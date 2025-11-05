@@ -986,10 +986,10 @@ const MainPage = () => {
                   </div>
                 </div>
 
-                {/*<div className="bg-white rounded-lg p-5 shadow-md">
+                <div className="bg-white rounded-lg p-5 shadow-md">
                   <div className="flex items-center mb-4">
                     <span className="inline-block bg-[#d4af37] text-white text-xl font-bold rounded-full w-8 h-8 flex items-center justify-center mr-3">3</span>
-                    <h4 className="text-lg font-bold text-[#1a3a6c]">愛カード</h4>
+                    <h4 className="text-lg font-bold text-[#1a3a6c]">渋谷愛ビジョンの「愛カード」をプレゼント</h4>
                   </div>
                   <div className="flex flex-col md:flex-row gap-6">
                     <div className="md:w-1/3">
@@ -997,10 +997,10 @@ const MainPage = () => {
                     </div>
                     <div className="md:w-2/3">
                       <p className="text-gray-700 mb-4">
-                        <br></br>
+                       QRコードを読み取ると、あなただけのスペシャル映像が流れる渋谷愛ビジョンオリジナルグリーティングカード『愛カード』
                       </p>
                       <p className="text-gray-700 mt-3">
-                        <br></br>
+                        普段はお申込みから一週間以内に、素敵な写真やイラストが入った渋谷愛ビジョンオリジナルグリーティングカード『愛カード』の2枚セットを発送していて1セットを大切な方に、もう1セットはご自身の記念用にお手元にとっておくことができるものになっています。
                       </p>
                       <div className="mt-4 text-center">
                         <a 
@@ -1014,12 +1014,12 @@ const MainPage = () => {
                       </div>
                     </div>
                   </div>
-                </div>*/}
+                </div>
           
                 
                 <div className="bg-white rounded-lg p-5 shadow-md">
                   <div className="flex items-center mb-4">
-                    <span className="inline-block bg-[#d4af37] text-white text-xl font-bold rounded-full w-8 h-8 flex items-center justify-center mr-3">3</span>
+                    <span className="inline-block bg-[#d4af37] text-white text-xl font-bold rounded-full w-8 h-8 flex items-center justify-center mr-3">4</span>
                     <h4 className="text-lg font-bold text-[#1a3a6c]">今週のバースデープレゼント</h4>
                   </div>
                   <p className="text-sm text-gray-600 mb-3">※番組内「おめありレコメンド」でご紹介した商品をプレゼントしております。</p>
@@ -1044,7 +1044,7 @@ const MainPage = () => {
               </div>
               
               <p className="text-lg text-gray-700 mb-8 text-center">
-                以上、愛が詰まった3つのサービス＆商品をプレゼントさせていただきます。
+                以上、愛が詰まった4つのサービス＆商品をプレゼントさせていただきます。
               </p>
               
               {/*<div className="text-center mb-4">
