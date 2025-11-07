@@ -293,6 +293,16 @@ export const guestArchive: GuestData[] = [
     twitter: "https://x.com/556_nakagawa",
     twitter2: "",
     instagram: ""
+  } ,{
+    name: "山田義孝",
+    image: "/guest/guest29.jpg",
+    bio: "吉田結威(Gt/Vo)と山田義孝(Vo)からなる男性二人組アーティスト。2009年10月に「ガムシャランナー」でメジャーデビュー。2013年12月に放送を開始したNHKみんなのうた「日々」が“泣ける歌”と話題になり、5度の再放送を経てロングセールスを記録。一躍その名を拡げ、YouTubeの再生回数は、現在2,000万回を突破。2022 年からはTikTokで「もやし」が話題となり、多くのユーザーコンテンツが投稿されている。港区政70周年記念事業の一環として、イメージソングの「MY HOME TOWN」を制作し、『港区観光大使』にも就任している。先日10月21日にデビュー丸16周年を迎えた。\n♪　これまでにもらった誕生日プレゼントで印象に残ってるものは？ 自分が生まれた週の少年ジャンプ",
+    appearanceDate: "2025年11月13日", 
+    birthDate: "12月13日",
+    officialSite: "https://yoshidayamada.com/",
+    twitter: "https://x.com/yamadayositaka?s=21&t=yFiC3o3Bku78q-p_1LbtKQ",
+    twitter2: "",
+    instagram: ""
   } 
 
 ];
