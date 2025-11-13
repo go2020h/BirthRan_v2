@@ -84,8 +84,8 @@ const PresentsPage = () => {
                   <thead>
                     <tr className="bg-gray-100 border-b border-gray-200">
                       <th className="py-4 px-6 text-center font-semibold text-gray-700 whitespace-nowrap">紹介日</th>
-                      <th className="py-4 px-6 text-left font-semibold text-gray-700 whitespace-nowrap">おめありレコメンド</th>
                       <th className="py-4 px-6 text-center font-semibold text-gray-700 whitespace-nowrap min-w-[300px]">写真</th>
+                      <th className="py-4 px-6 text-left font-semibold text-gray-700 whitespace-nowrap">おめありレコメンド</th>
                       <th className="py-4 px-6 text-left font-semibold text-gray-700 whitespace-nowrap min-w-[300px]">レコメンド</th>
                       <th className="py-4 px-6 text-center font-semibold text-gray-700 whitespace-nowrap">会社名（提供社）</th>
                       <th className="py-4 px-6 text-center font-semibold text-gray-700 whitespace-nowrap">公式WEB</th>

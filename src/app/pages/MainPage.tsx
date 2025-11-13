@@ -15,10 +15,10 @@ const MainPage = () => {
   const [currentDate, setCurrentDate] = useState(new Date()); // 現在の日付を取得
   const today = new Date(); // 現在日
   const [isTextExpanded, setIsTextExpanded] = useState(false); // テキストの折りたたみ状態を管理
-  
+
   // 最初の週の開始日（2025年3月28日）を定義
   const firstAllowedWeekStart = new Date(2025, 2, 28); // 2025年3月28日
-  
+
   // 金曜日始まりの週の開始日を取得する関数
   function getWeekStartDate(date: Date): Date {
     const day = date.getDay(); // 0: 日曜日, 1: 月曜日, ..., 6: 土曜日
@@ -41,7 +41,7 @@ const MainPage = () => {
   const [selectedDayIndex, setSelectedDayIndex] = useState<number>(6); // 木曜日（インデックスは6が木曜日）
   const [rankingData, setRankingData] = useState<RankingItem[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
-  
+
   // 週の日付配列を生成する関数
   function getWeekDates(startDate: Date): Date[] {
     const dates: Date[] = [];
@@ -71,7 +71,7 @@ const MainPage = () => {
       // 週の日付配列を文字列形式で生成
       const weekDateStrings = getWeekDateStrings(currentWeekStart);
       console.log(`[DEBUG] Week dates:`, weekDateStrings);
-      
+
       const data = await getRankingByDayIndex(dayIndex, weekDateStrings);
       setRankingData(data);
     } catch (error) {
@@ -86,18 +86,18 @@ const MainPage = () => {
   useEffect(() => {
     fetchRankingData(selectedDayIndex);
   }, [selectedDayIndex, fetchRankingData]);
-  
+
   // 日付タブを選択したときの処理
   const handleDaySelect = (index: number) => {
     console.log(`[DEBUG] Selecting day index: ${index}`);
     setSelectedDayIndex(index);
   };
-  
+
   // 前の週に移動
   const goToPreviousWeek = () => {
     const newDate = new Date(currentWeekStart);
     newDate.setDate(currentWeekStart.getDate() - 7);
-    
+
     // 2025年3月28日より前には遡れないように制限
     if (newDate >= firstAllowedWeekStart) {
       setCurrentWeekStart(newDate);
@@ -105,7 +105,7 @@ const MainPage = () => {
       setSelectedDayIndex(0);
     }
   };
-  
+
   // 次の週に移動
   const goToNextWeek = () => {
     const newDate = new Date(currentWeekStart);
@@ -114,7 +114,7 @@ const MainPage = () => {
     // 週を切り替えたときに選択された曜日インデックスをリセット
     setSelectedDayIndex(0);
   };
-  
+
   // 日付をフォーマットする関数
   function getWeekRangeText(startDate: Date): string {
     const endDate = new Date(startDate);
@@ -125,7 +125,7 @@ const MainPage = () => {
     const endMonth = endDate.getMonth() + 1;
     const startDay = startDate.getDate();
     const endDay = endDate.getDate();
-    
+
     if (startYear === endYear) {
       if (startMonth === endMonth) {
         return `${startYear}年${startMonth}月${startDay}日～${endDay}日`;
@@ -136,10 +136,10 @@ const MainPage = () => {
       return `${startYear}年${startMonth}月${startDay}日～${endYear}年${endMonth}月${endDay}日`;
     }
   }
-  
+
   // 曜日の短縮名
   const dayNames = ['金', '土', '日', '月', '火', '水', '木'];
-  
+
   // 前月へ移動
   const goToPreviousMonth = () => {
     const prevMonth = new Date(currentDate);
@@ -158,26 +158,26 @@ const MainPage = () => {
   const generateCalendarDays = () => {
     const year = currentDate.getFullYear();
     const month = currentDate.getMonth();
-    
+
     // 月の最初の日
     const firstDayOfMonth = new Date(year, month, 1);
     // 月の最後の日
     const lastDayOfMonth = new Date(year, month + 1, 0);
-    
+
     // 前月の最後の日
     const lastDayOfPrevMonth = new Date(year, month, 0);
-    
+
     // 月の最初の日の曜日（0: 日曜日, 1: 月曜日, ...）
     const firstDayOfWeek = firstDayOfMonth.getDay();
     // 月の最後の日の曜日
     const lastDayOfWeek = lastDayOfMonth.getDay();
-    
+
     // カレンダーに表示する日数（前月の日 + 当月の日 + 翌月の日）
     const daysInMonth = lastDayOfMonth.getDate();
     const daysInPrevMonth = lastDayOfPrevMonth.getDate();
-    
+
     const calendarDays = [];
-    
+
     // 日付をYYYY-MM-DD形式に変換する関数
     const formatDateHelper = (date: Date): string => {
       const year = date.getFullYear();
@@ -185,14 +185,14 @@ const MainPage = () => {
       const day = String(date.getDate()).padStart(2, '0');
       return `${year}-${month}-${day}`;
     };
-    
+
     // 前月の日を追加
     for (let i = 0; i < firstDayOfWeek; i++) {
       const day = daysInPrevMonth - firstDayOfWeek + i + 1;
       const date = new Date(year, month - 1, day);
       const dateStr = formatDateHelper(date);
       const topRanker = monthlyRankings[dateStr]?.[0]?.name || '';
-      
+
       calendarDays.push({
         day,
         currentMonth: false,
@@ -201,13 +201,13 @@ const MainPage = () => {
         topRanker
       });
     }
-    
+
     // 当月の日を追加
     for (let i = 1; i <= daysInMonth; i++) {
       const date = new Date(year, month, i);
       const dateStr = formatDateHelper(date);
       const topRanker = monthlyRankings[dateStr]?.[0]?.name || '';
-      
+
       calendarDays.push({
         day: i,
         currentMonth: true,
@@ -217,15 +217,15 @@ const MainPage = () => {
         isToday: i === today.getDate() && month === today.getMonth() && year === today.getFullYear()
       });
     }
-    
+
     // 翌月の日を追加（最終週を完成させるために必要な日数のみ）
     const remainingDays = lastDayOfWeek < 6 ? 6 - lastDayOfWeek : 0;
-    
+
     for (let i = 1; i <= remainingDays; i++) {
       const date = new Date(year, month + 1, i);
       const dateStr = formatDateHelper(date);
       const topRanker = monthlyRankings[dateStr]?.[0]?.name || '';
-      
+
       calendarDays.push({
         day: i,
         currentMonth: false,
@@ -234,7 +234,7 @@ const MainPage = () => {
         topRanker
       });
     }
-    
+
     return calendarDays;
   };
 
@@ -269,16 +269,16 @@ const MainPage = () => {
 
   // 日付の枠をクリックしたときにポップアップを表示する
   const [isPopupOpen, setIsPopupOpen] = useState<boolean>(false);
-  const [selectedDateData, setSelectedDateData] = useState<{date: string, ranking: RankingItem | null}>({date: '', ranking: null});
+  const [selectedDateData, setSelectedDateData] = useState<{ date: string, ranking: RankingItem | null }>({ date: '', ranking: null });
 
   const handleDayClick = (dateStr: string) => {
     console.log('日付がクリックされました:', dateStr);
     console.log('月間ランキング:', monthlyRankings);
     console.log('選択された日のランキング:', monthlyRankings[dateStr]);
-    
+
     if (monthlyRankings[dateStr] && monthlyRankings[dateStr].length > 0) {
       console.log('ポップアップを表示します');
-      setSelectedDateData({date: dateStr, ranking: monthlyRankings[dateStr][0]});
+      setSelectedDateData({ date: dateStr, ranking: monthlyRankings[dateStr][0] });
       setIsPopupOpen(true);
     } else {
       console.log('選択された日のランキングがありません');
@@ -287,11 +287,11 @@ const MainPage = () => {
 
   // 曲の理由を表示するポップアップの状態管理
   const [isSongReasonPopupOpen, setIsSongReasonPopupOpen] = useState<boolean>(false);
-  const [selectedSongData, setSelectedSongData] = useState<{date: string, ranking: RankingItem | null}>({date: '', ranking: null});
+  const [selectedSongData, setSelectedSongData] = useState<{ date: string, ranking: RankingItem | null }>({ date: '', ranking: null });
 
   const handleSongClick = (date: string, ranking: RankingItem) => {
     console.log('曲がクリックされました:', ranking.song);
-    setSelectedSongData({date, ranking});
+    setSelectedSongData({ date, ranking });
     setIsSongReasonPopupOpen(true);
   };
 
@@ -307,11 +307,11 @@ const MainPage = () => {
   function formatDateJapanese(dateStr: string): string {
     const parts = dateStr.split('-');
     if (parts.length !== 3) return dateStr;
-    
+
     const year = parts[0];
     const month = parseInt(parts[1], 10);
     const day = parseInt(parts[2], 10);
-    
+
     return `${year}年${month}月${day}日`;
   };
 
@@ -421,7 +421,7 @@ const MainPage = () => {
               </div>
               <div className="w-full md:w-2/3 lg:w-2/3 xl:w-2/3 p-4">
                 <h2 className="text-3xl font-bold text-[#1a3a6c] mb-8 text-center">バースデー・ランキングに投票しよう</h2>
-                
+
                 <div className="text-center max-w-2xl mx-auto">
                   <p className="text-xl font-bold text-[#0167CC] mb-4">皆様の投票&投稿がランキングを決める！</p>
                   <p className="text-lg text-gray-700 mb-6">
@@ -429,9 +429,9 @@ const MainPage = () => {
                     生まれてきてくれて「ありがとう」の<br />
                     気持ちを込めて投票しよう♡
                   </p>
-                  
+
                   <div className="mt-8">
-                    <Link 
+                    <Link
                       href="/post"
                       className="inline-flex items-center justify-center bg-[#f5d742] hover:bg-[#f2c464] text-black font-bold py-4 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
                     >
@@ -449,12 +449,12 @@ const MainPage = () => {
               </div>
               <div className="w-full md:w-2/3 lg:w-2/3 xl:w-2/3 p-4">
                 <h2 className="text-3xl font-bold text-[#1a3a6c] mb-8 text-center">渋谷愛ビジョンに放映しよう</h2>
-                
+
                 <div className="text-center max-w-2xl mx-auto">
                   <p className="text-lg text-gray-700 mb-6">
                     渋谷愛ビジョンで愛メッセージを放映したい方はコチラから投稿してください。
                   </p>
-                  
+
                   <div className="bg-[#f8f9fa] p-4 rounded-lg mb-6 border-l-4 border-[#0167CC]">
                     <p className="text-gray-700 font-bold text-left">【注意事項】</p>
                     <ul className="text-left text-gray-700 list-disc pl-5 mt-2">
@@ -463,10 +463,10 @@ const MainPage = () => {
                       <li>無料放映は抽選となります。予めご了承ください。</li>
                     </ul>
                   </div>
-                  
+
                   <div className="mt-8">
-                    <a 
-                      href="https://ec.saivision.jp/" 
+                    <a
+                      href="https://ec.saivision.jp/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center justify-center bg-[#f5d742] hover:bg-[#f2c464] text-black font-bold py-4 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
@@ -492,11 +492,11 @@ const MainPage = () => {
               最も多くのお祝いメッセージを受け取った上位3名を発表します！
             </p>
           </div>
-          
+
           <div className="bg-white rounded-xl shadow-lg p-8 max-w-4xl mx-auto border border-gray-200 mb-8">
             <div className="flex justify-center items-center mb-6">
-              <button 
-                className="text-[#1a3a6c] hover:text-[#d4af37] transition-colors mr-6 p-2" 
+              <button
+                className="text-[#1a3a6c] hover:text-[#d4af37] transition-colors mr-6 p-2"
                 onClick={goToPreviousWeek}
                 type="button"
                 aria-label="前週へ移動"
@@ -505,11 +505,11 @@ const MainPage = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                 </svg>
               </button>
-              
+
               <h3 className="text-xl font-bold mx-4 text-[#1a3a6c]">{getWeekRangeText(currentWeekStart)}</h3>
-              
-              <button 
-                className="text-[#1a3a6c] hover:text-[#d4af37] transition-colors ml-6 p-2" 
+
+              <button
+                className="text-[#1a3a6c] hover:text-[#d4af37] transition-colors ml-6 p-2"
                 onClick={goToNextWeek}
                 type="button"
                 aria-label="翌週へ移動"
@@ -519,7 +519,7 @@ const MainPage = () => {
                 </svg>
               </button>
             </div>
-            
+
             {/* 曜日タブ */}
             <div className="grid grid-cols-7 gap-2 mb-6">
               {getWeekDates(currentWeekStart).map((date, index) => (
@@ -535,7 +535,7 @@ const MainPage = () => {
                 </button>
               ))}
             </div>
-            
+
             {/* ランキング表示 */}
             <h3 className="text-xl font-bold text-[#1a3a6c] mb-4">
               {formatDate(getWeekDates(currentWeekStart)[selectedDayIndex])}
@@ -564,8 +564,8 @@ const MainPage = () => {
                           <span className="inline-flex items-center justify-center bg-[#d4af37] text-white rounded-full w-6 h-6 text-sm font-bold">1</span>
                         </td>
                         <td className="py-4 px-4 font-medium text-[#1a3a6c] whitespace-nowrap">
-                          {rankingData[0].name === '集計中' ? 
-                            '集計中' : 
+                          {rankingData[0].name === '集計中' ?
+                            '集計中' :
                             `${rankingData[0].name}さん`
                           }
                         </td>
@@ -573,7 +573,7 @@ const MainPage = () => {
                           {(rankingData[0].message ? rankingData[0].message.replace(/\\n/g, '\n') : '') || '集計中'}
                         </td>
                         <td className="py-4 px-4">
-                          <button 
+                          <button
                             onClick={() => handleSongClick(formatDate(getWeekDates(currentWeekStart)[selectedDayIndex]), rankingData[0])}
                             className="text-[#0166CD] hover:text-[#d4af37] transition-colors"
                           >
@@ -582,7 +582,7 @@ const MainPage = () => {
                         </td>
                       </tr>
                     )}
-                    
+
                     {/* 2025年4月4日以降は2位と3位も表示 */}
                     {new Date() >= new Date(2025, 3, 4) && rankingData.length > 1 && (
                       <>
@@ -592,8 +592,8 @@ const MainPage = () => {
                             <span className="inline-flex items-center justify-center bg-[#C0C0C0] text-white rounded-full w-6 h-6 text-sm font-bold">2</span>
                           </td>
                           <td className="py-4 px-4 font-medium text-[#1a3a6c] whitespace-nowrap">
-                            {rankingData[1]?.name === '集計中' ? 
-                              '集計中' : 
+                            {rankingData[1]?.name === '集計中' ?
+                              '集計中' :
                               `${rankingData[1]?.name}さん`
                             }
                           </td>
@@ -601,7 +601,7 @@ const MainPage = () => {
                             {(rankingData[1]?.message ? rankingData[1].message.replace(/\\n/g, '\n') : '') || '集計中'}
                           </td>
                           <td className="py-4 px-4">
-                            <button 
+                            <button
                               onClick={() => handleSongClick(formatDate(getWeekDates(currentWeekStart)[selectedDayIndex]), rankingData[1])}
                               className="text-[#0166CD] hover:text-[#d4af37] transition-colors"
                             >
@@ -616,8 +616,8 @@ const MainPage = () => {
                               <span className="inline-flex items-center justify-center bg-[#CD7F32] text-white rounded-full w-6 h-6 text-sm font-bold">3</span>
                             </td>
                             <td className="py-4 px-4 font-medium text-[#1a3a6c] whitespace-nowrap">
-                              {rankingData[2]?.name === '集計中' ? 
-                                '集計中' : 
+                              {rankingData[2]?.name === '集計中' ?
+                                '集計中' :
                                 `${rankingData[2]?.name}さん`
                               }
                             </td>
@@ -625,7 +625,7 @@ const MainPage = () => {
                               {(rankingData[2]?.message ? rankingData[2].message.replace(/\\n/g, '\n') : '') || '集計中'}
                             </td>
                             <td className="py-4 px-4">
-                              <button 
+                              <button
                                 onClick={() => handleSongClick(formatDate(getWeekDates(currentWeekStart)[selectedDayIndex]), rankingData[2])}
                                 className="text-[#0166CD] hover:text-[#d4af37] transition-colors"
                               >
@@ -652,11 +652,11 @@ const MainPage = () => {
               バスランNo.1カレンダー
             </h2>
           </div>
-          
+
           <div className="bg-white rounded-xl shadow-lg p-4 sm:p-8 max-w-4xl mx-auto border border-gray-200">
             <div className="flex justify-center items-center mb-4 sm:mb-8">
-              <button 
-                className="text-[#1a3a6c] hover:text-[#d4af37] transition-colors mr-3 sm:mr-6 p-1 sm:p-2" 
+              <button
+                className="text-[#1a3a6c] hover:text-[#d4af37] transition-colors mr-3 sm:mr-6 p-1 sm:p-2"
                 onClick={() => goToPreviousMonth()}
                 type="button"
                 aria-label="前月へ移動"
@@ -666,8 +666,8 @@ const MainPage = () => {
                 </svg>
               </button>
               <h3 className="text-xl sm:text-2xl font-bold mx-2 sm:mx-4 text-[#1a3a6c]">{getMonthName(currentDate)}</h3>
-              <button 
-                className="text-[#1a3a6c] hover:text-[#d4af37] transition-colors ml-3 sm:ml-6 p-1 sm:p-2" 
+              <button
+                className="text-[#1a3a6c] hover:text-[#d4af37] transition-colors ml-3 sm:ml-6 p-1 sm:p-2"
                 onClick={() => goToNextMonth()}
                 type="button"
                 aria-label="翌月へ移動"
@@ -677,14 +677,14 @@ const MainPage = () => {
                 </svg>
               </button>
             </div>
-            
+
             <div className="grid grid-cols-7 gap-1 sm:gap-2">
               {['日', '月', '火', '水', '木', '金', '土'].map((day) => (
                 <div key={day} className="text-center font-medium py-1 sm:py-2 text-gray-600 text-xs sm:text-base">{day}</div>
               ))}
               {generateCalendarDays().map((day, index) => (
-                <div 
-                  key={index} 
+                <div
+                  key={index}
                   className={`h-16 sm:h-20 bg-gray-50 hover:bg-[#f0f8ff] rounded-lg flex flex-col items-start p-1 sm:p-2 cursor-pointer transition-colors border border-gray-100 ${!day.currentMonth ? 'text-gray-400' : day.isToday ? 'text-[#d4af37] font-bold' : 'text-gray-700'} font-medium`}
                   onClick={() => handleDayClick(day.dateStr)}
                 >
@@ -704,7 +704,7 @@ const MainPage = () => {
 
           {/* 過去のランキングを見るボタン */}
           <div className="mt-8 text-center">
-            <Link 
+            <Link
               href="/backnumber"
               className="bg-[#1a3a6c] hover:bg-[#15305a] text-white font-medium py-2 px-4 rounded-md transition-colors inline-block"
             >
@@ -722,17 +722,17 @@ const MainPage = () => {
               バスラン！の夢
             </h2>
           </div>
-          
+
           <div className="max-w-4xl mx-auto bg-gradient-to-br from-[#f8f9fa] to-[#e6f0ff] rounded-xl shadow-lg p-10 border border-gray-200 relative overflow-hidden">
             {/* 装飾用の半透明円形要素 */}
             <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-[#d4af37] to-[#f0e68c] opacity-10 rounded-full transform translate-x-20 -translate-y-20"></div>
             <div className="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-tr from-[#0166CD] to-[#4dabf5] opacity-10 rounded-full transform -translate-x-16 translate-y-16"></div>
-            
+
             <div className="text-center relative z-10">
               <p className="text-xl md:text-2xl text-[#1a3a6c] font-medium mb-6">
                 愛溢れるメディアを創りたい<span className="text-[#ff4081]">💝</span>
               </p>
-              
+
               <div className="space-y-4 text-lg text-gray-700 mb-8 leading-relaxed">
                 <p>誕生日をお祝いしたい人はいますか？</p>
                 <p>誕生日をお祝いしてくれる人はいますか？</p>
@@ -743,7 +743,7 @@ const MainPage = () => {
                 <p>「おかえりなさい」「またね～」</p>
                 <p>という愛言葉が集まる場所になることを目指しています。</p>
               </div>
-              
+
               <div className="bg-white bg-opacity-80 rounded-lg shadow-md mb-6">
                 <div className="birthran-broadcast-info grid grid-cols-1 md:grid-cols-2 gap-4 text-left p-6">
                   <div className="birthran-info-col">
@@ -769,23 +769,23 @@ const MainPage = () => {
               渋谷愛ビジョンYouTube-LIVE
             </h2>
           </div>
-          
+
           <div className="max-w-5xl mx-auto bg-white rounded-xl shadow-lg p-8 md:p-10 border border-gray-200 relative overflow-hidden">
             {/* 装飾用の半透明円形要素 */}
             <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-[#d4af37] to-[#f0e68c] opacity-10 rounded-full transform translate-x-20 -translate-y-20"></div>
             <div className="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-tr from-[#0166CD] to-[#4dabf5] opacity-10 rounded-full transform -translate-x-16 translate-y-16"></div>
-            
+
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 relative z-10">
               {/* 最新のYouTube動画 */}
               <div className="rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:scale-102 hover:shadow-xl transform border border-gray-100 bg-gradient-to-br from-white to-[#f8f9fa]">
                 <div className="relative pb-[56.25%] h-0 overflow-hidden">
-                  <iframe 
+                  <iframe
                     className="absolute top-0 left-0 w-full h-full"
-                    src="https://www.youtube.com/embed/v85WMKS2coY" 
-                    title="【LIVE】渋谷愛ビジョン・宮益坂交差点ライブカメラ／『SHIBUYA AI Vision』" 
-                    frameBorder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    referrerPolicy="strict-origin-when-cross-origin" 
+                    src="https://www.youtube.com/embed/v85WMKS2coY"
+                    title="【LIVE】渋谷愛ビジョン・宮益坂交差点ライブカメラ／『SHIBUYA AI Vision』"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
                     allowFullScreen
                   ></iframe>
                 </div>
@@ -795,9 +795,9 @@ const MainPage = () => {
                     <h3 className="text-lg font-bold text-[#1a3a6c]">渋谷愛ビジョン・宮益坂交差点ライブカメラ</h3>
                   </div>
                   <div className="mt-3 flex justify-end items-center">
-                    <a 
-                      href="https://www.youtube.com/watch?v=six6fVA6Gxo" 
-                      target="_blank" 
+                    <a
+                      href="https://www.youtube.com/watch?v=six6fVA6Gxo"
+                      target="_blank"
                       rel="noopener noreferrer"
                       className="text-[#0166CD] hover:text-[#d4af37] text-sm font-medium inline-flex items-center transition-colors"
                     >
@@ -809,17 +809,17 @@ const MainPage = () => {
                   </div>
                 </div>
               </div>
-              
+
               {/* 2つ目のYouTube動画 */}
               <div className="rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:scale-102 hover:shadow-xl transform border border-gray-100 bg-gradient-to-br from-white to-[#f8f9fa]">
                 <div className="relative pb-[56.25%] h-0 overflow-hidden">
-                  <iframe 
+                  <iframe
                     className="absolute top-0 left-0 w-full h-full"
-                    src="https://www.youtube.com/embed/ZTR8FFdF0x8" 
-                    title="【LIVE】渋谷愛ビジョンの眼（AI）／SHIBUYA AI Vision" 
-                    frameBorder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    referrerPolicy="strict-origin-when-cross-origin" 
+                    src="https://www.youtube.com/embed/ZTR8FFdF0x8"
+                    title="【LIVE】渋谷愛ビジョンの眼（AI）／SHIBUYA AI Vision"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
                     allowFullScreen
                   ></iframe>
                 </div>
@@ -829,9 +829,9 @@ const MainPage = () => {
                     <h3 className="text-lg font-bold text-[#1a3a6c]">渋谷愛ビジョンの眼</h3>
                   </div>
                   <div className="mt-3 flex justify-end items-center">
-                    <a 
-                      href="https://www.youtube.com/watch?v=ZTR8FFdF0x8" 
-                      target="_blank" 
+                    <a
+                      href="https://www.youtube.com/watch?v=ZTR8FFdF0x8"
+                      target="_blank"
                       rel="noopener noreferrer"
                       className="text-[#0166CD] hover:text-[#d4af37] text-sm font-medium inline-flex items-center transition-colors"
                     >
@@ -871,17 +871,17 @@ const MainPage = () => {
               誕生日が近い！ゲスト募集中！！
             </h2>
           </div>
-          
+
           <div className="bg-gradient-to-br from-[#f8f9fa] to-[#e6f0ff] rounded-xl shadow-lg p-8 max-w-4xl mx-auto border border-gray-200 relative overflow-hidden">
             {/* 装飾用の半透明円形要素 */}
             <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-[#d4af37] to-[#f0e68c] opacity-10 rounded-full transform translate-x-20 -translate-y-20"></div>
             <div className="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-tr from-[#0166CD] to-[#4dabf5] opacity-10 rounded-full transform -translate-x-16 translate-y-16"></div>
-            
+
             <div className="relative z-10">
               <p className="text-lg text-gray-700 mb-6">
                 番組では、誕生日が近いゲストを大募集しています。
               </p>
-              
+
               <div className="bg-white bg-opacity-80 rounded-lg p-6 shadow-md mb-6">
                 <ul className="space-y-3 text-gray-700">
                   <li className="flex items-start">
@@ -898,9 +898,9 @@ const MainPage = () => {
                   </li>
                 </ul>
               </div>
-              
+
               <h3 className="text-xl font-bold mb-4 text-[#1a3a6c]">ゲスト出演してくださった方には、誕生日プレゼントとして</h3>
-              
+
               <div className="space-y-6 mb-8">
                 <div className="bg-white rounded-lg p-5 shadow-md">
                   <div className="flex items-center mb-4">
@@ -919,9 +919,9 @@ const MainPage = () => {
                         ミュージックビデオや映画・ドラマのPRはもちろんのこと、自らが発信したい映像を放映して渋谷で注目を浴びましょう。
                       </p>
                       <div className="mt-4 text-center">
-                        <a 
-                          href="https://www.saivision.jp/timetable.html" 
-                          target="_blank" 
+                        <a
+                          href="https://www.saivision.jp/timetable.html"
+                          target="_blank"
                           rel="noopener noreferrer"
                           className="inline-flex items-center justify-center bg-[#0167CC] hover:bg-[#0155a8] text-white font-medium py-2 px-4 rounded-md transition-colors"
                         >
@@ -931,8 +931,8 @@ const MainPage = () => {
                     </div>
                   </div>
                 </div>
-                
-                
+
+
                 <div className="bg-white rounded-lg p-5 shadow-md">
                   <div className="flex items-center mb-4">
                     <span className="inline-block bg-[#d4af37] text-white text-xl font-bold rounded-full w-8 h-8 flex items-center justify-center mr-3">2</span>
@@ -944,17 +944,17 @@ const MainPage = () => {
                     </div>
                     <div className="md:w-2/3">
                       <p className="text-gray-700">
-                      渋谷愛ビジョン公認SHOPの『UP-T』からゲスト出演されましたもうすぐお誕生日の方へ
+                        渋谷愛ビジョン公認SHOPの『UP-T』からゲスト出演されましたもうすぐお誕生日の方へ
                       </p>
                       <p className="text-gray-700">
-                      世界に一枚しかない渋谷愛メッセージ入りのTシャツをプレゼントさせていただきます☆彡
+                        世界に一枚しかない渋谷愛メッセージ入りのTシャツをプレゼントさせていただきます☆彡
                       </p>
                       <div className="text-gray-700 mt-4">
                         <div className="overflow-hidden">
                           <div className={`${isTextExpanded ? '' : 'line-clamp-1'}`}>
                             渋谷愛ビジョンで放送した『愛メッセージ』がTシャツにプリントされています。そして愛メッセージを放映した動画のQRコードもプリントされています。<br></br><br></br>『UP-T』・・・AKB48、らぶいーずのテレビCMでお馴染みのオリジナルプリントTシャツ最大手 UP-Tの公式ホームページはコチラ！
                           </div>
-                          <button 
+                          <button
                             onClick={() => setIsTextExpanded(!isTextExpanded)}
                             className="text-[#0166CD] hover:text-[#d4af37] text-sm mt-2 font-medium transition-colors focus:outline-none"
                           >
@@ -963,9 +963,9 @@ const MainPage = () => {
                         </div>
                       </div>
                       <div className="mt-4 text-center">
-                        <a 
-                          href="https://up-t.jp/" 
-                          target="_blank" 
+                        <a
+                          href="https://up-t.jp/"
+                          target="_blank"
                           rel="noopener noreferrer"
                           className="inline-flex items-center justify-center bg-[#0167CC] hover:bg-[#0155a8] text-white font-medium py-2 px-4 rounded-md transition-colors"
                         >
@@ -973,9 +973,9 @@ const MainPage = () => {
                         </a>
                       </div>
                       <div className="mt-4 text-center">
-                        <a 
-                          href="https://up-t.jp/collabo/saivision2025" 
-                          target="_blank" 
+                        <a
+                          href="https://up-t.jp/collabo/saivision2025"
+                          target="_blank"
                           rel="noopener noreferrer"
                           className="inline-flex items-center justify-center bg-[#0167CC] hover:bg-[#0155a8] text-white font-medium py-2 px-4 rounded-md transition-colors"
                         >
@@ -997,15 +997,15 @@ const MainPage = () => {
                     </div>
                     <div className="md:w-2/3">
                       <p className="text-gray-700 mb-4">
-                       QRコードを読み取ると、あなただけのスペシャル映像が流れる渋谷愛ビジョンオリジナルグリーティングカード『愛カード』
+                        QRコードを読み取ると、あなただけのスペシャル映像が流れる渋谷愛ビジョンオリジナルグリーティングカード『愛カード』
                       </p>
                       <p className="text-gray-700 mt-3">
                         普段はお申込みから一週間以内に、素敵な写真やイラストが入った渋谷愛ビジョンオリジナルグリーティングカード『愛カード』の2枚セットを発送していて1セットを大切な方に、もう1セットはご自身の記念用にお手元にとっておくことができるものになっています。
                       </p>
                       <div className="mt-4 text-center">
-                        <a 
-                          href="https://ec.saivision.jp/aicard" 
-                          target="_blank" 
+                        <a
+                          href="https://ec.saivision.jp/aicard"
+                          target="_blank"
                           rel="noopener noreferrer"
                           className="inline-flex items-center justify-center bg-[#0167CC] hover:bg-[#0155a8] text-white font-medium py-2 px-4 rounded-md transition-colors"
                         >
@@ -1015,17 +1015,19 @@ const MainPage = () => {
                     </div>
                   </div>
                 </div>
-          
-                
+
+
                 <div className="bg-white rounded-lg p-5 shadow-md">
                   <div className="flex items-center mb-4">
                     <span className="inline-block bg-[#d4af37] text-white text-xl font-bold rounded-full w-8 h-8 flex items-center justify-center mr-3">4</span>
                     <h4 className="text-lg font-bold text-[#1a3a6c]">今週のバースデープレゼント</h4>
                   </div>
-                  <p className="text-sm text-gray-600 mb-3">※番組内「おめありレコメンド」でご紹介した商品をプレゼントしております。</p>
-                  <MonthlyPresent present={getLatestPresent()} />
+                  <p className="text-sm text-gray-600 mb-3">お客様やSTAFFから「おめでとう」「ありがとう」という言葉が集まっていいる愛ある商品やサービス、会社をご紹介するコーナーです。<br />
+                    「おめありレコメンド」でご紹介した商品やサービスを『もうすぐ誕生日！ようこそバスランへ！』にご出演頂いたゲストへの誕生日プレゼントとさせていただいております。<br />
+                    お楽しみに～♡</p>
+                  {/*<MonthlyPresent present={getLatestPresent()} />*/}
                   <div className="mt-8 text-center space-y-4">
-                    <Link href="/wanted" className="text-[#0167CC] hover:text-[#d4af37] font-medium transition-colors inline-flex items-center justify-center">
+                    {/*<Link href="/wanted" className="text-[#0167CC] hover:text-[#d4af37] font-medium transition-colors inline-flex items-center justify-center">
                       <span className="sm:hidden">
                         バースデープレゼントの<br/>
                         スポンサー募集中！
@@ -1033,7 +1035,7 @@ const MainPage = () => {
                       <span className="hidden sm:inline">
                         バースデープレゼントのスポンサー募集中！
                       </span>
-                    </Link>
+                    </Link>*/}
                     <div>
                       <Link href="/presents" className="text-[#0167CC] hover:text-[#d4af37] font-medium transition-colors inline-flex items-center justify-center">
                         過去のバースデープレゼントを見る
@@ -1042,11 +1044,11 @@ const MainPage = () => {
                   </div>
                 </div>
               </div>
-              
+
               <p className="text-lg text-gray-700 mb-8 text-center">
                 以上、愛が詰まった4つのサービス＆商品をプレゼントさせていただきます。
               </p>
-              
+
               {/*<div className="text-center mb-4">
                 <Link href="/wanted" className="bg-[#d4af37] hover:bg-[#c9a431] text-white font-bold py-3 px-8 rounded-lg transition-colors inline-block text-lg">
                   応募する
@@ -1055,7 +1057,7 @@ const MainPage = () => {
             </div>
           </div>
         </div>
-      </section>  
+      </section>
 
       {/* バイタルデータセクション 
       <section className="py-20 bg-gradient-to-r from-[#f0f8ff] to-[#e6f0ff]">
@@ -1136,7 +1138,7 @@ const MainPage = () => {
           <div className="bg-white rounded-lg shadow-xl p-6 max-w-lg w-full max-h-[80vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
             <div className="flex justify-between items-center mb-4">
               <h3 className="text-xl font-bold text-[#1a3a6c]">{formatDateJapanese(selectedDateData.date)} 愛メッセージ</h3>
-              <button 
+              <button
                 onClick={closePopup}
                 className="text-gray-500 hover:text-gray-700 transition-colors"
                 aria-label="閉じる"
@@ -1146,7 +1148,7 @@ const MainPage = () => {
                 </svg>
               </button>
             </div>
-            
+
             <div className="space-y-6">
               <div className="pb-4">
                 <div className="flex items-center mb-2">
@@ -1168,9 +1170,9 @@ const MainPage = () => {
                 )}
               </div>
             </div>
-            
+
             <div className="mt-6 text-center">
-              <button 
+              <button
                 onClick={closePopup}
                 className="bg-[#1a3a6c] hover:bg-[#15305a] text-white font-medium py-2 px-4 rounded-md transition-colors"
               >
@@ -1180,14 +1182,14 @@ const MainPage = () => {
           </div>
         </div>
       )}
-      
+
       {/* 曲の理由ポップアップ */}
       {isSongReasonPopupOpen && selectedSongData.ranking && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50" onClick={closeSongReasonPopup}>
           <div className="bg-white rounded-lg shadow-xl p-6 max-w-lg w-full max-h-[80vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
             <div className="flex justify-between items-center mb-4">
               <h3 className="text-xl font-bold text-[#1a3a6c]">{formatDateJapanese(selectedSongData.date)} ？どうしてこの曲を？</h3>
-              <button 
+              <button
                 onClick={closeSongReasonPopup}
                 className="text-gray-500 hover:text-gray-700 transition-colors"
                 aria-label="閉じる"
@@ -1197,7 +1199,7 @@ const MainPage = () => {
                 </svg>
               </button>
             </div>
-            
+
             <div className="space-y-6">
               <div className="pb-4">
                 <div className="flex items-center mb-2">
@@ -1216,9 +1218,9 @@ const MainPage = () => {
                 )}
               </div>
             </div>
-            
+
             <div className="mt-6 text-center">
-              <button 
+              <button
                 onClick={closeSongReasonPopup}
                 className="bg-[#1a3a6c] hover:bg-[#15305a] text-white font-medium py-2 px-4 rounded-md transition-colors"
               >
@@ -1229,7 +1231,7 @@ const MainPage = () => {
         </div>
       )}
     </main>
-    
+
   );
 };
 
