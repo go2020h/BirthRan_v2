@@ -36,28 +36,28 @@ const MonthlyPresent: React.FC<MonthlyPresentProps> = ({ present, asTableRow }) 
         <td className="py-4 px-6 text-center">
           <div className="text-sm text-gray-600">{formatDate(present.date)}</div>
         </td>
-        
+
+        <td className="py-4 px-6">
+          <Image
+            src={present.imagePath}
+            alt={present.imageAlt}
+            width={384}
+            height={192}
+            className="object-cover rounded-lg mx-auto"
+          />
+        </td>
+
         <td className="py-4 px-6 text-left">
           <div className="text-sm font-medium">{present.name}</div>
         </td>
-        
-        <td className="py-4 px-6">
-          <Image 
-            src={present.imagePath} 
-            alt={present.imageAlt} 
-            width={384}
-            height={192}
-            className="object-cover rounded-lg mx-auto" 
-          />
-        </td>
-        
+
         <td className="py-4 px-6">
           <div className="max-w-md overflow-hidden text-sm">
             <div className={`${isExpanded ? '' : 'line-clamp-3'}`}>
               <ReactMarkdown>{present.descriptionMarkdown}</ReactMarkdown>
             </div>
             {present.description.length > 100 && (
-              <button 
+              <button
                 onClick={() => setIsExpanded(!isExpanded)}
                 className="text-[#0166CD] hover:text-[#d4af37] text-sm mt-2 font-medium transition-colors focus:outline-none"
               >
@@ -66,21 +66,21 @@ const MonthlyPresent: React.FC<MonthlyPresentProps> = ({ present, asTableRow }) 
             )}
           </div>
         </td>
-        
+
         <td className="py-4 px-6 text-center">
           <div className="text-sm">{present.company}</div>
         </td>
-        
+
         <td className="py-4 px-6 text-center">
-          <a 
-            href={present.url} 
-            target="_blank" 
+          <a
+            href={present.url}
+            target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center bg-[#0167CC] hover:bg-[#0155a8] text-white text-sm py-2 px-3 rounded-md transition-colors"
             title="u516cu5f0fu30b5u30a4u30c8u3092u958bu304f"
           >
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
             </svg>
           </a>
         </td>
