@@ -1020,7 +1020,7 @@ const MainPage = () => {
                     <span className="inline-block bg-[#d4af37] text-white text-xl font-bold rounded-full w-8 h-8 flex items-center justify-center mr-3">4</span>
                     <h4 className="text-lg font-bold text-[#1a3a6c]">今週のバースデープレゼント</h4>
                   </div>
-                  <p className="text-sm text-gray-600 mb-3">お客様やSTAFFから「おめでとう」「ありがとう」という言葉が集まっていいる愛ある商品やサービス、会社をご紹介するコーナーです。<br />
+                  <p className="text-lg text-gray-600 mb-3">お客様やSTAFFから「おめでとう」「ありがとう」という言葉が集まっていいる愛ある商品やサービス、会社をご紹介するコーナーです。<br />
                     「おめありレコメンド」でご紹介した商品やサービスを『もうすぐ誕生日！ようこそバスランへ！』にご出演頂いたゲストへの誕生日プレゼントとさせていただいております。<br />
                     お楽しみに～♡</p>
                   {/*<MonthlyPresent present={getLatestPresent()} />*/}
