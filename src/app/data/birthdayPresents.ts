@@ -189,6 +189,16 @@ const birthdayPresents: BirthdayPresent[] = [
     url: "https://falco.sakura.ne.jp/tsuru/",
     date: "2025-11-07",
     company: "鶴に橘"
+  },{
+    id: 18,
+    name: "今回ご紹介させていただくのは、日本酒の魅力を再発見！全国の酒蔵と一緒に「推し蔵」を発掘そして、応援する日本酒プロジェクトを展開。「SAKEクラファン」を通じてたくさんのオリジナルSKAEを世に送りだしている『ハンズオンローカルSAKE』の代表・増田雅人さんにお電話でご出演いただきました。",
+    description: "ゲストの吉田山田の山田義孝さんだけでなくパーソナリティのゆうにゃんに新幹線専用小瓶日本酒「Bullet Sake」をプレゼントしていただきました。",
+    descriptionMarkdown: "ゲストの吉田山田の山田義孝さんだけでなくパーソナリティのゆうにゃんに新幹線専用小瓶日本酒「Bullet Sake」をプレゼントしていただきました。",
+    imagePath: "/home20.jpg",
+    imageAlt: "ハンズオンSAKE",
+    url: "https://hands-on-local.com/",
+    date: "2025-11-14",
+    company: "ハンズオンSAKE"
   }
   
   
