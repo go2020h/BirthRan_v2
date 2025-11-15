@@ -303,6 +303,16 @@ export const guestArchive: GuestData[] = [
     twitter: "https://x.com/yamadayositaka?s=21&t=yFiC3o3Bku78q-p_1LbtKQ",
     twitter2: "",
     instagram: ""
+  } ,{
+    name: "Yuki（East Of Eden）",
+    image: "/guest/guest30.jpg",
+    bio: "兵庫県神戸市出身。17歳からギターを始める。2009年にD_Driveを結成。精力的に全国でライブ活動を行い、2019 年イギリスのアンプメーカーMarshall が所有するレコードレーベルMarshall Recordsと契約し世界デビューを果たす。ソロとしての活動はアトスインターナショナルからギターの教則DVD「一緒に弾ける!速弾きギター超入門」と「ゼッタイ弾ける!スウィープ超入門」をリリース。ソニーのスマートフォンXperiaをはじめとするテレビCMにも複数出演し、バラエティー番組にも出演。NHKの歌番組「うたコン」や「NAONのYAON」などで歌手やミュージシャンとのコラボレーションも経験し、2023年よりガールズロックバンド【East Of Eden】のギタリストとして活動中。\n♪　これまでにもらった誕生日プレゼントで印象に残ってるものは？ ファンの方達が作ってくれたメッセージカードやメッセージ動画",
+    appearanceDate: "2025年11月20日", 
+    birthDate: "12月6日",
+    officialSite: "https://fan.pia.jp/east_of_eden_official/",
+    twitter: "https://x.com/D_Drive_Yuki",
+    twitter2: "",
+    instagram: ""
   } 
 
 ];
