@@ -1018,11 +1018,11 @@ const MainPage = () => {
                 <div className="bg-white rounded-lg p-5 shadow-md">
                   <div className="flex items-center mb-4">
                     <span className="inline-block bg-[#d4af37] text-white text-xl font-bold rounded-full w-8 h-8 flex items-center justify-center mr-3">4</span>
-                    <h4 className="text-lg font-bold text-[#1a3a6c]">今週のバースデープレゼント</h4>
+                    <h4 className="text-lg font-bold text-[#1a3a6c]">『おめありレコメンド』からBDプレゼント</h4>
                   </div>
-                  <p className="text-base text-gray-600 mb-3">お客様やSTAFFから「おめでとう」「ありがとう」という言葉が集まっている愛ある商品やサービス、会社をご紹介するコーナーです。<br />
-                    「おめありレコメンド」でご紹介した商品やサービスを『もうすぐ誕生日！ようこそバスランへ！』にご出演頂いたゲストへの誕生日プレゼントをご提供いただいております。<br />
-                    お楽しみに～♡</p>
+                  <p className="text-base text-gray-600 mb-3">『バスラン』がセレクトした「おめでとう」「ありがとう」の言葉が集まっている愛ある商品やサービスをご紹介する『おめありレコメンド』のコーナーより！<br/>
+                  『もうすぐ誕生日！ようこそバスランへ！』にご出演頂くゲストの方へ！<br/>
+                  一足早い！誕生日プレゼントをご提供いただいております。お楽しみに～♡</p>
                   {/*<MonthlyPresent present={getLatestPresent()} />*/}
                   <div className="mt-8 text-center space-y-4">
                     {/*<Link href="/wanted" className="text-[#0167CC] hover:text-[#d4af37] font-medium transition-colors inline-flex items-center justify-center">

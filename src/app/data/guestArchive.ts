@@ -313,6 +313,16 @@ export const guestArchive: GuestData[] = [
     twitter: "https://x.com/D_Drive_Yuki",
     twitter2: "",
     instagram: ""
+  } ,{
+    name: "宇佐美空来",
+    image: "/guest/guest31.jpg",
+    bio: "マジカル・パンチライン、略してマジパン 世界中の毎日をキラキラハッピーにする！！をコンセプトの5人組アイドルグループ！ で緑色担当、神奈川県出身、ニックネームは「そらっち」\n♪　 今までで特に印象に残っている誕生日プレゼントは？ 毎年作ってもらっているナンバークッキー",
+    appearanceDate: "2025年11月27日", 
+    birthDate: "12月8日",
+    officialSite: "https://magipun.com/",
+    twitter: "https://x.com/sora_usami_box?s=21&t=yFiC3o3Bku78q-p_1LbtKQ",
+    twitter2: "",
+    instagram: ""
   } 
 
 ];
