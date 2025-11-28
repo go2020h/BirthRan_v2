@@ -323,6 +323,16 @@ export const guestArchive: GuestData[] = [
     twitter: "https://x.com/sora_usami_box?s=21&t=yFiC3o3Bku78q-p_1LbtKQ",
     twitter2: "",
     instagram: ""
+  } ,{
+    name: "森川七星",
+    image: "/guest/guest32.jpg",
+    bio: "100STARSは、「+1」「U×2」を筆頭に「いつまでも青春」をテーマに老若男女が楽しめるコンテンツを提供することを目的に始動しました。我々は、年齢に囚われず、夢を追うこと、何かに夢中になることが青春だと考えています。時の経過を気にすることなく、常に皆様の心をドキドキさせ、 甘酸っぱい人生をいつまでも過ごしてもらえることを目指しています。100STARSでは、個性豊かなアイドルが、あなたの人生に”青春”を届けます。\n♪　 今までで特に印象に残っている誕生日プレゼントは？ ・ReFaのヘアアイロンとドライヤー・ps4、Switch",
+    appearanceDate: "2025年12月4日", 
+    birthDate: "12月12日",
+    officialSite: "https://100stars.jp/",
+    twitter: "https://x.com/7na12se",
+    twitter2: "",
+    instagram: ""
   } 
 
 ];
