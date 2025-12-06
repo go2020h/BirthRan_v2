@@ -333,6 +333,16 @@ export const guestArchive: GuestData[] = [
     twitter: "https://x.com/7na12se",
     twitter2: "",
     instagram: ""
+  } ,{
+    name: "HAKUEI",
+    image: "/guest/guest33.jpg",
+    bio: "1992年に結成したヴィジュアル系バンド「PENICILLIN」のヴォーカリスト。インディーズで 4 年間活動したのち、1996 年にメジャーデビュー。アニメ「セクシーコマンドー外伝 すごいよ !! マサルさん」の オープニングテーマ「ロマンス」が 90 万枚を超える 大ヒット。今年で結成33周年を迎える。2.5 次元ミュージカル「刀剣乱舞」や「NARUTO」等に出演している 俳優・佐藤流司「Ryuji」のバンドプロジェクト「The Brow Beat」を結成し、「HAKUEI」がトータルプロデュース＆ツインボーカルにて2018年から活動を開始している。そして、2025年7月 「HAKUEI」と hide with Spread Beaver「Kiyoshi」と約10年ぶりに「machine」を再始動させた。",
+    appearanceDate: "2025年12月11日", 
+    birthDate: "12月16日",
+    officialSite: "https://hakuei-bros.com/",
+    twitter: "https://x.com/hakueiman?s=21&t=yFiC3o3Bku78q-p_1LbtKQ",
+    twitter2: "",
+    instagram: ""
   } 
 
 ];
