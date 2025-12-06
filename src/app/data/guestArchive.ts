@@ -343,6 +343,6 @@ export const guestArchive: GuestData[] = [
     twitter: "https://x.com/hakueiman?s=21&t=yFiC3o3Bku78q-p_1LbtKQ",
     twitter2: "",
     instagram: ""
-  } 
+  } ,
 
 ];
