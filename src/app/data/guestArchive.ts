@@ -343,6 +343,16 @@ export const guestArchive: GuestData[] = [
     twitter: "https://x.com/hakueiman?s=21&t=yFiC3o3Bku78q-p_1LbtKQ",
     twitter2: "",
     instagram: ""
+  } ,{
+    name: "富田翔",
+    image: "/guest/guest34.jpg",
+    bio: "2002年にTVドラマ「ごくせん」でデビュー。翌2003年にTVドラマ・スーパー戦隊シリーズ「爆竜戦隊アバレンジャー」アバレブルー / 三条幸人 役で出演。その後、「忠臣蔵」（矢頭右衛門七役）「名奉行！大岡越前」 （池田大助役）「黒い太陽」（橋爪浩司役）などの時代劇やドラマにレギュラー出演。近年は舞台を中心に活動し、シリーズ5作品を通して主演を務めた「炎の蜃気楼 昭和編」（上杉景虎/加瀬賢三役）や「刀剣乱舞-義伝 暁の独眼竜-」（伊達政宗役）タクフェス第７弾「流れ星」（内藤ヨージ役）など数々の話題作に出演。その他、書道デザイナーとしての活動を行うなど、活躍の幅を広げている。",
+    appearanceDate: "2025年12月18日", 
+    birthDate: "1月7日",
+    officialSite: "http://sho-tomita.com/index.html",
+    twitter: "https://x.com/shotomita18?s=21&t=yFiC3o3Bku78q-p_1LbtKQ",
+    twitter2: "",
+    instagram: ""
   } ,
 
 ];
