@@ -83,7 +83,7 @@ const Form: React.FC = () => {
 
   return (
     <div className="max-w-2xl mx-auto">
-      <h2 className="text-2xl font-bold text-[#1a3a6c] mb-6 text-center">バスランに投票する</h2>
+      <h2 className="text-2xl font-bold text-[#1a3a6c] mb-6 text-center">あなたの大切な人・推しに投票！</h2>
       
       <div className="bg-[#f8f9fa] p-4 rounded-lg mb-6 border-l-4 border-[#0167CC]">
         <p className="text-gray-700 font-bold">【注意事項】1投票＝大切な人1人に対し重複投票しても1通しかカウントされません。あらかじめご了承ください。</p>

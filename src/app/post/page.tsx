@@ -57,7 +57,7 @@ const PostPage: React.FC = () => {
                       onClick={handleOpen}
                       className="inline-flex items-center justify-center bg-[#f5d742] hover:bg-[#f2c464] text-black font-bold py-4 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
                     >
-                      バスランに投票する
+                      あなたの大切な人・推しに投票！
                     </button>
                   </div>
                 </div>
