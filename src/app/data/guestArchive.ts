@@ -353,6 +353,16 @@ export const guestArchive: GuestData[] = [
     twitter: "https://x.com/shotomita18?s=21&t=yFiC3o3Bku78q-p_1LbtKQ",
     twitter2: "",
     instagram: ""
+  } ,{
+    name: "ACE COLLECTION Mochi（Ba.）",
+    image: "/guest/guest35.jpg",
+    bio: "2017年12月9日、東京で結成。結成日より、『初ライブで1,000人以上を動員する』事を目標に知名度を獲得するためYouTubeでカバー動画の配信を開始。以降、約3ヶ月にわたり毎日動画配信を行い続けSNSの口コミをきっかけに話題となり約半年でチャンネル登録者数は10万人を超えた。2019年4月29日、バンド史上初のライブ'FIRST ONE-MAN SHOW「HELLO,WORLD」'をマイナビBLITZ赤坂で開催し、チケットは即完売。以降、各地の大型フェスに出演。同年冬には、9ヶ所10公演に及ぶ初の全国ツアーを開催。チケットは全公演完売。2020年4月、UNIVERSAL MUSIC JAPANよりメジャーデビュー。2021年、所属事務所を退所しメンバーで新会社『STARSEED株式会社』を設立し独立。結成から培ってきたセルフプロデュース能力圧巻のライブパフォーマンス波乱万丈な人生から織りなされる楽曲達対極する個性が交わり導かれる奇跡の座標をこれからも絶えず示して行くだろう。",
+    appearanceDate: "2025年12月25日", 
+    birthDate: "1月6日",
+    officialSite: "https://www.star-seed.tokyo/index.php",
+    twitter: "https://x.com/acecollectionjp?s=21&t=yFiC3o3Bku78q-p_1LbtKQ",
+    twitter2: "",
+    instagram: ""
   } ,
 
 ];

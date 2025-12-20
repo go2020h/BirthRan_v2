@@ -229,6 +229,16 @@ const birthdayPresents: BirthdayPresent[] = [
     url: "https://shachimonaka.com/",
     date: "2025-12-18",
     company: "元祖鯱もなか本店"
+  },{
+    id: 22,
+    name: "今回はコーヒーに新たな革命を起こしたい！そんな想いで開発した商品をご紹介させていただきます。コーヒー好きなら！誰もが知っている！「キーコーヒー株式会社」からマーケティング本部・R&Dグループ設計第一チーム・主任・福永 成恵さんにスタジオにお越しいただきました。",
+    description: "ゲストの人気俳優の富田翔さんへ一足早い誕生日プレゼントは『JET BREW』をご用意いただきました。",
+    descriptionMarkdown: "ゲストの人気俳優の富田翔さんへ一足早い誕生日プレゼントは『JET BREW』をご用意いただきました。",
+    imagePath: "/home24.jpg",
+    imageAlt: "キーコーヒー株式会社",
+    url: "https://www.keycoffee.co.jp/future/detail/18",
+    date: "2025-12-20",
+    company: "キーコーヒー株式会社"
   }
   
   
