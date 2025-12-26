@@ -239,6 +239,16 @@ const birthdayPresents: BirthdayPresent[] = [
     url: "https://www.keycoffee.co.jp/future/detail/18",
     date: "2025-12-20",
     company: "キーコーヒー株式会社"
+  },{
+    id: 23,
+    name: "今回ご紹介させていただくのは、美容意識の高いリスナーのご要望によって月イチレギュラーになった素敵な方の登場です。「老けた？」と思ったら、大人のためのエイジングメディア『美ST』で情報を読もう！シミ・シワ・たるみに効くコスメは何！？最新の若返りメイクから更年期のダイエットや美容医療に至るまで嬉しい情報が盛りだくさん。今！最も信頼されている美容雑誌『美ST』の編集長・千田真弓さんがスタジオにお越しなりました。",
+    description: "ゲストのACE COLLECTIONのベーシストMochiさんに美ST最新号（2月号）板谷由夏さん表紙の本誌（付録付き）と発酵オートミールハルクルをご提供いただきました。",
+    descriptionMarkdown: "ゲストのACE COLLECTIONのベーシストMochiさんに美ST最新号（2月号）板谷由夏さん表紙の本誌（付録付き）と発酵オートミールハルクルをご提供いただきました。",
+    imagePath: "/home25.jpg",
+    imageAlt: "美ST",
+    url: "https://be-story.jp/",
+    date: "2025-12-26",
+    company: "美ST"
   }
   
   

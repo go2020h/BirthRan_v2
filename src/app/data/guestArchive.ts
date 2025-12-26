@@ -363,6 +363,16 @@ export const guestArchive: GuestData[] = [
     twitter: "https://x.com/acecollectionjp?s=21&t=yFiC3o3Bku78q-p_1LbtKQ",
     twitter2: "",
     instagram: ""
+  } ,{
+    name: "Yup'in",
+    image: "/guest/guest36.jpg",
+    bio: "シンガーソングライター／歌謡曲DJ。アーティスト名の「Yup」にはスラングで「YES」という意味と「高飛車で生意気」という２つの意味が込められており、その名の通り、Yup'inの歌には、「自分を愛すること」の大切さを肯定する前向きなメッセージ、一方で、「普段口に出せない心の叫び」を託したメッセージが込められている。TikTokでは、架空の『スナックやぴん＂夜品＂』から、昭和歌謡をテーマにしたDJ&歌配信を行っている。\n♪　これまでにもらった誕生日プレゼントで印象に残ってるものは？　その時にもらった誕生日ケーキ、自分より大きいクマのぬいぐるみw",
+    appearanceDate: "2025年1月1日", 
+    birthDate: "1月16日",
+    officialSite: "https://yupin.aremond.com/",
+    twitter: "https://x.com/y__u__p?s=21&t=yFiC3o3Bku78q-p_1LbtKQ",
+    twitter2: "",
+    instagram: ""
   } ,
 
 ];
