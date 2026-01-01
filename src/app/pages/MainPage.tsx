@@ -777,9 +777,10 @@ const MainPage = () => {
               {/* 最新のYouTube動画 */}
               <div className="rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:scale-102 hover:shadow-xl transform border border-gray-100 bg-gradient-to-br from-white to-[#f8f9fa]">
                 <div className="relative pb-[56.25%] h-0 overflow-hidden">
+                  
                   <iframe
                     className="absolute top-0 left-0 w-full h-full"
-                    src="https://www.youtube.com/live/ocQygJpZnhU?si=wqjnPVc2DGzLxFU-"
+                    src="https://www.youtube.com/embed/ocQygJpZnhU?si=6dm12s64kOZ32Ayj"
                     title="【LIVE】渋谷愛ビジョン・宮益坂交差点ライブカメラ／『SHIBUYA AI Vision』"
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
