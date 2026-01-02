@@ -56,7 +56,7 @@ const MonthlyPresent: React.FC<MonthlyPresentProps> = ({ present, asTableRow }) 
             <div className={`${isExpanded ? '' : 'line-clamp-3'}`}>
               <ReactMarkdown>{present.descriptionMarkdown}</ReactMarkdown>
             </div>
-            {present.descriptionMarkdown.length > 100 && (
+            {present.descriptionMarkdown.length > 30 && (
               <button
                 onClick={() => setIsExpanded(!isExpanded)}
                 className="text-[#0166CD] hover:text-[#d4af37] text-sm mt-2 font-medium transition-colors focus:outline-none"
@@ -105,7 +105,7 @@ const MonthlyPresent: React.FC<MonthlyPresentProps> = ({ present, asTableRow }) 
             <div className={`${isExpanded ? '' : 'line-clamp-3'}`}>
               <ReactMarkdown>{present.descriptionMarkdown}</ReactMarkdown>
             </div>
-            {present.descriptionMarkdown.length > 100 && (
+            {present.descriptionMarkdown.length > 30 && (
               <button
                 onClick={() => setIsExpanded(!isExpanded)}
                 className="text-[#0166CD] hover:text-[#d4af37] text-sm mt-2 font-medium transition-colors focus:outline-none"
