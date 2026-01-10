@@ -383,6 +383,16 @@ export const guestArchive: GuestData[] = [
     twitter: "https://x.com/kiri_tebasen?s=21&t=yFiC3o3Bku78q-p_1LbtKQ",
     twitter2: "",
     instagram: ""
+  } ,{
+    name: "ひとみ（あたらよVo&Gt）",
+    image: "/guest/guest38.jpg",
+    bio: "グループ名の「あたらよ」は”明けるのが惜しいほど美しい夜”という意味の可惜夜（あたらよ）から由来している。2020年11月に Youtube に楽曲を投稿し始め活動を開始。初のオリジナル曲「10月無口な君を忘れる」では、切なくエモーショナルな歌声と、都会的な空気感、共感を呼ぶ切ない歌詞の世界観が話題となり、現在Youtubeでは5000万再生突破。2021年3月にデジタルリリースを開始すると、瞬く間にLINE MUSIC・Spotify・TikTok・AWAでチャート首位獲得。活動開始から1年足らずでTHE FIRST TAKEに出演。2021/10/4に初の7曲入りEP「夜明け前」をリリースし、2022/03/24に1stアルバム「極夜において月は語らず」をリリース、2023/08/23にはコンセプトアルバム「季億の箱」をリリース。",
+    appearanceDate: "2025年1月15日", 
+    birthDate: "1月24日",
+    officialSite: "https://atarayo-band.jp/",
+    twitter: "https://x.com/psycho_hitomi?s=21&t=yFiC3o3Bku78q-p_1LbtKQ",
+    twitter2: "",
+    instagram: ""
   } ,
 
 ];
