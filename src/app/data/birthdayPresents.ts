@@ -269,6 +269,16 @@ const birthdayPresents: BirthdayPresent[] = [
     url: "https://www.ikedapiano.co.jp/?gad_source=1&gad_campaignid=19968975300&gbraid=0AAAAAphUyO7nwfADCf_FDZAKJxSm-sYVr",
     date: "2026-01-10",
     company: "池田ピアノ運送株式会社"
+  },{
+    id: 26,
+    name: "今回ご紹介させていただくのは、第３週はリスナーのご要望によってレギュラー化した方の登場です。「老けた？」と思ったら、大人のためのエイジングメディア『美ST』を読もう！シミ・シワ・たるみに効くコスメは何！？最新の若返りメイクから更年期のダイエットや美容医療に至るまで嬉しい情報が満載。今！最も信頼されている美容雑誌『美ST』の編集長・千田真弓さんがスタジオにお越しなりました。",
+    description: "ゲストのひとみさん（あたらよ）に美ST最新号（3月号）松下奈緒さん表紙の本誌（付録付き）をプレゼントとしてお預かりしました。",
+    descriptionMarkdown: "ゲストのひとみさん（あたらよ）に美ST最新号（3月号）松下奈緒さん表紙の本誌（付録付き）をプレゼントとしてお預かりしました。",
+    imagePath: "/home28.jpg",
+    imageAlt: "株式会社光文社",
+    url: "https://be-story.jp/",
+    date: "2026-01-17",
+    company: "株式会社光文社"
   }
   
   
