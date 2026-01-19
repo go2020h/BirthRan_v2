@@ -399,8 +399,8 @@ export const guestArchive: GuestData[] = [
     bio: "1987年2月5日、シングル「男のコになりたい」でレコード・デビュー。以来、ミリオンセラー「碧いうさぎ」等の多くのシングル・アルバムを発表。女優としてもテレビ・映画・CMなど活動の範囲を広げる。その後、中国・香港・台湾をはじめとするアジア各地でも評価を得て、現地でのコンサートも開催した。現在もFM NACK5　森田健作の「青春もぎたて朝一番」やBSフジ「なるほど！なっとく塾」、舞台やディナーショー等を中心にタレントとしての活動を行っている。\n♪　これまでにもらった誕生日プレゼントで印象に残ってるものは？\n毎年100本くらいある薔薇をおくってくださる方がいて、部屋中がバラに囲まれてお姫様みたいな気持ちにしていただけて嬉しいです。",
     appearanceDate: "2025年1月22日", 
     birthDate: "2月14日",
-    officialSite: "https://x.com/noripsmile",
-    twitter: "https://www.jvcmusic.co.jp/-/Artist/A000342.html",
+    officialSite: "https://www.jvcmusic.co.jp/-/Artist/A000342.html",
+    twitter: "https://x.com/noripsmile",
     twitter2: "",
     instagram: ""
   } ,
