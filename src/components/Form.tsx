@@ -106,7 +106,7 @@ const Form: React.FC = () => {
       <form onSubmit={handleSubmit} className="space-y-6">
         <div>
           <label className="block text-gray-700 font-bold mb-2">
-            ① 誕生日を教えてください<span className="text-red-600">*</span>
+            ① 推しの誕生日を教えてください<span className="text-red-600">*</span>
           </label>
           <div className="flex items-center space-x-2">
             <select 
