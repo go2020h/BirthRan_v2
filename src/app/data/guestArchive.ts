@@ -403,6 +403,17 @@ export const guestArchive: GuestData[] = [
     twitter: "https://x.com/noripsmile",
     twitter2: "",
     instagram: ""
+  } ,{
+    name: "加護亜依",
+    image: "/guest40.jpg",
+    bio: "元モーニング娘。でInstagram(@ai.1988kg)25.3万フォロワーでファッションや日常を発信、X(@lovbus)。2025年10月「ロンドンハーツ」17年ぶり出演で話題となり、「くりぃむナンタラ」「あちこちオードリー」「ぐるナイ」などバラエティ番組に活発出演。2025年11月23日、故郷・奈良の大和高田さざんかホールで「加護亜依 born 奈良～25年目のただいま～」開催現在も精力的に芸能活動を続けており、ファンからの支持も厚い。\n♪　これまでにもらった誕生日プレゼントで印象に残ってるものは？\nうちのお母さんから誕生日プレゼントにセクシーランジェリーが送られてきた",
+    appearanceDate: "2025年1月29日", 
+    birthDate: "2月7日",
+    officialSite: "https://kagoai.peeeps.jp/",
+    twitter: "https://x.com/lovbus?s=21&t=yFiC3o3Bku78q-p_1LbtKQ",
+    twitter2: "",
+    instagram: ""
   } ,
+
 
 ];
