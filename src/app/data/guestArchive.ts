@@ -413,6 +413,16 @@ export const guestArchive: GuestData[] = [
     twitter: "https://x.com/lovbus?s=21&t=yFiC3o3Bku78q-p_1LbtKQ",
     twitter2: "",
     instagram: ""
+  } ,{
+    name: "高島江梨奈",
+    image: "/guest/guest41.jpg",
+    bio: "CLIONE（クリオネ）、あまいものつめあわせで活動中。2025年8月、11月『週刊ヤングジャンプ』（集英社）巻末グラビア掲載。現在発売中の週刊プレイボーイにも掲載中！コスプレイヤーとしても活動しており幅広いジャンルで活躍中の期待の新人！\n♪　これまでにもらった誕生日プレゼントで印象に残ってるものは？\nアルバムです。買ってくれた物をもらうのはもちろん嬉しいですが、手作りのものは愛情を感じられて嬉しいです。",
+    appearanceDate: "2025年2月5日", 
+    birthDate: "2月22日",
+    officialSite: "https://lit.link/CLIONE_official",
+    twitter: "https://x.com/erina_dayooo2?s=21&t=yFiC3o3Bku78q-p_1LbtKQ",
+    twitter2: "",
+    instagram: ""
   } ,
 
 
