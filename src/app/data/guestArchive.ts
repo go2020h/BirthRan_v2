@@ -433,6 +433,16 @@ export const guestArchive: GuestData[] = [
     twitter: "https://x.com/kawasakimayokun?s=21&t=yFiC3o3Bku78q-p_1LbtKQ",
     twitter2: "",
     instagram: ""
+  } ,{
+    name: "湊あかね（East Of Eden）",
+    image: "/guest/guest43.jpg",
+    bio: "神奈川県出身。2014年prediaのメンバーとしてメジャーデビュー。2022年の解散までメインボーカルを担当した。解散後はソロとして活動。圧倒的な歌唱力を持つボーカルとしてTVに多数出演し、プロ野球試合開始前の国家独唱を3年連続で務めるなど注目を集める。\n♪　これまでにもらった誕生日プレゼントで印象に残ってるものは？\npredia活動中のときにメンバーにもらったセクシーな下着",
+    appearanceDate: "2025年2月19日", 
+    birthDate: "3月20日",
+    officialSite: "https://fan.pia.jp/east_of_eden_official/",
+    twitter: "https://x.com/akanesakae?s=21&t=yFiC3o3Bku78q-p_1LbtKQ",
+    twitter2: "",
+    instagram: ""
   } ,
 
 
