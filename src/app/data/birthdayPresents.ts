@@ -319,6 +319,16 @@ const birthdayPresents: BirthdayPresent[] = [
     url: "https://www.lamaisonduchocolat.com/ja_jp?gad_source=1&gad_campaignid=1634341326&gbraid=0AAAAAC5zkCqUuv4rjV5LjBg9bqRr2ZU3b",
     date: "2026-02-13",
     company: "ラ・メゾン・デュ・ショコラ・ジャポン株式会社"}
+    ,{
+    id: 31,
+    name: "今回ご紹介させていただくのは、第３週はリスナーのご要望によってレギュラー化した方の登場です。「老けた？」と思ったら、大人のためのエイジングメディア『美ST』を読もう！シミ・シワ・たるみに効くコスメは何！？最新の若返りメイクから更年期のダイエットや美容医療に至るまで嬉しい情報が満載。今！最も信頼されている美容雑誌『美ST』の編集長・千田真弓さんがスタジオにお越しなりました。",
+    description: "ゲストの湊あかねさん（East Of Eden）に美ST最新号（4月号）MEGUMIさん、佐野勇斗さん表紙の本誌（付録付き）をプレゼントとしてお預かりしました。",
+    descriptionMarkdown: "ゲストの湊あかねさん（East Of Eden）に美ST最新号（4月号）MEGUMIさん、佐野勇斗さん表紙の本誌（付録付き）をプレゼントとしてお預かりしました。",
+    imagePath: "/home33.jpg",
+    imageAlt: "株式会社光文社",
+    url: "https://be-story.jp/",
+    date: "2026-02-20",
+    company: "株式会社光文社"}
   
   
   
