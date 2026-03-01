@@ -329,6 +329,17 @@ const birthdayPresents: BirthdayPresent[] = [
     url: "https://be-story.jp/",
     date: "2026-02-20",
     company: "株式会社光文社"}
+    ,{
+    id: 32,
+    name: "今回ご紹介させていただくのは最近では、タレントグッズとして大人気を博している商品でもあります。世界に一つだけのオリジナルグッズをあなたの元へ！株式会社ミツバ梱包の代表取締役社長・戸松玲子（とまつれいこ）さんスタジオにお越し頂きました！",
+    description: "ゲストの花谷麻妃さんに缶バッチ、アクリルキーホルダー、ステッカーを1日で作成してお持ちいただきました。",
+    descriptionMarkdown: "ゲストの花谷麻妃さんに缶バッチ、アクリルキーホルダー、ステッカーを1日で作成してお持ちいただきました。",
+    imagePath: "/home34.jpg",
+    imageAlt: "株式会社ミツバ梱包",
+    url: "https://www.mitsuba-k.co.jp/",
+    date: "2026-03-01",
+    company: "株式会社ミツバ梱包"}
+    
   
   
   
