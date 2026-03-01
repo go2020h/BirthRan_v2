@@ -337,7 +337,7 @@ const birthdayPresents: BirthdayPresent[] = [
     imagePath: "/home34.jpg",
     imageAlt: "株式会社ミツバ梱包",
     url: "https://www.mitsuba-k.co.jp/",
-    date: "2026-03-01",
+    date: "2026-02-26",
     company: "株式会社ミツバ梱包"}
     
   
