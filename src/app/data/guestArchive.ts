@@ -463,6 +463,16 @@ export const guestArchive: GuestData[] = [
     twitter: "https://x.com/manoa_sun?s=21&t=yFiC3o3Bku78q-p_1LbtKQ",
     twitter2: "",
     instagram: ""
+  } ,{
+    name: "MASHIHO",
+    image: "/guest/guest46.jpg",
+    bio: "世界的な注目を得ているトリリンガル（日本語、韓国語、英語）ソロアーティスト。リスナーを魅了する甘い歌に加え、圧倒的なダンススキルの持ち主。音楽のみならずファッション界からも注目を集める。2018年から放送されていた、韓国の大手事務所・YGエンタテインメント所属の男子練習生によるサバイバル番組「YG宝石箱」を経て2020年にTREASUREのメンバーとしてデビュー。2022年11月にグループを離れ、およそ1年の充電期間を経て、2024年3月25日にソロアーティストとして活動することを発表。大阪、横浜、タイ、台北でのファンミーティングも大盛況に終え、2025年3月25日、ソロデビューからちょうど1周年を迎える記念日にデビューアルバム「ULTRA　VIOLET」がリリースされた。写真集発売、ZEPPツアーを東名阪＆タイで完走し、2026年は初ドラマ出演、初舞台座長を務めるなど　これまでの魅力をさらに深め、新たな可能性を切り拓くMASHIHOから目が離せない。",
+    appearanceDate: "2025年3月12日", 
+    birthDate: "3月28日",
+    officialSite: "https://official-mashiho.com/",
+    twitter: "https://x.com/mashiho_ib?s=21&t=yFiC3o3Bku78q-p_1LbtKQ",
+    twitter2: "",
+    instagram: ""
   } 
 
 
