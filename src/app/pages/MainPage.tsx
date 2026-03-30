@@ -321,7 +321,7 @@ const MainPage = () => {
         <div className="relative w-full h-full md:hidden">
           <div className="relative w-full h-full">
             <Image
-              src="/ver320263_2.png"
+              src="/hero2.png"
               alt="バースデーランキング"
               className="w-full h-full object-contain"
               fill
