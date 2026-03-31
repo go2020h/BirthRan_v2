@@ -322,7 +322,7 @@ const MainPage = () => {
           <div className="relative w-full h-full">
             <Image
               src="/hero1_fix.png"
-              alt="バースデーランキング"
+              alt="バースデーランキング画像"
               className="w-full h-full object-contain"
               fill
               priority
@@ -336,7 +336,7 @@ const MainPage = () => {
           <div className="relative w-full h-full">
             <Image
               src="/hero2_fix.png"
-              alt="バースデーランキング"
+              alt="バースデーランキング画像"
               className="w-full h-full object-contain"
               fill
               priority
