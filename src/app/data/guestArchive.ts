@@ -493,6 +493,16 @@ export const guestArchive: GuestData[] = [
     twitter: "https://x.com/jun_kawasaki?s=21&t=yFiC3o3Bku78q-p_1LbtKQ",
     twitter2: "",
     instagram: ""
+  }, {
+    name: "Sayaka（HAGANE）",
+    image: "/guest/guest48.jpg",
+    bio: "ガールズメタルバンドHAGANEのベースSayakaさん。2018年6月23日結成メロディックスピードメタルバンド『HAGANE』。外見からは想像のつかないハードなサウンドを奏で、圧倒的なボーカルとパワフルかつテクニカルな楽器隊で構成された唯一無二の存在感を放つガールズバンド。2024年にボーカル凪希とドラムJUNNAを新メンバーに迎え再始動。\n♪　これまでにもらった誕生日プレゼントで印象に残ってるものは？\n去年初めて生誕祭ライブをやって、その時にファンのみなさんからいただいたメッセージ色紙です。たくさんの方からメッセージを集めていただくにとどまらず、イラストレーターの方に私の似顔絵を描いていただいて色紙にはってくださったのも嬉しかったです。",
+    appearanceDate: "2025年4月2日",
+    birthDate: "4月24日",
+    officialSite: "https://www.hagane-official.com/",
+    twitter: "https://x.com/sayaka89394411?s=21&t=yFiC3o3Bku78q-p_1LbtKQ",
+    twitter2: "",
+    instagram: ""
   }
 
 

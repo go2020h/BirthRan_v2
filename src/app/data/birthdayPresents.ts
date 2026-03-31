@@ -375,6 +375,16 @@ const birthdayPresents: BirthdayPresent[] = [
     url: "https://be-story.jp/",
     date: "2026-03-19",
     company: "株式会社光文社"
+  }, {
+    id: 36,
+    name: "この番組『池田ピアノプレゼンツ・ウィークリー・バースデー・ランキング』が最終回を迎えるということで、この番組を支えてくれた池田ピアノ運送株式会社の広報を担当しているキャラクターの池田もっちーさんにスタジオにお越しいただきました。",
+    description: "ゲストの川﨑純さん（LEEVELLES）に「もっちーていねい１０のこと」オリジナルエコバックをプレゼントにご用意していただきました。",
+    descriptionMarkdown: "ゲストの川﨑純さん（LEEVELLES）に「もっちーていねい１０のこと」オリジナルエコバックをプレゼントにご用意していただきました。",
+    imagePath: "/home38.jpg",
+    imageAlt: "池田ピアノ運送株式会社",
+    url: "https://www.ikedapiano.jp/",
+    date: "2026-03-26",
+    company: "池田ピアノ運送株式会社"
   }
 
   // 今後、新しいプレゼントをここに追加していく
