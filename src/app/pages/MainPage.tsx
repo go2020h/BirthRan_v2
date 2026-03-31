@@ -335,7 +335,7 @@ const MainPage = () => {
         <div className="relative w-full h-full hidden md:block">
           <div className="relative w-full h-full">
             <Image
-              src="/ver320263_32.png"
+              src="/hero_pc.png"
               alt="バースデーランキング"
               className="w-full h-full object-contain"
               fill
