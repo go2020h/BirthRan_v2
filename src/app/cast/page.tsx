@@ -255,13 +255,13 @@ const CastStaffPage: React.FC = () => {
             <div className="max-w-4xl mx-auto bg-[#1a2547] rounded-xl shadow-lg overflow-hidden p-8">
               <div className="text-white leading-relaxed space-y-6">
                 <p>
-                  「<span className="text-[#d4af37] font-bold">efitプレゼンツ☆ウィークリー・バースデー・ランキング</span>」は、視聴者の皆さまに「誕生日」という特別な日を通じて、新しい発見と感動をお届けする番組です。私たち制作チームは、この番組を通じて、視聴者の皆さまに「誕生日」という特別な日の魅力を再発見していただきたいと考えています。
+                  「<span className="text-[#d4af37] font-bold">おめありかふぇPresents デイリー・バースデー・ランキング</span>」は、視聴者の皆さまに「誕生日」という特別な日を通じて、新しい発見と感動をお届けする番組です。私たち制作チームは、この番組を通じて、視聴者の皆さまに「誕生日」という特別な日の魅力を再発見していただきたいと考えています。
                 </p>
                 <p>
                   <span className="text-[#d4af37] font-bold">ラジオ日本</span>と<span className="text-[#d4af37] font-bold">渋谷愛ビジョン</span>を結ぶクロスメディア展開により、視聴者の皆さまにより多角的な楽しみ方を提供できるよう工夫を重ねています。また、視聴者参加型の企画も充実させ、ラジオ日本局内で『聴取率』『フォロワー数でNo.1を目指しています。
                 </p>
                 <p>
-                  これからも、視聴者の皆さまに「驚き」と「感動」をお届けできるよう、スタッフ一同、全力で取り組んでまいります。どうぞ、これからも「<span className="text-[#d4af37] font-bold">efitプレゼンツ☆ウィークリー・バースデー・ランキング</span>」をよろしくお願いいたします。
+                  これからも、視聴者の皆さまに「驚き」と「感動」をお届けできるよう、スタッフ一同、全力で取り組んでまいります。どうぞ、これからも「<span className="text-[#d4af37] font-bold">おめありかふぇPresents デイリー・バースデー・ランキング</span>」をよろしくお願いいたします。
                 </p>
                 <p className="text-[#d4af37] font-bold text-right mt-8">
                   制作チーム一同
