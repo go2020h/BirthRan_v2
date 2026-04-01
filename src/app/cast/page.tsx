@@ -297,10 +297,10 @@ const CastStaffPage: React.FC = () => {
                 <div className="bg-[#1a2547] rounded-xl shadow-lg overflow-hidden p-8 text-center">
                   <h3 className="text-xl font-bold text-[#d4af37] mb-4">スポンサー</h3>
                   <p className="text-white mb-6">番組メインスポンサー</p>
-                  <div className="flex justify-center bg-white p-4 rounded-xl h-32 flex items-center">
-                    <a href="https://www.ikedapiano.co.jp/?gad_source=1&gad_campaignid=19968975300&gbraid=0AAAAAphUyO7dHbtRd11FZ86iwgfNp_O9s&gclid=CjwKCAjw6P3GBhBVEiwAJPjmLvNdlIWhlxsRxhs3n729tYOXtEJaBtl9m8caawQuNEOArgDikVyqghoCEVUQAvD_BwE" target="_blank" rel="noopener noreferrer">
+                  <div className="flex justify-center p-4 rounded-xl h-32 flex items-center">
+                   {/* <a href="https://www.ikedapiano.co.jp/?gad_source=1&gad_campaignid=19968975300&gbraid=0AAAAAphUyO7dHbtRd11FZ86iwgfNp_O9s&gclid=CjwKCAjw6P3GBhBVEiwAJPjmLvNdlIWhlxsRxhs3n729tYOXtEJaBtl9m8caawQuNEOArgDikVyqghoCEVUQAvD_BwE" target="_blank" rel="noopener noreferrer">
                       <Image src="/logo2.png" alt="efit" width={200} height={96} className="h-24 w-auto object-contain hover:opacity-80 transition-opacity" />
-                    </a>
+                    </a> */}
                   </div>
                 </div>
               </div>
