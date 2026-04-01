@@ -112,9 +112,9 @@ const CastStaffPage: React.FC = () => {
     },
     {
       id: 'staff4',
-      name: '神取美佳',
-      role: '制作',
-      birthday: '9月28日生まれ',
+      name: '宮嶋章裕',
+      role: 'キャスティング',
+      birthday: '12月22日生まれ',
       image: '/cast/staff4-1.jpg',
       detailImage: '/cast/staff4-2.jpg',
       description: '｢誕生日｣をテーマに愛を伝える番組に関わることができて私自身とてもワクワクしております！日頃は恥ずかしくて伝えられない人もこの番組を通して大切な人に伝えたくなる、世界が｢おめでとう｣｢ありがとう｣で溢れる、そんな番組になるように精一杯がんばります。'
@@ -187,7 +187,7 @@ const CastStaffPage: React.FC = () => {
           </div>
         </section>
 
-        {/* キャストセクション */}
+        {/* キャストセクション 
         <section className="py-20 bg-[#0f1429]">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
@@ -213,7 +213,7 @@ const CastStaffPage: React.FC = () => {
               ))}
             </div>
           </div>
-        </section>
+        </section>*/}
 
         {/* スタッフセクション */}
         <section className="py-20 bg-[#0f1429]">
