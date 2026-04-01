@@ -316,7 +316,7 @@ const MainPage = () => {
   return (
     <main>
       {/* ヒーローセクション */}
-      <section className="relative w-full h-[48vh] bg-[#17142E]">
+      <section className="relative w-full h-[50vh] bg-[#17142E]">
         {/* スマホ表示用画像 */}
         <div className="relative w-full h-full md:hidden">
           <div className="relative w-full h-full">
