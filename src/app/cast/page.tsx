@@ -297,7 +297,7 @@ const CastStaffPage: React.FC = () => {
                 <div className="bg-[#1a2547] rounded-xl shadow-lg overflow-hidden p-8 text-center">
                   <h3 className="text-xl font-bold text-[#d4af37] mb-4">スポンサー</h3>
                   <p className="text-white mb-6">番組メインスポンサー</p>
-                  <div className="flex justify-center p-4 rounded-xl h-80 flex items-center">
+                  <div className="flex justify-center p-4 rounded-xl h-60 flex items-center">
                    
                       <Image src="/logo2.png" alt="efit" width={200} height={96} className="h-auto w-auto object-contain hover:opacity-80 transition-opacity" />
                     
