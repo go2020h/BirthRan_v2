@@ -185,7 +185,7 @@ const PurposePage: React.FC = () => {
                   ラジオ番組を核にした連携
                 </h3>
                 <p className="text-gray-700 leading-relaxed mb-4">
-                  ラジオ日本の「ウィークリー・バースデー・ランキング」を中心に、公式WEBサイト、渋谷愛ビジョン（街頭ビジョン）、YouTube Live、SNS（X/Twitter）が相互に連携しています。
+                  ラジオ日本の「デイリー・バースデー・ランキング」を中心に、公式WEBサイト、渋谷愛ビジョン（街頭ビジョン）、YouTube Live、SNS（X/Twitter）が相互に連携しています。
                 </p>
 
                 <h3 className="text-xl font-bold text-[#1a3a6c] mb-4 mt-6">
