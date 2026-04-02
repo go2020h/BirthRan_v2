@@ -286,9 +286,9 @@ const CastStaffPage: React.FC = () => {
                 <div className="bg-[#1a2547] rounded-xl shadow-lg overflow-hidden p-8 text-center">
                   <h3 className="text-xl font-bold text-[#d4af37] mb-4">情報提供・制作協力</h3>
                   <p className="text-white mb-6">渋谷の街を彩る大型ビジョンで番組情報を放映</p>
-                  <div className="flex justify-center p-4 rounded-xl h-32 flex items-center">
+                  <div className="flex justify-center p-4 rounded-xl h-60 flex items-center">
                     <a href="https://www.saivision.jp/top.php" target="_blank" rel="noopener noreferrer">
-                      <Image src="/logo1.png" alt="渋谷愛ビジョン" width={200} height={96} className="h-24 w-auto object-contain hover:opacity-80 transition-opacity" />
+                      <Image src="/logo1.png" alt="渋谷愛ビジョン" width={200} height={96} className="h-auto w-auto object-contain hover:opacity-80 transition-opacity" />
                     </a>
                   </div>
                 </div>
