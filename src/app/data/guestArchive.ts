@@ -503,6 +503,16 @@ export const guestArchive: GuestData[] = [
     twitter: "https://x.com/sayaka89394411?s=21&t=yFiC3o3Bku78q-p_1LbtKQ",
     twitter2: "",
     instagram: ""
+  }, {
+    name: "GAI・SANI",
+    image: "/guest/guest49.jpg",
+    bio: "HIP HOPカルチャーを、ポップに、ファッショナブルに、、現代HIP HOPのトレンド感を敏感にキャッチした、6人組ボーイズグループ「JAM HEADS」2023年7月にプレデビューし、同年11月17日にデビュー。HIP HOPを基調とした幅広いジャンルの楽曲、そして6人のエネルギッシュで「青春感」溢れるパフォーマンスが魅力。現在デビュー3年目。2度の全国ツアーを実施した他、インドネシア・ジャカルタで開催された「JAK-JAPAN MATSURI」に2024年、2025年と2年連続で出演し、海外進出も果たす。コンセプトとして掲げる「アフタースクール」をまさに体現するかのような、6人の仲の良さ・空気感は、各地でのライブ活動・SNSを中心に幅広い世代を惹き付けている。",
+    appearanceDate: "2026年4月9日",
+    birthDate: "(GAI)4月23日・(SANI)4月25日",
+    officialSite: "https://jamheads.bitfan.id/",
+    twitter: "https://x.com/jamheads_?s=21&t=yFiC3o3Bku78q-p_1LbtKQ",
+    twitter2: "",
+    instagram: ""
   }
 
 
