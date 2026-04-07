@@ -26,59 +26,32 @@ const CastStaffPage: React.FC = () => {
   } | null>(null);
 
   const castData = [
-    {
+     {
       id: 'cast1',
-      name: '松田和佳',
-      week: '第１週',
-      birthday: '5月29日生まれ',
-      image: '/cast/cast1-1.jpg',
-      detailImage: '/cast/cast1-2.jpg',
-      description: '吉本興業所属タレント。元静岡朝日テレビアナウンサーとして活躍した経験を活かし、その明るく爆発力のあるキャラクターとプロ意識の高い進行で番組を盛り上げている。'
-    },
-    {
-      id: 'cast2',
-      name: 'ゆうにゃん',
-      week: '第２週',
-      birthday: '2月22日生まれ',
-      image: '/cast/cast2-1.jpg',
-      detailImage: '/cast/cast2-2.jpg',
-      description: '自称「ぶりっ子女王」として知られる人気インフルエンサー。TikTokAwards2023ファッション部門で最優秀賞を受賞し、SNSでの活動が注目を集めている。フジパンの人気キャラクター「ネオバタくん」の声を担当するなど、声優としても活躍中。キュートなキャラクターと独自の世界観で多くのファンを魅了している。'
-    },
-    {
-      id: 'cast3',
-      name: '風谷南友',
-      week: '第3週',
-      birthday: '3月21日生まれ',
-      image: '/cast/cast7-1.jpg',
-      detailImage: '/cast/cast7-2.jpg',
-      description: '生き物と植物が好きで、ナウシカをリスペクトする女優。「ミス小野小町」グランプリ受賞後、アクションや日舞、居合抜刀などを習得。「勝負の姫君」として神事抜刀を執り行う。蠱惑的な声質で声優やナレーションも担当。自然愛からSDGsのラジオ番組MCを務め、BS演技バトル番組で優勝。狂気溢れたホラー演技がtiktoKで注目されている。'
-    },
-    {
-      id: 'cast4',
-      name: '宮崎美穂',
-      week: '第4週',
-      birthday: '7月30日生まれ',
-      image: '/cast/cast4-1.jpg',
-      detailImage: '/cast/cast4-2.jpg',
-      description: 'AKB48卒業生。PRODUCE48に参加し、日韓での活動経験も持つ。TOPIK3級の韓国語力を活かし、国内外で活動の場を広げている。北海道日本ハムファイターズの熱烈なファンとしても知られる。現在はABEMA「ラブパワーキングダム」に出演し、新たな活動に挑戦している。'
-    },
-    {
-      id: 'cast5',
-      name: 'ChumuNote',
-      week: '第5週',
-      birthday: '5月19日生まれ',
-      image: '/cast/cast5-1.jpg',
-      detailImage: '/cast/cast5-2.jpg',
-      description: '音楽系釣り好きVTuber。「夢はさいたまスーパーアリーナ」を目指し活動中。旧名義で所属していた事務所の解散に伴い転生（？）し、名義を「ChumuNote」へ変更。現在はレメディ・アンド・カンパニーに所属し、医薬品開発の企業にお世話になりながら、「旧名義のチャンネル登録者数を超えたい！」と全身全霊で活動中。'
-    },
-    {
-      id: 'cast6',
       name: '川村ケンスケ',
       week: '誕生日総合研究所',
       birthday: '5月2日生まれ',
       image: '/cast/cast6-1.jpg',
       detailImage: '/cast/cast6-2.jpg',
       description: 'これまでMVを500本以上（自分調べで曖昧です）監督してきた映像ディレクターとして、この番組での私の役割は…ランキング１位のかたに、わたしが選曲した１曲をプレゼントすることです。言ってみれば…１位になったその人を主役に据えてMVを撮りたい！（MVの成り立ちとは真逆ですが）といった発想だったりするかもしれませんね。最高の、全力の、選曲で、バースデー・ランキングを飾りたいと思います。'
+    },
+     {
+      id: 'cast2',
+      name: '風谷南友',
+      week: 'MC',
+      birthday: '3月21日生まれ',
+      image: '/cast/cast7-1.jpg',
+      detailImage: '/cast/cast7-2.jpg',
+      description: '生き物と植物が好きで、ナウシカをリスペクトする女優。「ミス小野小町」グランプリ受賞後、アクションや日舞、居合抜刀などを習得。「勝負の姫君」として神事抜刀を執り行う。蠱惑的な声質で声優やナレーションも担当。自然愛からSDGsのラジオ番組MCを務め、BS演技バトル番組で優勝。狂気溢れたホラー演技がtiktoKで注目されている。'
+    },
+    {
+      id: 'cast3',
+      name: '百音',
+      week: '読み手',
+      birthday: '',
+      image: '/cast/cast8-1.jpg',
+      detailImage: '/cast/cast8-2.jpg',
+      description: ''
     },
   ];
 
@@ -187,7 +160,7 @@ const CastStaffPage: React.FC = () => {
           </div>
         </section>
 
-        {/* キャストセクション 
+        {/* キャストセクション */}
         <section className="py-20 bg-[#0f1429]">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
@@ -213,7 +186,7 @@ const CastStaffPage: React.FC = () => {
               ))}
             </div>
           </div>
-        </section>*/}
+        </section>
 
         {/* スタッフセクション */}
         <section className="py-20 bg-[#0f1429]">
