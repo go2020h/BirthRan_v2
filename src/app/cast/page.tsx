@@ -48,10 +48,10 @@ const CastStaffPage: React.FC = () => {
       id: 'cast3',
       name: '百音',
       week: '読み手',
-      birthday: '',
+      birthday: '5月19日生まれ',
       image: '/cast/cast8-1.jpg',
       detailImage: '/cast/cast8-2.jpg',
-      description: ''
+      description: '百に音と書いてもねと読みます。バスラン愛なら誰にも負けない！バスランの読み手、公式Xの中身、そして放送日にバスラン愛を集めています♪バスランに出演したゲストの方、ランクインしたあの人に！想いを届けるお手伝いさせてください！'
     },
   ];
 
