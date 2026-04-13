@@ -516,7 +516,7 @@ export const guestArchive: GuestData[] = [
   }, {
     name: "星慧音（CLASS SEVEN）",
     image: "/guest/guest50.jpg",
-    bio: "2024年11月11日に結成された大東立樹、髙野秀侑、高田憐、近藤大海、横田大雅、星慧音、中澤漣からなる7人組グループ。TOBEアーティストが総出演するライブ「to HEROes ～TOBE 2nd Super Live～」東京ドーム公演にて配信デビューを発表。“令和7年7月7日”に「miss you」にて配信デビュー。4月6日に 2nd Single「心にキスをした」発売。\n♪　これまでにもらった誕生日プレゼントで印象に残ってるものは？\n2年間欲しいって言ってた財布のプレゼントです！まだ、使ってます！",
+    bio: "2024年11月11日に結成された大東立樹、髙野秀侑、高田憐、近藤大海、横田大雅、星慧音、中澤漣からなる7人組グループ。TOBEアーティストが総出演するライブ「to HEROes ～TOBE 2nd Super Live～」東京ドーム公演にて配信デビューを発表。“令和7年7月7日”に「miss you」にて配信デビュー。4月6日に 2nd Single「心にキスをした」発売。\n♪　これまでにもらった誕生日プレゼントで印象に残ってるものは？\n2年間欲しいって言ってた財布のプレゼントです！まだ、使ってます！\n同グループから髙野秀侑さんもお越しいただきます。",
     appearanceDate: "2025年4月16日",
     birthDate: "4月21日",
     officialSite: "https://tobe-official.jp/artists/classseven",
