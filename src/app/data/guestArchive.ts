@@ -517,10 +517,20 @@ export const guestArchive: GuestData[] = [
     name: "星慧音（CLASS SEVEN）",
     image: "/guest/guest50.jpg",
     bio: "2024年11月11日に結成された大東立樹、髙野秀侑、高田憐、近藤大海、横田大雅、星慧音、中澤漣からなる7人組グループ。TOBEアーティストが総出演するライブ「to HEROes ～TOBE 2nd Super Live～」東京ドーム公演にて配信デビューを発表。“令和7年7月7日”に「miss you」にて配信デビュー。4月6日に 2nd Single「心にキスをした」発売。\n♪　これまでにもらった誕生日プレゼントで印象に残ってるものは？\n2年間欲しいって言ってた財布のプレゼントです！まだ、使ってます！\n同グループから髙野秀侑さんもお越しいただきます。",
-    appearanceDate: "2025年4月16日",
+    appearanceDate: "2026年4月16日",
     birthDate: "4月21日",
     officialSite: "https://tobe-official.jp/artists/classseven",
     twitter: "https://x.com/c_7_official?s=21&t=yFiC3o3Bku78q-p_1LbtKQ",
+    twitter2: "",
+    instagram: ""
+  },{
+    name: "宮田愛萌",
+    image: "/guest/guest51.jpg",
+    bio: "作家・タレント 東京都出身。2023年アイドルグループ卒業時に​デビュー作「きらきらし」新潮社を上梓。​現在は文筆家として小説・エッセイ・短歌などジャンルを問わず活躍。”​本”に関するTV/トークショー/対談なども出演。\n♪　これまでにもらった誕生日プレゼントで印象に残ってるものは？\n高校2年生の時に友達がくれたメッセージブックです。私が中学生の頃からずっと好きだった先輩からもメッセージをもらってくれて嬉しかったです！",
+    appearanceDate: "2026年4月23日",
+    birthDate: "4月28日",
+    officialSite: "https://www.farminc.co.jp/manamo-miyata",
+    twitter: "https://x.com/manamodesuga",
     twitter2: "",
     instagram: ""
   },
