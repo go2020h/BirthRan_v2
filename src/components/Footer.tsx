@@ -19,7 +19,7 @@ const Footer = () => {
             <span className="text-sm">バスラン</span>
           </div>
         </div>
-        
+
         {/* 番組情報セクション */}
         <div className="grid grid-cols-1 md:grid-cols-1 gap-6 mb-8 max-w-md mx-auto">
           {/*<div className="bg-[#1a2542] p-4 rounded-lg flex flex-col items-center justify-center">
@@ -33,9 +33,9 @@ const Footer = () => {
           </div>*/}
           <div className="bg-[#1a2542] p-4 rounded-lg flex flex-col items-center">
             <p className="text-white font-medium mb-2">バスランは、radikoのタイムフリーで<br />放送後1週間聴くことができます♡</p>
-            <a 
-              href="https://radiko.jp/r_seasons/10029307"
-              target="_blank" 
+            <a
+              href=" https://radiko.jp/r_seasons/10032438"
+              target="_blank"
               rel="noopener noreferrer"
               className="hover:opacity-80 transition-all"
             >
@@ -43,7 +43,7 @@ const Footer = () => {
             </a>
           </div>
         </div>
-        
+
         <div className="flex justify-center flex-wrap space-x-4 md:space-x-8 mb-8">
           <Link href="/" className="text-white hover:text-[#d4af37] transition-colors text-base py-1">
             ホーム
@@ -64,7 +64,7 @@ const Footer = () => {
             番組の目的
           </Link>
         </div>
-        
+
         <div className="text-center text-sm text-gray-300">
           Copyright &copy; 2025 バスラン, All Rights Reserved.
         </div>
