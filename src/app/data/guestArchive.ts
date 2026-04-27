@@ -533,6 +533,16 @@ export const guestArchive: GuestData[] = [
     twitter: "https://x.com/manamodesuga",
     twitter2: "",
     instagram: ""
+  },{
+    name: "阿部菜々実",
+    image: "/guest/guest52.jpg",
+    bio: "メンバーとファンが一緒に最高の「フルコース」を完成させる”参加型”アイドルグループスターティングメンバーである元「ラストアイドル」の阿部菜々実、鈴木遥夏、そして中川心から始まった。HEROINES×TWINPLANETの新グループオーディションを勝ち抜いた4名が合流し7名で結成されたグループの白色担当で山形県出身。\n♪　これまでにもらった誕生日プレゼントで印象に残ってるものは？\nここ数年毎年ファンの皆さんから頂いているアルバムが、とても嬉しいです！",
+    appearanceDate: "2026年4月30日",
+    birthDate: "5月17日",
+    officialSite: "https://fullcourse-fc.com/#/",
+    twitter: "https://x.com/fullco_nanami?s=21&t=yFiC3o3Bku78q-p_1LbtKQ",
+    twitter2: "",
+    instagram: ""
   },
 
 
