@@ -523,7 +523,7 @@ export const guestArchive: GuestData[] = [
     twitter: "https://x.com/c_7_official?s=21&t=yFiC3o3Bku78q-p_1LbtKQ",
     twitter2: "",
     instagram: ""
-  },{
+  }, {
     name: "宮田愛萌",
     image: "/guest/guest51.jpg",
     bio: "作家・タレント 東京都出身。2023年アイドルグループ卒業時に​デビュー作「きらきらし」新潮社を上梓。​現在は文筆家として小説・エッセイ・短歌などジャンルを問わず活躍。”​本”に関するTV/トークショー/対談なども出演。\n♪　これまでにもらった誕生日プレゼントで印象に残ってるものは？\n高校2年生の時に友達がくれたメッセージブックです。私が中学生の頃からずっと好きだった先輩からもメッセージをもらってくれて嬉しかったです！",
@@ -533,7 +533,7 @@ export const guestArchive: GuestData[] = [
     twitter: "https://x.com/manamodesuga",
     twitter2: "",
     instagram: ""
-  },{
+  }, {
     name: "阿部菜々実",
     image: "/guest/guest52.jpg",
     bio: "メンバーとファンが一緒に最高の「フルコース」を完成させる”参加型”アイドルグループスターティングメンバーである元「ラストアイドル」の阿部菜々実、鈴木遥夏、そして中川心から始まった。HEROINES×TWINPLANETの新グループオーディションを勝ち抜いた4名が合流し7名で結成されたグループの白色担当で山形県出身。\n♪　これまでにもらった誕生日プレゼントで印象に残ってるものは？\nここ数年毎年ファンの皆さんから頂いているアルバムが、とても嬉しいです！",
@@ -541,6 +541,16 @@ export const guestArchive: GuestData[] = [
     birthDate: "5月17日",
     officialSite: "https://fullcourse-fc.com/#/",
     twitter: "https://x.com/fullco_nanami?s=21&t=yFiC3o3Bku78q-p_1LbtKQ",
+    twitter2: "",
+    instagram: ""
+  }, {
+    name: "平嶋夏海",
+    image: "/guest/guest53.jpg",
+    bio: "元AKB48 1期生。2005年 AKB48第一期生オーディション合格。2009年 渡り廊下走り隊結成 。AKB48選抜総選挙にて第1回から3年連続26位。2012年 AKB48卒業。現在はマルチタレントとして活躍中でバイク女子としても活動中。2019年〜オートバイ用品店「NAPS」のイメージキャラクターに就任し、現在も継続中。2019年 〜ブシロードメディアミックスコンテンツ「D4DJ」で瀬戸リカ役として声優にも挑戦。2020年には2代目川口オートレースイメージガールに就任。2024年2月〜オートバイインカムメーカー「ミッドランド」の公式アンバサダーに就任し、現在も継続中。2025年〜スーパーGT「ANEST IWATA Racing」応援団長に就任。2025年10月〜「一般社団法人公民連携推進機構」公民連携推進大使に就任。2026年2月〜「一般社団法人日本二輪車普及安全協会」JAPAN RIDERS公式アンバサダーに就任。平嶋夏海公式YouTube「はしれ！なっちゃんねる」ではサウナ×ツーリングの動画も投稿しており、178万回再生を超える動画もある。愛車は「MOTOGUZZI V7Ⅲ 10th ANNIVERSARY」。趣味の漫画は隙あらばスマホで購読しているレベルで大好き。",
+    appearanceDate: "2026年5月7日",
+    birthDate: "5月28日",
+    officialSite: "https://18pro.co.jp/talent-list/hirajimanatsumi/",
+    twitter: "https://x.com/nacchan_h0528?s=21&t=yFiC3o3Bku78q-p_1LbtKQ",
     twitter2: "",
     instagram: ""
   },
