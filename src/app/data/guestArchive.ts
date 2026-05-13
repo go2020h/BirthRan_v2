@@ -553,6 +553,16 @@ export const guestArchive: GuestData[] = [
     twitter: "https://x.com/nacchan_h0528?s=21&t=yFiC3o3Bku78q-p_1LbtKQ",
     twitter2: "",
     instagram: ""
+  },{
+    name: "YOUSUKE",
+    image: "/guest/guest54.jpg",
+    bio: "LAST FIRST（ラストファースト）「終わりは、新たな始まり」という想いを込め、出会いと挑戦を大切に活動している。メンバーは、GACKY（ガッキー：広島県広島市）、YOSUKE（ヨウスケ：広島県広島市）、OSA（オサ：兵庫県神戸市） の3名。2019年、日本コロムビアよりメジャーデビュー。以降、情報番組のエンディングソングやタイアップ、オリコンチャート上位ランクインなど実績を重ねる。広島マツダスタジアムでの国歌斉唱や各地でのライブ活動を展開し、2025年にはオリコン演歌・歌謡チャート5位を獲得、日本作曲家協会「奨励賞」を受賞。リーダーを務めるYOUSUKEさんは幼い頃から野球をやっていて運動神経はいい方だと思うとのこと。ボーリングも好きで当時出した最高得点は255点。",
+    appearanceDate: "2026年5月14日",
+    birthDate: "5月21日",
+    officialSite: "https://last-first.net/",
+    twitter: "https://x.com/takemotoyousuke",
+    twitter2: "",
+    instagram: ""
   },
 
 
