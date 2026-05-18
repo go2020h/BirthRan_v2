@@ -553,7 +553,7 @@ export const guestArchive: GuestData[] = [
     twitter: "https://x.com/nacchan_h0528?s=21&t=yFiC3o3Bku78q-p_1LbtKQ",
     twitter2: "",
     instagram: ""
-  },{
+  }, {
     name: "YOSUKE",
     image: "/guest/guest54.jpg",
     bio: "LAST FIRST（ラストファースト）「終わりは、新たな始まり」という想いを込め、出会いと挑戦を大切に活動している。メンバーは、GACKY（ガッキー：広島県広島市）、YOSUKE（ヨウスケ：広島県広島市）、OSA（オサ：兵庫県神戸市） の3名。2019年、日本コロムビアよりメジャーデビュー。以降、情報番組のエンディングソングやタイアップ、オリコンチャート上位ランクインなど実績を重ねる。広島マツダスタジアムでの国歌斉唱や各地でのライブ活動を展開し、2025年にはオリコン演歌・歌謡チャート5位を獲得、日本作曲家協会「奨励賞」を受賞。リーダーを務めるYOSUKEさんは幼い頃から野球をやっていて運動神経はいい方だと思うとのこと。ボーリングも好きで当時出した最高得点は255点。",
@@ -561,6 +561,16 @@ export const guestArchive: GuestData[] = [
     birthDate: "5月21日",
     officialSite: "https://last-first.net/",
     twitter: "https://x.com/takemotoyousuke",
+    twitter2: "",
+    instagram: ""
+  }, {
+    name: "赤尾ひかる",
+    image: "/guest/guest55.jpg",
+    bio: "埼玉県出身趣味　ヴァイオリン、ピアノ、料理、お菓子作り特技　声楽2015年から声優活動を開始　2018年から声優ユニット「teaЯLove」（ティアラブ）のメンバーとして4年半務めた　2020年からはメディアミックス「アサルトリリィBOUQUET」の一柳梨璃役を務めアニメ、ゲーム、舞台に出演2022年、第16回声優アワードにて新人女優賞を受賞　代表作　こみっくがーるず』（萌田薫子）　『えんどろ〜！』（ユーシャ）　最近では声優業以外にも脚本家としても活躍していて担当する朗読劇「花売りに結ばれて」が6月24日〜6月28日に池袋で開催。そして6月30日KADOKAWAから小説「甘い制服をまとって」出版。",
+    appearanceDate: "2026年5月21日",
+    birthDate: "6月16日",
+    officialSite: "https://www.imenterprise.jp/profile.php?id=9",
+    twitter: "https://x.com/akao_hikaru?s=21&t=yFiC3o3Bku78q-p_1LbtKQ",
     twitter2: "",
     instagram: ""
   },
