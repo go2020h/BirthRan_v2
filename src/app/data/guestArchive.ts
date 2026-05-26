@@ -573,7 +573,17 @@ export const guestArchive: GuestData[] = [
     twitter: "https://x.com/akao_hikaru?s=21&t=yFiC3o3Bku78q-p_1LbtKQ",
     twitter2: "",
     instagram: ""
-  },
+  }, {
+    name: "佐々木楓菜・日比野芽奈",
+    image: "/guest/guest56.jpg",
+    bio: "さまざまな人気バラエティー番組を世に送り出しているテレビプロデューサー・佐久間宣之さんが総合プロデュースを手掛ける、8人組のアイドルグループのメンバー。2022年にオーディションが開催され、結成日は2022年12月8日、デビュー日は2023年3月9日。 佐久間Pが命名した「ラフ×ラフ」（英語表記：rough×laugh）は、粗削りの“ラフ“と笑いの“ラフ“を掛け合わせており、成長を続けるメンバーたちがいろいろな人を笑顔にしたいという気持ちが込められています。",
+    appearanceDate: "2026年6月11日",
+    birthDate: "6月24日・6月27日",
+    officialSite: "https://roughlaugh-official.com/",
+    twitter: "https://x.com/sasaki_fuuna?s=21&t=yFiC3o3Bku78q-p_1LbtKQ",
+    twitter2: "https://x.com/hibino_meina?s=21&t=yFiC3o3Bku78q-p_1LbtKQ",
+    instagram: ""
+  }
 
 
 ];
