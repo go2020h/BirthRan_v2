@@ -583,6 +583,16 @@ export const guestArchive: GuestData[] = [
     twitter: "https://x.com/sasaki_fuuna?s=21&t=yFiC3o3Bku78q-p_1LbtKQ",
     twitter2: "https://x.com/hibino_meina?s=21&t=yFiC3o3Bku78q-p_1LbtKQ",
     instagram: ""
+  }, {
+    name: "琴川あみ",
+    image: "/guest/guest57.jpg",
+    bio: "FULIT BOXは「ココロ揚ゲテケ」をコンセプトに活動しているアイドルグループです！5月で結成2周年を迎えました！夏にはTIF2026への初出演も決定して、今波に乗っている7人組です！愛されリーダー担当のあみちゃこと琴川あみです！富山県出身です！性格は真面目なひょうきんもので、チャームポイントは色が白いところです！お茶の水女子大学を卒業していて、インテリ担当だと思ってます！FULIT BOXに入る前は謎解きを作るお仕事をしてました！ ",
+    appearanceDate: "2026年6月18日",
+    birthDate: "7月16日",
+    officialSite: "https://18pro.co.jp/talent-list/kotokawaami/",
+    twitter: "https://x.com/ami_fulitbox?s=21&t=yFiC3o3Bku78q-p_1LbtKQ",
+    twitter2: "",
+    instagram: ""
   }
 
 
