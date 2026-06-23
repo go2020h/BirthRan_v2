@@ -463,7 +463,7 @@ const birthdayPresents: BirthdayPresent[] = [
     imagePath: "/home46.jpg",
     imageAlt: "株式会社光文社",
     url: "https://be-story.jp/",
-    date: "2026-06-13",
+    date: "2026-06-23",
     company: "株式会社光文社"
   }
 
