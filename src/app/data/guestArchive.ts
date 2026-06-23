@@ -593,6 +593,16 @@ export const guestArchive: GuestData[] = [
     twitter: "https://x.com/ami_fulitbox?s=21&t=yFiC3o3Bku78q-p_1LbtKQ",
     twitter2: "",
     instagram: ""
+  }, {
+    name: "松本羚央",
+    image: "/guest/guest58.jpg",
+    bio: "Neo Style Rockアイドル[never2never]-ネヴァートゥーネヴァー従来のダンスボーカルやアイドルパフォーマンスに加え、シャウトやデスボ、ヘドバンなど激しいライブパフォーマンスが売りです。有名バンドのカバー等もしており、初めて見る方も参加しやすく、フロアを沸かすことをなによりも大切にライブ作りをしているグループのリーダーです。グループではパートはメインラッパーを担当しています。料理人も10年以上しています。(現在も実家経営店の一つでオフ日にはメインシェフとして手伝っていたりします。) \n♪　これまでにもらった誕生日プレゼントで印象に残ってるものは？\n祖母から二十歳の誕生日にもらった時計です。良い時計は残り続けるし、共に刻んでいく時を思い出として重ねていけるので、一生物だと思っています。",
+    appearanceDate: "2026年6月25日",
+    birthDate: "7月6日",
+    officialSite: "https://dblh-inc.com/2025/02/18/nst/index.html",
+    twitter: "https://x.com/leo_n2n?s=21&t=yFiC3o3Bku78q-p_1LbtKQ",
+    twitter2: "",
+    instagram: ""
   }
 
 
