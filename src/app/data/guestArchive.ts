@@ -603,6 +603,16 @@ export const guestArchive: GuestData[] = [
     twitter: "https://x.com/leo_n2n?s=21&t=yFiC3o3Bku78q-p_1LbtKQ",
     twitter2: "",
     instagram: ""
+  }, {
+    name: "hiroto(CROWN HEAD)",
+    image: "/guest/guest59.jpg",
+    bio: "2025年3月結成、日韓混合ロックバンド 同5月ユニバーサルミュージックよりメジャーデビュー ボーカルMoto（モト） ベースボーカル Lumel（ルメル） ドラム Tasuku（タスク） ギター hiroto（ヒロト）　 「Red Hot Chili Peppers」ジョン・フルシアンテに魅せられ11歳よりギターを始める 都内音楽学校、ロサンゼルスなどでギターを学び、rockをルーツに、pops、blues、jazz、funkなど、 ジャンル問わず演奏の幅を持つ 現在は「CROWN HEAD」でギタリスト、ギターアレンジャーとして活動 その他、サポート・レコーディング・アレンジ、都内高校軽音学部コーチなど活動も行う \n♪　これまでにもらった誕生日プレゼントで印象に残ってるものは？\nメンバーのDr.Tasukuからもらったピックネックレス",
+    appearanceDate: "2026年7月2日",
+    birthDate: "7月26日",
+    officialSite: "https://crownhead.jp/",
+    twitter: "https://x.com/crownhead_jp?s=21",
+    twitter2: "",
+    instagram: ""
   }
 
 
