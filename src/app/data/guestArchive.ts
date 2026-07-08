@@ -613,6 +613,16 @@ export const guestArchive: GuestData[] = [
     twitter: "https://x.com/crownhead_jp?s=21",
     twitter2: "",
     instagram: ""
+  }, {
+    name: "鈴木優香",
+    image: "/guest/guest60.jpg",
+    bio: "静岡県出身。身長163cm。血液型＝AB型。2021年にAKB48を卒業後タレント、グラビアなどの活動以外にもYouTubeも開設していて公式チャンネル登録者数は60万人を越える。4月より毎月刊行しているデジタル写真集のラストを飾る第3弾『After Bloom』が配信中。\n♪　これまでにもらった誕生日プレゼントで印象に残ってるものは？\n日本ではあまりないかもしれないのですが、中国では毎年誕生日に写真を撮ってアルバムを作ってくれていました。小さい頃からの誕生日のアルバムがたくさん残っていて、今でも大切な思い出です。",
+    appearanceDate: "2026年7月16日",
+    birthDate: "8月15日",
+    officialSite: "https://www.libera-japan.com/artist/suzukiyuka.php",
+    twitter: "https://x.com/suzukiyuukarin_?s=21&t=yFiC3o3Bku78q-p_1LbtKQ",
+    twitter2: "",
+    instagram: ""
   }
 
 
