@@ -26,7 +26,7 @@ const CastStaffPage: React.FC = () => {
   } | null>(null);
 
   const castData = [
-     {
+    {
       id: 'cast1',
       name: '川村ケンスケ',
       week: '誕生日総合研究所',
@@ -35,7 +35,7 @@ const CastStaffPage: React.FC = () => {
       detailImage: '/cast/cast6-2.jpg',
       description: 'これまでMVを500本以上（自分調べで曖昧です）監督してきた映像ディレクターとして、この番組での私の役割は…ランキング１位のかたに、わたしが選曲した１曲をプレゼントすることです。言ってみれば…１位になったその人を主役に据えてMVを撮りたい！（MVの成り立ちとは真逆ですが）といった発想だったりするかもしれませんね。最高の、全力の、選曲で、バースデー・ランキングを飾りたいと思います。'
     },
-     {
+    {
       id: 'cast2',
       name: '風谷南友',
       week: 'MC',
@@ -154,7 +154,7 @@ const CastStaffPage: React.FC = () => {
           <div className="container mx-auto px-4">
             <div className="text-center">
               <h1 className="text-4xl md:text-5xl font-bold mb-4 text-[#d4af37]">
-              キャスト＆STAFF
+                キャスト＆STAFF
               </h1>
             </div>
           </div>
@@ -168,7 +168,7 @@ const CastStaffPage: React.FC = () => {
                 愛あるパーソナリティ
               </h2>
             </div>
-            
+
             <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 max-w-6xl mx-auto">
               {castData.map((cast) => (
                 <div key={cast.id} className="bg-transparent rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 cursor-pointer" onClick={() => openCastDetail(cast)}>
@@ -196,7 +196,7 @@ const CastStaffPage: React.FC = () => {
                 愛あるSTAFF
               </h2>
             </div>
-            
+
             <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 max-w-6xl mx-auto">
               {staffData.map((staff) => (
                 <div key={staff.id} className="bg-transparent rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 cursor-pointer" onClick={() => openStaffDetail(staff)}>
@@ -224,7 +224,7 @@ const CastStaffPage: React.FC = () => {
                 制作STAFFからの<br />メッセージ
               </h2>
             </div>
-            
+
             <div className="max-w-4xl mx-auto bg-[#1a2547] rounded-xl shadow-lg overflow-hidden p-8">
               <div className="text-white leading-relaxed space-y-6">
                 <p>
@@ -252,7 +252,7 @@ const CastStaffPage: React.FC = () => {
                 協賛・協力
               </h2>
             </div>
-            
+
             <div className="max-w-4xl mx-auto">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                 {/* 渋谷愛ビジョン */}
@@ -265,8 +265,8 @@ const CastStaffPage: React.FC = () => {
                     </a>
                   </div>
                 </div>
-                
-                {/* スポンサー */}
+
+                {/* スポンサー 
                 <div className="bg-[#1a2547] rounded-xl shadow-lg overflow-hidden p-8 text-center">
                   <h3 className="text-xl font-bold text-[#d4af37] mb-4">スポンサー</h3>
                   <p className="text-white mb-6">番組メインスポンサー</p>
@@ -275,26 +275,26 @@ const CastStaffPage: React.FC = () => {
                       <Image src="/logo2.png" alt="efit" width={200} height={96} className="h-auto w-auto object-contain hover:opacity-80 transition-opacity" />
                     
                   </div>
-                </div>
+                </div>*/}
               </div>
             </div>
           </div>
         </section>
-        
+
       </main>
 
       {/* キャスト詳細ダイアログ */}
       {selectedCast && (
         <div className="fixed inset-0 bg-black bg-opacity-80 flex items-start md:items-center justify-center z-50 p-4 pt-20 md:pt-4 backdrop-blur-sm overflow-y-auto" onClick={handleBackdropClick}>
           <div className="bg-[#0f1429] max-w-4xl w-full rounded-xl overflow-hidden relative shadow-2xl border border-[#d4af37]/20 my-4">
-            <button 
+            <button
               onClick={closeCastDetail}
               className="absolute top-4 right-4 text-white text-3xl hover:text-white transition-colors w-10 h-10 flex items-center justify-center rounded-full bg-black hover:bg-black/80 z-50"
               aria-label="閉じる"
             >
               ×
             </button>
-            
+
             <div className="flex flex-col md:flex-row">
               <div className="md:w-1/2 relative">
                 <Image
@@ -306,7 +306,7 @@ const CastStaffPage: React.FC = () => {
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#0f1429] to-transparent h-20"></div>
               </div>
-              
+
               <div className="md:w-1/2 p-8 flex flex-col justify-center bg-[#0f1429]">
                 <div className="border-l-4 border-[#d4af37] pl-4 mb-6">
                   <h2 className="text-3xl font-bold text-[#d4af37] mb-1">
@@ -328,14 +328,14 @@ const CastStaffPage: React.FC = () => {
       {selectedStaff && (
         <div className="fixed inset-0 bg-black bg-opacity-80 flex items-start md:items-center justify-center z-50 p-4 pt-20 md:pt-4 backdrop-blur-sm overflow-y-auto" onClick={handleBackdropClick}>
           <div className="bg-[#0f1429] max-w-4xl w-full rounded-xl overflow-hidden relative shadow-2xl border border-[#d4af37]/20 my-4">
-            <button 
+            <button
               onClick={closeStaffDetail}
               className="absolute top-4 right-4 text-white text-3xl hover:text-white transition-colors w-10 h-10 flex items-center justify-center rounded-full bg-black hover:bg-black/80 z-50"
               aria-label="閉じる"
             >
               ×
             </button>
-            
+
             <div className="flex flex-col md:flex-row">
               <div className="md:w-1/2 relative">
                 <Image
@@ -347,7 +347,7 @@ const CastStaffPage: React.FC = () => {
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#0f1429] to-transparent h-20"></div>
               </div>
-              
+
               <div className="md:w-1/2 p-8 flex flex-col justify-center bg-[#0f1429]">
                 <div className="border-l-4 border-[#d4af37] pl-4 mb-6">
                   <h2 className="text-3xl font-bold text-[#d4af37] mb-1">
