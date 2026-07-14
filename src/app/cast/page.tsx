@@ -256,7 +256,7 @@ const CastStaffPage: React.FC = () => {
             <div className="max-w-4xl mx-auto">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                 {/* 渋谷愛ビジョン */}
-                <div className="bg-[#1a2547] rounded-xl shadow-lg overflow-hidden p-8 text-center">
+                <div className="bg-[#1a2547] rounded-xl shadow-lg overflow-hidden p-8 text-center md:col-span-2 md:w-[calc(50%_-_1.5rem)] md:justify-self-center">
                   <h3 className="text-xl font-bold text-[#d4af37] mb-4">情報提供・制作協力</h3>
                   <p className="text-white mb-6">渋谷の街を彩る大型ビジョンで番組情報を放映</p>
                   <div className="flex justify-center p-4 rounded-xl h-60 flex items-center">
