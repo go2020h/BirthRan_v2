@@ -321,7 +321,7 @@ const MainPage = () => {
         <div className="relative w-full h-full md:hidden">
           <div className="relative w-full h-full">
             <Image
-              src="/hero1_fix.png"
+              src="/hero_sp_fix.webp"
               alt="バースデーランキング画像"
               className="w-full h-full object-contain"
               fill
@@ -777,7 +777,7 @@ const MainPage = () => {
               {/* 最新のYouTube動画 */}
               <div className="rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:scale-102 hover:shadow-xl transform border border-gray-100 bg-gradient-to-br from-white to-[#f8f9fa]">
                 <div className="relative pb-[56.25%] h-0 overflow-hidden">
-                  
+
                   <iframe
                     className="absolute top-0 left-0 w-full h-full"
                     src="https://www.youtube.com/embed/ocQygJpZnhU?si=6dm12s64kOZ32Ayj"
@@ -1021,9 +1021,9 @@ const MainPage = () => {
                     <span className="inline-block bg-[#d4af37] text-white text-xl font-bold rounded-full w-8 h-8 flex items-center justify-center mr-3">4</span>
                     <h4 className="text-lg font-bold text-[#1a3a6c]">『おめありレコメンド』からBDプレゼント</h4>
                   </div>
-                  <p className="text-base text-gray-600 mb-3">『バスラン』がセレクトした「おめでとう」「ありがとう」の言葉が集まっている愛ある商品やサービスをご紹介する『おめありレコメンド』のコーナーより！<br/>
-                  『もうすぐ誕生日！ようこそバスランへ！』にご出演頂くゲストの方へ！<br/>
-                  一足早い！誕生日プレゼントをご提供いただいております。お楽しみに～♡</p>
+                  <p className="text-base text-gray-600 mb-3">『バスラン』がセレクトした「おめでとう」「ありがとう」の言葉が集まっている愛ある商品やサービスをご紹介する『おめありレコメンド』のコーナーより！<br />
+                    『もうすぐ誕生日！ようこそバスランへ！』にご出演頂くゲストの方へ！<br />
+                    一足早い！誕生日プレゼントをご提供いただいております。お楽しみに～♡</p>
                   {/*<MonthlyPresent present={getLatestPresent()} />*/}
                   <div className="mt-8 text-center space-y-4">
                     {/*<Link href="/wanted" className="text-[#0167CC] hover:text-[#d4af37] font-medium transition-colors inline-flex items-center justify-center">
