@@ -634,6 +634,16 @@ export const guestArchive: GuestData[] = [
     twitter: "https://x.com/odtmak?s=21&t=yFiC3o3Bku78q-p_1LbtKQ",
     twitter2: "",
     instagram: ""
+  }, {
+    name: "海蔵亮太",
+    image: "/guest/guest62.jpg",
+    bio: "愛知県名古屋市出身。2016、2017年KWC(Karaoke World Championships)に出場し二連覇を経て2018年に「愛のカタチ」でメジャーデビュー。2019年「第61回輝く！日本レコード大賞」にて新人賞を受賞。その後も数ある歌番組で優勝を経験。2024年にはギネス世界記録「毎週連続配信」63週を樹立。2026年4月15日には、3年間で158曲の連続配信を達成しプロジェクトを完走。2026年9月からは全国6都市を巡る「海蔵亮太 LIVE TOUR 2026 “琥珀”」を開催。楽曲リリースやライブ活動を精力的に展開し、その歌声を全国へ届け続けている。",
+    appearanceDate: "2026年7月30日",
+    birthDate: "8月8日",
+    officialSite: "https://ryotakaizo-official.com/",
+    twitter: "https://x.com/uuuumin_88?s=21&t=yFiC3o3Bku78q-p_1LbtKQ",
+    twitter2: "",
+    instagram: ""
   }
 
 
