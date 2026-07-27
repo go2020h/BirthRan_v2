@@ -494,7 +494,7 @@ const birthdayPresents: BirthdayPresent[] = [
     imagePath: "/home49.jpg",
     imageAlt: "国連支援交流協会』FSUN",
     url: "https://ngo-fsun.org/",
-    date: "2026-07-28",
+    date: "2026-07-23",
     company: "国連支援交流協会』FSUN"
   }
 
