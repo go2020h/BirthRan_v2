@@ -648,7 +648,7 @@ export const guestArchive: GuestData[] = [
     name: "森重樹一（ZIGGY）",
     image: "/guest/guest63.jpg",
     bio: "ZIGGYは1984年、森重樹一さんを中心に結成。海外グラムロック・ハードロックから強い影響を受けたサウンドと、歌謡曲にも通ずる甘いメロディが特徴のバンド。1987年にメジャーデビューし、1989年には初の武道館公演を実現。「GLORIA」「I'M GETTIN' BLUE」をはじめ数多くのヒット曲で80〜90年代の日本のロックシーンを牽引しました。2017年にデビュー30周年を記念して活動を再開し、2026年からはYou TubeにてZIGGY森重MJチャンネルを開始。新曲制作やライブなど精力的に活動中しています。",
-    appearanceDate: "2026年8月5日",
+    appearanceDate: "2026年8月6日",
     birthDate: "8月28日",
     officialSite: "",
     twitter: "",
