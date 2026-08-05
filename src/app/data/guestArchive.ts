@@ -651,7 +651,7 @@ export const guestArchive: GuestData[] = [
     appearanceDate: "2026年8月6日",
     birthDate: "8月28日",
     officialSite: "",
-    twitter: "",
+    twitter: "https://x.com/morishigejuichi?s=20",
     twitter2: "",
     instagram: ""
   }
