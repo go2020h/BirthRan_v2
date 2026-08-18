@@ -664,6 +664,16 @@ export const guestArchive: GuestData[] = [
     twitter: "https://x.com/ruki_saito?lang=ja",
     twitter2: "",
     instagram: ""
+  }, {
+    name: "北川大介",
+    image: "/guest/guest65.jpg",
+    bio: "神奈川県松田町出身。1998年、日本クラウンより「前橋ブルース」でデビュー。2000年に日本歌手協会新人奨励賞受賞、2008年には日本レコード大賞の日本作曲家協会奨励賞を受賞。翌2009年にも日本レコード大賞の優秀作品賞を受賞し、2015年には「横濱の踊り子」で日本レコード大賞作詞賞を受賞されています。",
+    appearanceDate: "2026年8月20日",
+    birthDate: "9月8日",
+    officialSite: "https://kitagawa-daisuke.jp/",
+    twitter: "",
+    twitter2: "",
+    instagram: ""
   }
 
 
