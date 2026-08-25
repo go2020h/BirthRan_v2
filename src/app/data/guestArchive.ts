@@ -674,6 +674,16 @@ export const guestArchive: GuestData[] = [
     twitter: "",
     twitter2: "",
     instagram: ""
+  }, {
+    name: "ベル",
+    image: "/guest/guest66.jpg",
+    bio: "新宿歌舞伎町で創業20年の老舗おかまバー「ひげガール」…笑いあり、涙ありの豪華ショータイムは一見の価値あり！…の、エグゼクティブプロデューサーのベルさん。\nひげガールは…毎週火曜日から土曜日は、笑いあり涙ありキラキラ輝くショータイム。スタイル抜群で綺麗なニューハーフたちが圧巻のダンスやパフォーマンスで盛り上げます。オリジナルカクテルやデザートも豊富で、ここでしか楽しめない個性あふれる逸品も。ぜひお越しを！",
+    appearanceDate: "2026年8月27日",
+    birthDate: "9月27日",
+    officialSite: "",
+    twitter: "",
+    twitter2: "",
+    instagram: "https://www.instagram.com/bell_newhalf/"
   }
 
 
