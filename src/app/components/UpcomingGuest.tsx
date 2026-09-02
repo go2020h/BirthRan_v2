@@ -71,7 +71,7 @@ export default function UpcomingGuest({
             
             {/* ゲスト情報 */}
             <div className="guest-info-wrapper w-full md:w-2/3 md:pl-8">
-              <h3 className="text-2xl font-bold text-[#1a3a6c] mb-2 text-center md:text-left">{name}</h3>
+              <h3 className="text-2xl font-bold text-[#1a3a6c] mb-2 text-center md:text-left whitespace-pre-line">{name}</h3>
               
               <div className="flex flex-col sm:flex-row items-center sm:items-start gap-2 sm:gap-4 mb-4">
                 <div className="guest-date-badge bg-[#1a3a6c] text-white px-4 py-1.5 rounded-full text-sm font-medium shadow-sm w-full sm:w-auto text-center">

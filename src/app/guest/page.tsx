@@ -47,7 +47,7 @@ export default function GuestArchivePage() {
                     />
                   </div>
                   <div className="p-6">
-                    <h2 className="text-xl font-bold text-[#1a3a6c] mb-2">{guest.name}</h2>
+                    <h2 className="text-xl font-bold text-[#1a3a6c] mb-2 whitespace-pre-line">{guest.name}</h2>
                     
                     <div className="flex flex-col sm:flex-row items-center sm:items-start gap-2 sm:gap-4 mb-4">
                       <div className="guest-date-badge bg-[#1a3a6c] text-white px-4 py-1.5 rounded-full text-xs font-medium shadow-sm w-full sm:w-auto text-center">
