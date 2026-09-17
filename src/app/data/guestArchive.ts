@@ -694,6 +694,16 @@ export const guestArchive: GuestData[] = [
     twitter: "https://x.com/MINATO_CCC_E",
     twitter2: "https://x.com/TAGO_CCC_M",
     instagram: ""
+  },{
+    name: "蘭華（シンガーソングライター）",
+    image: "/guest/guest68.jpg",
+    bio: "2015年、吉本ばななさん原作の映画『海のふた』主題歌を収録したシングル「ねがいうた/はじまり色」でメジャーデビュー。2016年、1stアルバム「東京恋文」が『第58回輝く！日本レコード大賞企画賞』を受賞。2019年、出雲観光大使就任。2020年、シングル「ねがいうた/愛を耕す人」がオリコンランキングで1位を獲得。という、経歴のかた。そして2023年には、アルバム「遺書」を発売。作詞作曲家としても、秋元康氏プロデュース・丘みどりさんNEWシングルに楽曲を提供するなど、J-POP、アイドル、アニソン、演歌歌謡曲など様々なアーティストへの楽曲提供を行い、なかつ応援サポーター、温泉ソムリエとしても活動していらっしゃいます。",
+    appearanceDate: "2026年9月17日",
+    birthDate: "9月28日",
+    officialSite: "https://rankaweb.net/",
+    twitter: "https://x.com/ranka77",
+    twitter2: "",
+    instagram: ""
   },
 
 
