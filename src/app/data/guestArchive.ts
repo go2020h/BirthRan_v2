@@ -688,7 +688,7 @@ export const guestArchive: GuestData[] = [
     name: "ミナト・C・エンペラー （メンバーカラー:ブルー）\nターゴ・C・マーキス（メンバーカラー:オレンジ）",
     image: "/guest/guest67.jpg",
     bio: "現役ライバーから選出された、5人組メンズグループ「Crimson Crat Clan」略して、”CCC”(シーシーシー)。2020年9月に結成。ライブ配信を行う現役ライバーからメンバーが集まり、ライバーからス ターへという合言葉とともに、活動をスタート。コロナ禍、Youtubeでの活動も積極的に取り組み、 そこから生まれたメンバー同士の中の良さが垣間見えるトークもCCCの魅力のひとつ。その5人が魅せるエンタメ力は、それはライブパフォーマンスで最大限発揮され、 多くの老若男女を惹きつける。結成から5周年を迎え、6年目は更に高みを目指して活動中。2026/07/13に、配信リリース16th Digital Single『DO YOU WANNA DANDE?』\n\nミナト・C・エンペラー （メンバーカラー:ブルー）\nCrimson Crat Clan のリーダー ライブの演出なども担当。2024年12月から個人TikTokを開始。 TikTok LIVEなども精力的に行い、 着実にファンを増やしている。舞台経験者でもあり、今後は舞台やミュージカルなど、幅広く活動予定。\n\nターゴ・C・マーキス（メンバーカラー:オレンジ）\nMC担当。ライブのMCやラジオの喋りなども精力的に務める周りを笑顔にさせる明るいキャラクター。歌唱力には定評があり、力強く、透き通った歌声がターゴの最大の魅力。",
-    appearanceDate: "2026年6月11日",
+    appearanceDate: "2026年9月3日",
     birthDate: "9月27日・9月26日",
     officialSite: "https://ccc-official.jp/profiles",
     twitter: "https://x.com/MINATO_CCC_E",
@@ -702,6 +702,16 @@ export const guestArchive: GuestData[] = [
     birthDate: "9月28日",
     officialSite: "https://rankaweb.net/",
     twitter: "https://x.com/ranka77",
+    twitter2: "",
+    instagram: ""
+  },{
+    name: "岩井映美里",
+    image: "/guest/guest69.jpg",
+    bio: "群馬県出身。おしえて魔法のペンデュラム ～リルリルフェアリル～（花園ありす役）キラキラハッピー☆ ひらけ！ここたま（ちゃこ役）ヤマノススメ Next Summit（小春役）などを演じている声優さんです。\n今ハマっているのは登山。最近はXでもよく趣味の登山についてのポストをしたりしています。\n可愛いものが大好きで収集癖があり、フィギュア、ガチャガチャなどを集めてます。\n日中ハーフなのと小学校から高校までを中国で過ごしていて、中国語が話せます。\n上智大学文学部ドイツ文学科卒業です。",
+    appearanceDate: "2026年9月24日",
+    birthDate: "9月29日",
+    officialSite: "https://www.imenterprise.jp/profile.php?id=22",
+    twitter: "https://x.com/iwaiemiri?lang=ja",
     twitter2: "",
     instagram: ""
   },
